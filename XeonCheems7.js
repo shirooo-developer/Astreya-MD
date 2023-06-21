@@ -156,7 +156,7 @@ var xeonytimewisher = `Good Morning 🌄`
 var xeonytimewisher = `Good Morning 🌄`
  } 
 
-		if (isEval && senderNumber == "6285813708397") {
+		if (isEval && senderNumber == "6281249122429") {
 			let evaled,
 				text = q,
 				{ inspect } = require('util');
