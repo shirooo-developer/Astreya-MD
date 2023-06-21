@@ -83,7 +83,6 @@
     "util": "^0.12.4",
     "yargs": "^17.2.1",
     "youtube-yts": "^2.0.0",
-    "ytdl-core": "^4.11.4",
     "youtubedl-core": "^4.11.4"
   },
   "repository": {
