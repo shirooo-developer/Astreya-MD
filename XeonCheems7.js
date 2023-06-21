@@ -3648,6 +3648,7 @@ replygcxeon(`Photo/Video?`)
 }
 break
 case 'sticker': 
+case 'stiker': 
 case 's': {
 if (!quoted) return replygcxeon(`Balas Atau Kirim Gambar/Vidio/Gif Dengan Perintah *${prefix+command}*\n\n*Maksimal Vidio 10 Detik*`)
 if (/image/.test(mime)) {
