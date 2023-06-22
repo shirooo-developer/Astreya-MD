@@ -2939,7 +2939,7 @@ Salin Tautan Di Atas Dan Ketik *.ytmp3 Tautan* Untuk Audio Dan *.ytmp4 Tauta* Un
 XeonBotInc.sendMessage(m.chat, { image : eek, caption: ngen }, { quoted: m})
 break
 }
-case 'play':  case 'song': case 'ytmp3': {
+case 'play':  case 'song': {
 if (!text) return replygcxeon(`Format: *${prefix + command} Kata Kunci*`)
 const xeonplaymp3 = require('./lib/ytdl2')
 const { fetchBuffer } = require("./lib/myfunc2")
@@ -2986,7 +2986,7 @@ replygcxeon(mess.wait)
 downloadMp4(text)
 }
 break
-case 'ytaxxx': case 'ytmp3xxx': case 'mp3xxx':{
+case 'ytaxxx': case 'ytmp3xxx': case 'ytmp3':{
 if (!text) return replygcxeon('Format: *.ytaxxx Tautan')
 replygcxeon(mess.wait)
 downloadMp3(text)
