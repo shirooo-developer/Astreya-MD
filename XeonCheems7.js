@@ -4756,21 +4756,11 @@ replygcxeon(mess.wait)
     waifudd = await axios.get(`https://api.lolhuman.xyz/api/random/loli?apikey=Shirooo`)         
 XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
 break
-case 'elaina':
-  if (!m.isGroup) return replygcxeon(mess.group);
-  replygcxeon(mess.wait);
-  try {
-    const response = await axios.get('https://api.lolhuman.xyz/api/random/elaina?apikey=Shirooo');
-    const imageUrl = response.data.result;
-    const caption = 'Ini adalah gambar Elaina:';
-    
-    // Mengirim gambar ke chat
-    await XeonBotInc.sendMessage(m.chat, { caption: caption, image: { url: imageUrl } }, { quoted: m });
-  } catch (error) {
-    console.log(error);
-    // Handle error appropriately
-  }
-  break;
+case 'elaina': {
+                replygcxeon(mess.wait)
+				XeonBotInc.sendMessage(m.chat, { image: { url: `https://api.lolhuman.xyz/api/random/elaina?apikey=Shirooo`})
+		    }
+	        break
 case '18loli2' :
 if (!m.isGroup) return replygcxeon(mess.group)
 if (!AntiNsfw) return replygcxeon(mess.nsfw)
