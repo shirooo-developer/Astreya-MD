@@ -4760,11 +4760,15 @@ case 'elaina':
   if (!m.isGroup) return replygcxeon(mess.group);
   replygcxeon(mess.wait);
   try {
-    const waifudd = await axios.get('https://api.lolhuman.xyz/api/random/elaina?apikey=Shirooo');
-    XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: waifudd.data.url } }, { quoted: m });
+    const response = await axios.get('https://api.lolhuman.xyz/api/random/elaina?apikey=Shirooo');
+    const imageUrl = response.data.result;
+    const caption = 'Ini adalah gambar Elaina:';
+    
+    // Mengirim gambar ke chat
+    await XeonBotInc.sendMessage(m.chat, { caption: caption, image: { url: imageUrl } }, { quoted: m });
   } catch (error) {
     console.log(error);
-    // handle error appropriately
+    // Handle error appropriately
   }
   break;
 case '18loli2' :
