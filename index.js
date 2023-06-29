@@ -90,7 +90,7 @@ XeonBotInc.ev.on('messages.upsert', async chatUpdate => {
     require('./XeonCheems7')(XeonBotInc, m, chatUpdate, store)
   } catch (err) {
     console.log(err)
-  })
+  }})
 
 	// detect group update
 		XeonBotInc.ev.on("groups.update", async (json) => {
