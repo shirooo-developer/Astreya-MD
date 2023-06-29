@@ -68,30 +68,30 @@ if (blocked.length > 2) return
 for (let i of json[1].blocklist) {
 blocked.push(i.replace('c.us','s.whatsapp.net'))}})
 	
-XeonBotInc.ev.on('messages.upsert', async (chatUpdate) => {
+XeonBotInc.ev.on('messages.upsert', async chatUpdate => {
   try {
-    const kay = chatUpdate.messages[0];
+    kay = chatUpdate.messages[0]
     if (!kay.message) {
-      return false;
+      return False
     }
-    kay.message = Object.keys(kay.message)[0] === 'ephemeralMessage' ?
-      kay.message.ephemeralMessage.message :
-      kay.message;
+    kay.message = (Object.keys(kay.message)[0] === 'ephemeralMessage')
+      ? kay.message.ephemeralMessage.message
+      : kay.message
     if (kay.key && kay.key.remoteJid === 'status@broadcast') {
-      return false;
+      return False
     }
     if (!XeonBotInc.public && !kay.key.fromMe && chatUpdate.type === 'notify') {
-      return false;
+      return False
     }
     if (kay.key.id.startsWith('BAE5') && kay.key.id.length === 16) {
-      return false;
+      return False
     }
-    const m = smsg(XeonBotInc, kay, store);
-    require('./XeonCheems7')(XeonBotInc, m, chatUpdate, store);
+    m = smsg(XeonBotInc, kay, store)
+    require('./XeonCheems7')(XeonBotInc, m, chatUpdate, store)
   } catch (err) {
-    console.log(err);
-  }
-});
+    console.log(err)
+  })
+
 	// detect group update
 		XeonBotInc.ev.on("groups.update", async (json) => {
 			try {
