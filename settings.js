@@ -18,7 +18,7 @@ global.socialm = "GitHub: Keizha" //ur github or insta name
 global.location = "Indonesia" //ur location
 
 //new
-global.botname = "𝗔𝘀𝘁𝗿𝗲𝘆𝗮-𝗠𝗗"
+global.botname = "𝗛𝗼𝘀𝗵𝗶𝗻𝗼 - 𝗠𝗗"
 global.ownernumber = '6281249122429'
 global.ownername = '6281249122429'
 global.ownerNumber = ["6281249122429@s.whatsapp.net"]
@@ -29,7 +29,7 @@ global.themeemoji = '🍀'
 global.wm = "𝗔𝘀𝘁𝗿𝗲𝘆𝗮-𝗠𝗗"
 global.botscript = 'Berada Digithub Saya' //script link
 global.packname = ""
-global.author = "𝗔𝘀𝘁𝗿𝗲𝘆𝗮-𝗠𝗗\n\n\nA Whatsapp Bot Created By\n𝗞𝗲𝗶𝘇𝗵𝗮\n\n\n\n\n\n\n\n       ━━━━━━━━━━━━━━━\n\n\n\n\n\n\n\nContact Bot: +62851-5925-8830"
+global.author = "𝗛𝗼𝘀𝗵𝗶𝗻𝗼 - 𝗠𝗗\n\n\nA Whatsapp Bot Created By\n𝗞𝗲𝗶𝘇𝗵𝗮\n\n\n\n\n\n\n\n       ━━━━━━━━━━━━━━━\n\n\n\n\n\n\n\nContact Bot: +62851-5925-8830"
 global.creator = "6281249122429@s.whatsapp.net"
 global.prefa = ['','!','.','#','/']
 global.hituet = 0

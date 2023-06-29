@@ -361,27 +361,6 @@ message: {
 }
 }
 
-const ftext = { 
-key: { 
-fromMe: false, 
-participant: `0@s.whatsapp.net`, 
-...(from ? {
-remoteJid: `${ownernumber}@s.whatsapp.net` } : {}) }, 
-message: { 
-extendedTextMessage: { 
-text: `${m.pushName}`, 
-title: `${m.pushName}`, 
-jpegThumbnail: defaultpp } } }
-
-const banRep = () => {
-XeonBotInc.sendMessage(m.chat, {
-text:`*Maaf Akun WhatsApp Kamu Ditangguhkan*`,
-mentions: [creator],
-},
-{
-quoted:m
-})
-}
 
 //Fake
 	    const ftroli ={key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "status@broadcast"}, "message": {orderMessage: {itemCount: 2022,status: 200, thumbnail: thumb, surface: 200, message: botname, orderTitle: ownername, sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
@@ -704,7 +683,7 @@ async function igstalk(Username) {
 }
 
 async function replyprem(teks) {
-    m.reply(`*Fitur Khusus Pengguna Premium*`)
+    m.reply(`*Perintah Khusus Untuk Anggota Premium*`)
 }
 
         // Autosticker gc
@@ -1081,7 +1060,7 @@ replygcxeon(`*Bot Telah Dimatikan*`)
 await sleep(3000)
 process.exit()
 break
-case 'owner': {
+case 'ksksjbsvs': {
 const repf = await XeonBotInc.sendMessage(from, { 
 contacts: { 
 displayName: `${list.length} Kontak`, 
@@ -1250,7 +1229,7 @@ muslim
 				})
 				.catch(console.error)
 			break
-case 'alive': case 'panel': case 'list': case 'menu': case 'help': case '?': {
+case 'iwush': case 'vfghg': case 'ggdxcghh': case 'gvcfg': case 'jgccvhj': case 'hgcccv': {
 	        let ownernya = ownernomer + '@s.whatsapp.net'
             let me = m.sender
             let timestampe = speed();
@@ -1317,7 +1296,7 @@ mentionedJid:[sender],
 }, { quoted: m })
            }
            break
-case 'allmenu': {
+case 'hehehvss': {
 var unicorn = await getBuffer(picak+'All Menu')
 sendXeonBotIncMessage(from, { 
 text: `Hai 👋 @${sender.split("@")[0]}\n\n${allmenu(prefix, hituet)}`,
@@ -1873,14 +1852,14 @@ XeonBotInc.sendMessage(from, {text: `*Disini @${teman.split("@")[0]}*`, mentions
 }, 9000)
 }
 break
-case 'q': case 'quoted': {
+case 'bvvvq': case 'quhhvoted': {
 if (!m.quoted) return replygcxeon('*Balas pesan*')
 let xeonquotx= await XeonBotInc.serializeM(await m.getQuotedObj())
 if (!xeonquotx.quoted) return replygcxeon('*Pesan yang Anda balas tidak diposting oleh bot*')
 await xeonquotx.quoted.copyNForward(m.chat, true)
 }
 break
-case 'say': {
+case 'jsjshbs': {
   if (!text) {
     replygcxeon(`Format: *${prefix + command} Teks*`);
   } else {
@@ -1941,7 +1920,7 @@ replygcxeon(mess.wait)
 eha = await npmstalk.npmstalk(q)
 replygcxeon(`*NPM STALKER*
 
-Nama: ${eha.name}*
+Nama: *${eha.name}*
 Versi Terbaru: *${eha.versionLatest}*
 Publikasikan Versi: *${eha.versionPublish}*
 Pembaruan Versi: *${eha.versionUpdate}*
@@ -1986,7 +1965,7 @@ let krt = await scp1.ssweb(q)
 XeonBotInc.sendMessage(from,{image:krt.result,caption:mess.succes}, {quoted:m})
 }
 break
-case 'join': {
+case 'hvcc': {
 if (!XeonTheCreator) return replygcxeon(mess.owner)
 if (!text) return replygcxeon(`Format: *${prefix+command} Tautan*`)
 if (!isUrl(args[0]) && !args[0].includes('whatsapp.com')) return replygcxeon('*Tautan Tidak Sah*')
@@ -2014,13 +1993,13 @@ case 'toviewonce': {
   break;
 }
 case 'fliptext': {
-if (args.length < 1) return replygcxeon(`Contoh: *${prefix}fliptext ${ownername}*`)
+if (args.length < 1) return replygcxeon(`Contoh: *${prefix}fliptext Keizha*`)
 quere = args.join(" ")
 flipe = quere.split('').reverse().join('')
 replygcxeon(`\`\`\`「 TEKS DIBALIK 」\`\`\`\n*Normal:*\n${quere}\n*Dibalik:*\n${flipe}`)
 }
 break
-            case 'listpc': {
+            case 'hhvc': {
                  let anulistp = await store.chats.all().filter(v => v.id.endsWith('.net')).map(v => v.id)
                  let teks = `${themeemoji} *DAFTAR OBROLAN PRIBADI*\n\nTotal Obrolan: *${anulistp.length} Obrolan*\n\n`
                  for (let i of anulistp) {
@@ -2030,7 +2009,7 @@ break
                  XeonBotInc.sendTextWithMentions(m.chat, teks, m)
              }
              break
-                case 'listgc': {
+                case 'ccfg': {
                  let anulistg = await store.chats.all().filter(v => v.id.endsWith('@g.us')).map(v => v.id)
                  let teks = `${themeemoji} *DAFTAR OBROLAN GRUP*\n\nTotal Grup: *${anulistg.length} Grup*\n\n`
                  for (let i of anulistg) {
@@ -2040,7 +2019,7 @@ break
                  XeonBotInc.sendTextWithMentions(m.chat, teks, m)
              }
              break
-             case 'ping': case 'botstatus': case 'statusbot': case 'p': {
+             case 'hhcc': case 'hfxx': case 'ggggcj': case 'gggg': {
                 const used = process.memoryUsage()
                 const cpus = os.cpus().map(cpu => {
                     cpu.total = Object.keys(cpu.times).reduce((last, type) => last + cpu.times[type], 0)
@@ -2143,12 +2122,12 @@ case 'block': {
 		await XeonBotInc.updateBlockStatus(users, 'unblock').then((res) => replygcxeon(jsonformat(res))).catch((err) => replygcxeon(jsonformat(err)))
 	}
 	break
-case 'listblock': case 'listban': case 'blocklist': case 'banlist': {
+case 'jhvf': case 'hgc': case 'hgc': case 'vvg': {
 	const lisben = "Total Blok: " + banUser.length
 	replygcxeon(lisben)
 	}
 	break
-case 'menfess': case 'confess':
+case 'nebjsis': case 'bwvgahsus':
 if (Object.values(anon.anonymous).find(p => p.check(sender))) return replygcxeon("You are still in the room")
 if (m.isGroup) return replygcxeon(mess.private)
 if (args.length < 1) return replygcxeon(`Format: *${prefix+command} Nomor|Pesanmu*\nContoh: *${prefix+command} ${ownernumber}|Hai Keizha*`)
@@ -2194,7 +2173,7 @@ console.log("[ CONFESS ] Creating room for: " + sender);
 return replygcxeon(lidt)
 }
 break
-case 'leave':{
+case 'hgccc':{
 if (m.isGroup && XeonTheCreator && command == "leave") return XeonBotInc.groupLeave(from)
 if (m.isGroup) return replygcxeon("*Hanya Digunakan Di Obrolan Pribadi*")
 var room = Object.values(anon.anonymous).find(p => p.check(sender))
@@ -2207,7 +2186,7 @@ text: "*Selamat Tinggal...*"
 })
 if (command == "leave") break;
 }
-case 'afk': {
+case 'ajhabwvvwjsjx': {
 if (!m.isGroup) return replygcxeon(mess.group)
 if (!text) return replygcxeon(`Format: ${prefix+command} *Alasan*`)
 let user = global.db.users[m.sender]
@@ -2216,14 +2195,7 @@ user.afkReason = args.join(" ")
 replygcxeon(`*${m.pushName} Sedang Mode AFK*\nAlasan: *${args.join(" ") ? args.join(" ") : ''}*`)
 }
 break
-case 'resetlinkgc':
-case 'resetlinkgroup':
-case 'resetlinkgrup':
-case 'revoke':
-case 'resetlink':
-case 'resetgrouplink':
-case 'resetgclink':
-case 'resetgruplink': {
+case 'jhgc': {
 if (!m.isGroup) return replygcxeon(mess.group)
 if (!isBotAdmins) return replygcxeon(mess.botAdmin)
 if (!isAdmins && !XeonTheCreator) return replygcxeon(mess.admin)
@@ -2241,7 +2213,7 @@ break
                 XeonBotInc.sendMessage(m.chat, reactionMessage)
             }
             break
-case 'group': case 'editinfo': {
+case 'ugfc': case 'hgcc': {
 if (!m.isGroup) return replygcxeon(mess.group)
 if (!isAdmins && !XeonTheCreator) return replygcxeon(mess.admin)
 if (!isBotAdmins) return replygcxeon(mess.botAdmin)
@@ -2302,14 +2274,13 @@ replygcxeon('*Sukses Menonaktifkan Anti-Virus Di Grup Ini*')
   }
   break
 case 'nsfw': {
-if (!m.isGroup) return replygcxeon(mess.group)
-if (!isBotAdmins) return replygcxeon(mess.botAdmin)
-if (!isAdmins && !XeonTheCreator) return replygcxeon(mess.admin)
+if (!m.isGroup) return
+if (!isBotAdmins) return
+if (!isAdmins && !XeonTheCreator) return
 if (args[0] === "on") {
-if (AntiNsfw) return replygcxeon('*Sudah Diaktifkan*')
+if (AntiNsfw) return
 ntnsfw.push(from)
 fs.writeFileSync('./database/nsfw.json', JSON.stringify(ntnsfw))
-replygcxeon('*Sukses Mengaktifkan NSFW Di Grup Ini*')
 var groupe = await XeonBotInc.groupMetadata(from)
 var members = groupe['participants']
 var mems = []
@@ -2318,11 +2289,10 @@ mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
 XeonBotInc.sendMessage(from, {text: `\`\`\`「 PERINGATAN 」\`\`\`\n\n*NSFW Telah Diaktifkan Digrup Ini, Peserta Dapat Mengakses Grafik Seksual*`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
-if (!AntiNsfw) return replygcxeon('*Sudah Dinonaktifkan*')
+if (!AntiNsfw) return
 let off = ntnsfw.indexOf(from)
 ntnsfw.splice(off, 1)
 fs.writeFileSync('./database/nsfw.json', JSON.stringify(ntnsfw))
-replygcxeon('*Sukses Menonaktifkan nsfw Di Grup Ini*')
 } else {
   await replygcxeon(`*${prefix + command} on* - Untuk Mengaktifkan NSFW\n*${prefix + command} off* - Untuk Menonaktifkan NSFW`)
   }
@@ -2571,7 +2541,7 @@ replygcxeon('*Sukses Menonaktifkan Anti Beracun Di Grup Ini*')
   }
   }
   break
-case 'antiwame': {
+case 'jejebeb': {
 if (!m.isGroup) return replygcxeon(mess.group)
 if (!isBotAdmins) return replygcxeon(mess.botAdmin)
 if (!isAdmins && !XeonTheCreator) return replygcxeon(mess.admin)
@@ -2630,7 +2600,7 @@ await replygcxeon(`*${prefix + command} on* - Untuk Mengaktifkan Anti Tautan Wa.
                 await XeonBotInc.groupLeave(m.chat).then((res) => replygcxeon(jsonformat(res))).catch((err) => replygcxeon(jsonformat(err)))
             }
             break
-case 'add': {
+case 'jejebsb': {
 if (!m.isGroup) return replygcxeon(mess.group)
 if (!isAdmins && !XeonTheCreator) return replygcxeon(mess.admin)
 if (!isBotAdmins) return replygcxeon(mess.botAdmin)
@@ -2681,7 +2651,7 @@ break
                  XeonBotInc.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: true, id: m.quoted.id, participant: m.quoted.sender } })
             }
             break
-            case 'linkgroup': case 'linkgc': case 'gclink': case 'grouplink': {
+            case 'hvc': case 'vvv': case 'hhh': case 'jhc': {
                 if (!m.isGroup) return replygcxeon(mess.group)
                 if (!isBotAdmins) return replygcxeon(mess.botAdmin)
                 let response = await XeonBotInc.groupInviteCode(m.chat)
@@ -2712,7 +2682,7 @@ replygcxeon(open)
 }, timer)
 }
 break
-case 'kick': {
+case 'jhgcc': {
 if (!m.isGroup) return replygcxeon(mess.group)
 if (!isAdmins && !XeonTheCreator) return replygcxeon(mess.admin)
 if (!isBotAdmins) return replygcxeon(mess.botAdmin)
@@ -2720,7 +2690,7 @@ let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender :
 await XeonBotInc.groupParticipantsUpdate(m.chat, [users], 'remove').then((res) => replygcxeon(jsonformat(res))).catch((err) => replygcxeon(jsonformat(err)))
 }
 break
-    case 'setname': case 'setsubject': {
+    case 'hhv': case 'hjgc': {
                 if (!m.isGroup) return replygcxeon(mess.group)
                 if (!isBotAdmins) return replygcxeon(mess.botAdmin)
                 if (!isAdmins) return replygcxeon(mess.admin)
@@ -2728,7 +2698,7 @@ break
                 await XeonBotInc.groupUpdateSubject(m.chat, text).then((res) => replygcxeon(mess.success)).catch((err) => replygcxeon(jsonformat(err)))
             }
             break
-          case 'setdesc': case 'setdesk': {
+          case 'setdehhhsc': case 'sehgvtdesk': {
                 if (!m.isGroup) return replygcxeon(mess.group)
                 if (!isBotAdmins) return replygcxeon(mess.botAdmin)
                 if (!isAdmins) return replygcxeon(mess.admin)
@@ -2736,7 +2706,7 @@ break
                 await XeonBotInc.groupUpdateDescription(m.chat, text).then((res) => replygcxeon(mess.success)).catch((err) => replygcxeon(jsonformat(err)))
             }
             break
-case 'setppgroup': case 'setgcpp': case 'setgrouppp': {
+case 'jjgc': case 'jhvc': case 'hhh': {
 if (!m.isGroup) return replygcxeon(mess.group)
 if (!isAdmins && !XeonTheCreator) return replygcxeon(mess.admin)
 if (!isBotAdmins) return replygcxeon(mess.botAdmin)
@@ -2770,7 +2740,7 @@ replygcxeon(`*Sukses*`)
 }
 }
 break
-case 'promote': {
+case 'projjkmote': {
 if (!m.isGroup) return replygcxeon(mess.group)
 if (!isAdmins && !XeonTheCreator) return replygcxeon(mess.admin)
 if (!isBotAdmins) return replygcxeon(mess.botAdmin)
@@ -2778,7 +2748,7 @@ let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender :
 await XeonBotInc.groupParticipantsUpdate(m.chat, [users], 'promote').then((res) => replygcxeon(jsonformat(res))).catch((err) => replygcxeon(jsonformat(err)))
 }
 break
-case 'demote': {
+case 'dekkkmote': {
 if (!m.isGroup) return replygcxeon(mess.group)
 if (!isAdmins && !XeonTheCreator) return replygcxeon(mess.admin)
 if (!isBotAdmins) return replygcxeon(mess.botAdmin)
@@ -2786,7 +2756,7 @@ let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender :
 await XeonBotInc.groupParticipantsUpdate(m.chat, [users], 'demote').then((res) => replygcxeon(jsonformat(res))).catch((err) => replygcxeon(jsonformat(err)))
 }
 break
-case 'hidetag': {
+case 'hidklletag': {
 if (!m.isGroup) return replygcxeon(mess.group)
 if (!isAdmins && !XeonTheCreator) return replygcxeon(mess.admin)
 if (!isBotAdmins) return replygcxeon(mess.botAdmin)
@@ -2830,7 +2800,7 @@ let anu = await fetchJson(`https://xeonapi.onrender.com/api/dowloader/fbdown?url
 XeonBotInc.sendMessage(m.chat, { video: { url: anu.result.HD }, caption: 'Here you go!.'}, {quoted: m})
 }
 break
-case 'tiktok':{ 
+case 'tiktjkkkok':{ 
 if (!text) return replygcxeon( `Format: *${prefix + command} Tautan*`)
 if (!q.includes('tiktok')) return replygcxeon(`*Tautan Tidak Sah*`)
 replygcxeon(mess.wait)
@@ -2839,7 +2809,7 @@ XeonBotInc.sendMessage(m.chat, { caption: `*Sukses*`, video: { url: data.waterma
 })
 }
 break
-case 'tiktokaudio':{
+case 'tiktokkkkaudio':{
 if (!text) return replygcxeon( `Format: *${prefix + command} Tautan*`)
 if (!q.includes('tiktok')) return replygcxeon(`*Tautan Tidak Sah*`)
 replygcxeon(mess.wait)
@@ -2848,7 +2818,7 @@ XeonBotInc.sendMessage(m.chat, { audio: { url: data.audio }, mimetype: 'audio/mp
 })
 }
 break
-case 'mediafire':
+case 'medbbvciafire':
 if (!q) return replygcxeon(`Format: *.mediafire Tautan*`)
 if (!isUrl(args[0]) && !args[0].includes('mediafire.com')) return replygcxeon('The link you sent is not a mediafire link or the link is invalid!')
 replygcxeon(mess.wait)
@@ -2904,8 +2874,8 @@ jpegThumbnail: defaultpp},
 {quoted:m})
 }
 break
-case 'search':
-case 'yts': case 'ytsearch': {
+case 'jhg':
+case 'jhgc': case 'jhcc': {
                 if (!text) return replygcxeon(`Format: *${prefix + command} Kata Kunci*`)
                 let yts = require("yt-search")
                 let search = await yts(text)
@@ -2917,7 +2887,7 @@ case 'yts': case 'ytsearch': {
                 XeonBotInc.sendMessage(m.chat, { image: { url: search.all[0].thumbnail },  caption: teks }, { quoted: m })
             }
             break
-case 'xxxxplay':{
+case 'hhvc':{
 if (!text) return replygcxeon(`Format: *${prefix+command} Kata Kunci*`)
 replygcxeon(mess.wait)
 let search = await yts(text)
@@ -2939,7 +2909,7 @@ Salin Tautan Di Atas Dan Ketik *.ytmp3 Tautan* Untuk Audio Dan *.ytmp4 Tauta* Un
 XeonBotInc.sendMessage(m.chat, { image : eek, caption: ngen }, { quoted: m})
 break
 }
-case 'play':  case 'song': {
+case 'plahhhy':  case 'shhhong': {
 if (!text) return replygcxeon(`Format: *${prefix + command} Kata Kunci*`)
 const xeonplaymp3 = require('./lib/ytdl2')
 const { fetchBuffer } = require("./lib/myfunc2")
@@ -2965,7 +2935,7 @@ await XeonBotInc.sendMessage(m.chat,{
 await fs.unlinkSync(pl.path)
 }
 break
-case 'ytmp4': case 'ytvideo': {
+case 'ytmhhhp4': case 'hhhhhh': {
 const xeonvidoh = require('./lib/ytdl2')
 if (args.length < 1 || !isUrl(text) || !xeonvidoh.isYTUrl(text)) replygcxeon(`Format: *${prefix + command} Tautan* 128kbps`)
 const vid=await xeonvidoh.mp4(text)
@@ -2980,26 +2950,26 @@ await XeonBotInc.sendMessage(m.chat,{
 },{quoted:m})
 }
 break
-case 'ytvxxx': case 'ytmp4xxx': case 'mp4xxx':{
+case 'ytvhhhxxx': case 'ytmpjjh4xxx': case 'mpjhh4xxx':{
 if (!text) return replygcxeon('Format: *.ytvxxx Tautan*')
 replygcxeon(mess.wait)
 downloadMp4(text)
 }
 break
-case 'ytaxxx': case 'ytmp3xxx': case 'ytmp3':{
+case 'ytaxjhhxx': case 'ytmpjjjjj3xxx': case 'ytjjjjmp3':{
 if (!text) return replygcxeon('Format: *.ytaxxx Tautan')
 replygcxeon(mess.wait)
 downloadMp3(text)
 }
 break 
-case 'getcase':
+case 'getjjjcase':
 if (!XeonTheCreator) return replygcxeon(mess.owner)
 const getCase = (cases) => {
 return "case"+`'${cases}'`+fs.readFileSync("XeonCheems7.js").toString().split('case \''+cases+'\'')[1].split("break")[0]+"break"
 }
 replygcxeon(`${getCase(q)}`)
 break
-case 'addprem':
+case 'addbvvprem':
 if (!XeonTheCreator) return replygcxeon(mess.owner)
 if (!args[0]) return replygcxeon(`Format: *${prefix+command} Nomor*`)
 prrkek = q.split("|")[0].replace(/[^0-9]/g, '')+`@s.whatsapp.net`
@@ -3009,7 +2979,7 @@ prem.push(prrkek)
 fs.writeFileSync('./database/premium.json', JSON.stringify(prem))
 replygcxeon(`Akun *${prrkek}* Sekarang Premium*`)
 break
-case 'delprem':
+case 'delbvvprem':
 if (!XeonTheCreator) return replygcxeon(mess.owner)
 if (!args[0]) return replygcxeon(`Format: *${prefix+command} Nomor*`)
 ya = q.split("|")[0].replace(/[^0-9]/g, '')+`@s.whatsapp.net`
@@ -3046,7 +3016,7 @@ teks += `│\n└────────────⭓\n\n*Total: ${BadXeon.le
 replygcxeon(teks)
 }
 break
-case 'addvideo':{
+case 'hhg':{
 if (!XeonTheCreator) return replygcxeon(mess.owner)
 if (args.length < 1) return replygcxeon('Format: *.addvideo Nama Vidio*')
 if (VideoXeon.includes(q)) return replygcxeon("*Nama Tersebut Sudah Digunakan*")
@@ -3058,7 +3028,7 @@ fs.unlinkSync(delb)
 replygcxeon(`*Sukses Menambahkan Vidio*\nCek Dengan Perintah *${prefix}listvideo*`)
 }
 break
-case 'delvideo':{
+case 'delvigggdeo':{
 if (!XeonTheCreator) return replygcxeon(mess.owner)
 if (args.length < 1) return replygcxeon('Format: *.delvideo Nama Vidio*')
 if (!VideoXeon.includes(q)) return replygcxeon("*Nama Tersebut Tidak Ditemukan Dibasis Data*")
@@ -3069,7 +3039,7 @@ fs.unlinkSync(`./XeonMedia/video/${q}.mp4`)
 replygcxeon(`Sukses Menghapus Vidio *${q}*`)
 }
 break
-case 'listvideo':{
+case 'lisbvvtvideo':{
 let teks = '┌──⭓「 *DAFTAR VIDIO* 」\n│\n'
 for (let x of VideoXeon) {
 teks += `│⭔ ${x}\n`
@@ -3078,7 +3048,7 @@ teks += `│\n└────────────⭓\n\n*Total: ${VideoXeon.
 replygcxeon(teks)
 }
 break
-case 'addimage':{
+case 'addhhhimage':{
 if (!XeonTheCreator) return replygcxeon(mess.owner)
 if (args.length < 1) return replygcxeon('Format: *.addimage Nama Gambar*')
 if (ImageXeon.includes(q)) return replygcxeon("*Nama Tersebut Sudah Digunakan*")
@@ -3090,7 +3060,7 @@ fs.unlinkSync(delb)
 replygcxeon(`*Sukses Menambahkan Gambar*\nCek Dengan Perintah *${prefix}listimage*`)
 }
 break
-case 'delimage':{
+case 'dhhvelimage':{
 if (!XeonTheCreator) return replygcxeon(mess.owner)
 if (args.length < 1) return replygcxeon('Format: *.delimage Nama Gambar*')
 if (!ImageXeon.includes(q)) return replygcxeon("*Nama Tersebut Tidak Ditemukan Dibasis Data*")
@@ -3101,7 +3071,7 @@ fs.unlinkSync(`./XeonMedia/image/${q}.jpg`)
 replygcxeon(`Sukses Menghapus Gambar *${q}*`)
 }
 break
-case 'listimage':{
+case 'listivbvmage':{
 let teks = '┌──⭓「 *DAFTAR GAMBAR* 」\n│\n'
 for (let x of ImageXeon) {
 teks += `│⭔ ${x}\n`
@@ -3110,7 +3080,7 @@ teks += `│\n└────────────⭓\n\n*Total: ${ImageXeon.
 replygcxeon(teks)
 }
 break
-case 'addsticker':{
+case 'adbbvdsticker':{
 if (!XeonTheCreator) return replygcxeon(mess.owner)
 if (args.length < 1) return replygcxeon('Format: *.addsticker Nama Stiker*')
 if (StickerXeon.includes(q)) return replygcxeon("*Nama Tersebut Sudah Digunakan*")
@@ -3122,7 +3092,7 @@ fs.unlinkSync(delb)
 replygcxeon(`*Sukses Menambahkan Stiker*\nCek Dengan Perintah *${prefix}liststicker*`)
 }
 break
-case 'delsticker':{
+case 'delvbvsticker':{
 if (!XeonTheCreator) return replygcxeon(mess.owner)
 if (args.length < 1) return replygcxeon('Format: *.delsticker Nama Stiker*')
 if (!StickerXeon.includes(q)) return replygcxeon("*Nama Tersebut Tidak Ditemukan Dibasis Data*")
@@ -3133,7 +3103,7 @@ fs.unlinkSync(`./XeonMedia/sticker/${q}.webp`)
 replygcxeon(`Sukses Menghapus Stiker *${q}*`)
 }
 break
-case 'liststicker':{
+case 'lihhhststicker':{
 let teks = '┌──⭓「 *DAFTAR STIKER* 」\n│\n'
 for (let x of StickerXeon) {
 teks += `│⭔ ${x}\n`
@@ -3142,7 +3112,7 @@ teks += `│\n└────────────⭓\n\n*Total: ${StickerXeo
 replygcxeon(teks)
 }
 break
-case 'addvn':{
+case 'hjhhaddvn':{
 if (!XeonTheCreator) return replygcxeon(mess.owner)
 if (args.length < 1) return replygcxeon('Format: *.addvn Nama VN*')
 if (VoiceNoteXeon.includes(q)) return replygcxeon("*Nama Tersebut Sudah Digunakan*")
@@ -3154,7 +3124,7 @@ fs.unlinkSync(delb)
 replygcxeon(`*Sukses Menambahkan VN*\nCek Dengan Perintah *${prefix}listvn*`)
 }
 break
-case 'delvn':{
+case 'djjjhelvn':{
 if (!XeonTheCreator) return replygcxeon(mess.owner)
 if (args.length < 1) return replygcxeon('Format: *.delvn Nama VN*')
 if (!VoiceNoteXeon.includes(q)) return replygcxeon("*Nama Tersebut Tidak Ditemukan Dibasis Data*")
@@ -3165,7 +3135,7 @@ fs.unlinkSync(`./XeonMedia/audio/${q}.mp3`)
 replygcxeon(`Sukses Menghapus VN *${q}*`)
 }
 break
-case 'listvn':{
+case 'listjjjjvn':{
 let teks = '┌──⭓「 *DAFTAR VN* 」\n│\n'
 for (let x of VoiceNoteXeon) {
 teks += `│⭔ ${x}\n`
@@ -3174,7 +3144,7 @@ teks += `│\n└────────────⭓\n\n*Total: ${VoiceNoteX
 replygcxeon(teks)
 }
 break
-case 'addowner':
+case 'addjjuowner':
 if (!XeonTheCreator) return replygcxeon(mess.owner)
 if (!args[0]) return replygcxeon(`Format: *${prefix+command} Nomor*`)
 bnnd = q.split("|")[0].replace(/[^0-9]/g, '')
@@ -3184,7 +3154,7 @@ owner.push(bnnd)
 fs.writeFileSync('./database/owner.json', JSON.stringify(owner))
 replygcxeon(`Akun *${bnnd}* Sekarang Pemilik Bot`)
 break
-case 'delowner':
+case 'deiiilowner':
 if (!XeonTheCreator) return replygcxeon(mess.owner)
 if (!args[0]) return replygcxeon(`Format: *${prefix+command} Nomor*`)
 ya = q.split("|")[0].replace(/[^0-9]/g, '')
@@ -3193,7 +3163,7 @@ owner.splice(unp, 1)
 fs.writeFileSync('./database/owner.json', JSON.stringify(owner))
 replygcxeon(`Akun *${ya}* Sekarang Bukan Pemilik Bot`)
 break
-case 'listpremium': case 'listprem':
+case 'listpiiuremium': case 'listjjprem':
 teks = '*DAFTAR PREMIUM*\n\n'
 for (let XeonBotInc of prem) {
 teks += `- ${XeonBotInc}\n`
@@ -3201,7 +3171,7 @@ teks += `- ${XeonBotInc}\n`
 teks += `\n*Total: ${prem.length}*`
 XeonBotInc.sendMessage(m.chat, { text: teks.trim() }, 'extendedTextMessage', { quoted: m, contextInfo: { "mentionedJid": prem } })
 break
-case 'setexif': {
+case 'setjjjexif': {
                if (!XeonTheCreator) return replygcxeon(mess.owner)
                if (!text) return replygcxeon(`Format: *${prefix + command} Nama Paket|Pengarang*`)
           global.packname = text.split("|")[0]
@@ -3209,7 +3179,7 @@ case 'setexif': {
           replygcxeom(`*EXIF Telah Berhasil Diubah Menjadi*\n\n${themeemoji} Nama Paket: ${global.packname}\n${themeemoji} Pengarang: ${global.author}`)
             }
             break
-case 'setppbot': case 'setbotpp': {
+case 'setpjiipbot': case 'setbjjotpp': {
 if (!XeonTheCreator) return replygcxeon(mess.owner)
 if (!quoted) return replygcxeon(`Kirim Atau Balas Gambar Dengan Perintah *${prefix + command}*`)
 if (!/image/.test(mime)) return replygcxeon(`Kirim Atau Balas Gambar Dengan Perintah *${prefix + command}*`)
@@ -3241,7 +3211,7 @@ replygcxeon(`*Sukses*`)
 }
 }
 break
-case 'creategc': case 'creategroup': {
+case 'creajjhtegc': case 'crejjhategroup': {
 if (!XeonTheCreator) return replygcxeon(mess.owner)
 if (!args.join(" ")) return replygcxeon(`Format: *${prefix+command} Nama Grup*`)
 try {
@@ -3261,6 +3231,7 @@ replygcxeon("*Kesalahan*")
 }
 }
 break
+case 'stickernobg':
 case 'snobg': {
 if (!quoted) return replygcxeon(`Kirim Atau Repy Media Dengan Perintah *${prefix+command}*\n\n*Maksimal Durasi Vidio 9 Detik*`)
 if (/image/.test(mime)) {
@@ -3284,7 +3255,7 @@ XeonBotInc.sendImageAsSticker(from, data.url, m, { packname: global.packname, au
 })
 }
 break
-case 'tomp4': case 'tovideo': {
+case 'jsksidi': case 'jgcfy': {
                 if (!quoted) return replygcxeon('Reply Image')
                 if (!/webp/.test(mime)) return replygcxeon(`Balas Gambar Dengan Perintah *${prefix + command}*`)
                 replygcxeon(mess.wait)
@@ -3295,7 +3266,7 @@ case 'tomp4': case 'tovideo': {
                 await fs.unlinkSync(media)
             }
             break
-            case 'toaud': case 'toaudio': {
+            case 'fccg': case 'ugcff': {
             if (!/video/.test(mime) && !/audio/.test(mime)) return replygcxeon(`Kirim Atau Balas Vidio/Audio Dengan Perintah *${prefix + command}*`)
             if (!quoted) return replygcxeon(`Kirim Atau Balas Gambar/Vidio Dengan Perintah *${prefix + command}*`)
             m.reply(mess.wait)
@@ -3305,7 +3276,7 @@ case 'tomp4': case 'tovideo': {
             XeonBotInc.sendMessage(m.chat, {audio: audio, mimetype: 'audio/mpeg'}, { quoted : m })
             }
             break
-            case 'tomp3': {
+            case 'jjsjsjsj': {
             if (/document/.test(mime)) return replygcxeon(`Kirim Atau Balas Vidio Dengan Perintah *${prefix + command}*`)
             if (!/video/.test(mime) && !/audio/.test(mime)) return replygcxeon(`Kirim Atau Balas Vidio Dengan Perintah *${prefix + command}*`)
             if (!quoted) return replygcxeon(`Kirim Atau Balas Vidio Dengan Perintah *${prefix + command}*`)
@@ -3316,7 +3287,7 @@ case 'tomp4': case 'tovideo': {
             XeonBotInc.sendMessage(m.chat, {document: audio, mimetype: 'audio/mpeg', fileName: `Convert By ${XeonBotInc.user.name}.mp3`}, { quoted : m })
             }
             break
-            case 'tovn': case 'toptt': {
+            case 'hgcc': case 'gghhv': {
             if (!/video/.test(mime) && !/audio/.test(mime)) return replygcxeon(`Kirim Atau Balas Vidio/Audio Dengan Perintah *${prefix + command}*`)
             if (!quoted) return replygcxeon(`Kirim Atau Balas Vidio/Audio Dengan Perintah *${prefix + command}*`)
             replygcxeon(mess.wait)
@@ -3327,13 +3298,13 @@ case 'tomp4': case 'tovideo': {
             }
             break
             case 'togif': {
-                if (!quoted) return replygcxeon('Reply video')
-                if (!/webp/.test(mime)) return replygcxeon(`Balas Stiker Dengan Perintah *${prefix + command}*`)
+                if (!quoted) return replygcxeon('Balas Stiker Atau Vidio Dengan Perintah *${prefix + command}*')
+                if (!/webp/.test(mime)) return replygcxeon(`Balas Stiker Atau Vidio Dengan Perintah *${prefix + command}*`)
                 replygcxeon(mess.wait)
 		let { webp2mp4File } = require('./lib/uploader')
                 let media = await XeonBotInc.downloadAndSaveMediaMessage(quoted)
                 let webpToMp4 = await webp2mp4File(media)
-                await XeonBotInc.sendMessage(m.chat, { video: { url: webpToMp4.result, caption: 'Convert Webp To Video' }, gifPlayback: true }, { quoted: m })
+                await XeonBotInc.sendMessage(m.chat, { video: { url: webpToMp4.result, caption: '*Konversi WEBP Ke MP4*' }, gifPlayback: true }, { quoted: m })
                 await fs.unlinkSync(media)
             }
             break
@@ -3612,7 +3583,7 @@ case 'checkme':
 					buff = await getBuffer(ppuser)
 XeonBotInc.sendMessage(from, { image: buff, caption: profile, mentions: [bet]},{quoted:m})
 break
-case 'toimg': {
+case 'jdjjdjdj': {
 if (!/webp/.test(mime)) return replygcxeon(`Balas Stiker Dengan Perintah *${prefix+command}*`)
 let media = await XeonBotInc.downloadAndSaveMediaMessage(quoted)
 let ran = await getRandom('.png')
@@ -3625,7 +3596,7 @@ fs.unlinkSync(ran)
 })
 }
 break
-case 'swm': case 'steal': case 'stickerwm': case 'take':{
+case 'hgcgg': case 'hvvg': case 'ugcc': case 'jgcft':{
 if (!isPrem) return replyprem(mess.premium)
 if (!args.join(" ")) return replygcxeon(`Format: *.stickerwm Nama Paket|Pengarang*`)
 const swn = args.join(" ")
@@ -3647,9 +3618,9 @@ replygcxeon(`Photo/Video?`)
 }
 }
 break
-case 'sticker': 
-case 'stiker': 
-case 's': {
+case 'ihvvvv': 
+case 'vvghjbh': 
+case 'hvcfgh': {
 if (!quoted) return replygcxeon(`Balas Atau Kirim Gambar/Vidio/Gif Dengan Perintah *${prefix+command}*\n\n*Maksimal Vidio 10 Detik*`)
 if (/image/.test(mime)) {
 let media = await quoted.download()
@@ -4354,7 +4325,7 @@ const i = Math.floor(Math.random() * wallpaper.length);
                 })
 //XeonBotInc.sendMessage(m.chat,{image:{url:wallpaper[i].image},caption:`*Query :* ${q}`})            
 break
-case 'akira': case 'akiyama': case 'ana': case 'art': case 'asuna': case 'ayuzawa': case 'boruto': case 'bts': case 'chiho': case 'chitoge': case 'cosplay': case 'cosplayloli': case 'cosplaysagiri': case 'cyber': case 'deidara': case 'doraemon': case 'elaina': case 'emilia': case 'erza': case 'exo':  case 'gamewallpaper': case 'gremory': case 'hacker': case 'hestia': case 'hinata': case 'husbu': case 'inori': case 'islamic': case 'isuzu': case 'itachi': case 'itori': case 'jennie': case 'jiso': case 'justina': case 'kaga': case 'kagura': case 'kakasih': case 'kaori': case 'cartoon': case 'shortquote': case 'keneki': case 'kotori': case 'kurumi': case 'lisa': case 'loli': case 'madara': case 'megumin': case 'mikasa': case 'mikey': case 'miku': case 'minato': case 'mountain': case 'naruto': case 'neko': case 'neko2': case 'nekonime': case 'nezuko': case 'onepiece': case 'pentol': case 'pokemon': case 'programming':  case 'randomnime': case 'randomnime2': case 'rize': case 'rose': case 'sagiri': case 'sakura': case 'sasuke': case 'satanic': case 'shina': case 'shinka': case 'shinomiya': case 'shizuka': case 'shota': case 'space': case 'technology': case 'tejina': case 'toukachan': case 'tsunade': case 'waifu': case 'yotsuba': case 'yuki': case 'yulibocil': case 'yumeko':{
+case 'akira': case 'akiyama': case 'ana': case 'art': case 'asuna': case 'ayuzawa': case 'boruto': case 'bts': case 'chiho': case 'chitoge': case 'cosplay': case 'cosplayloli': case 'cosplaysagiri': case 'cyber': case 'deidara': case 'doraemon': case 'emilia': case 'erza': case 'exo':  case 'gamewallpaper': case 'gremory': case 'hacker': case 'hestia': case 'hinata': case 'husbu': case 'inori': case 'islamic': case 'isuzu': case 'itachi': case 'itori': case 'jennie': case 'jiso': case 'justina': case 'kaga': case 'kagura': case 'kakasih': case 'kaori': case 'cartoon': case 'shortquote': case 'keneki': case 'kotori': case 'kurumi': case 'lisa': case 'loli': case 'madara': case 'megumin': case 'mikasa': case 'mikey': case 'miku': case 'minato': case 'mountain': case 'naruto': case 'neko': case 'neko2': case 'nekonime': case 'nezuko': case 'onepiece': case 'pentol': case 'pokemon': case 'programming':  case 'randomnime': case 'randomnime2': case 'rize': case 'rose': case 'sagiri': case 'sakura': case 'sasuke': case 'satanic': case 'shina': case 'shinka': case 'shinomiya': case 'shizuka': case 'shota': case 'space': case 'technology': case 'tejina': case 'toukachan': case 'tsunade': case 'waifu': case 'yotsuba': case 'yuki': case 'yulibocil': case 'yumeko':{
 replygcxeon(mess.wait)
 let heyy
 if (/akira/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/akira.json')
@@ -4377,7 +4348,6 @@ if (/cyber/.test(command)) heyy = await fetchJson('https://raw.githubusercontent
 if (/deidara/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/deidara.json')
 if (/doraemon/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/doraemon.json')
 if (/eba/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/eba.json')
-if (/elaina/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/elaina.json')
 if (/emilia/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/emilia.json')
 if (/erza/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/erza.json')
 if (/exo/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/exo.json')
@@ -4625,26 +4595,231 @@ if (!AntiNsfw) return m.reply(mess.nsfw)
                 XeonBotInc.sendMessage(m.chat, { video: { url: result912.video_1 }, caption: `Judul: *${result912.title}*\nKategori: *${result912.category}*\nJenis Mime: *${result912.type}*\nPenonton: *${result912.views_count}*\nShare: *${result912.share_count}*\n${themeemoji} Source : ${result912.link}\n${themeemoji} Media Url : ${result912.video_1}` }, { quoted: m })
             }
             break
-case 'trap' :
+case '18trap' :
 if (!m.isGroup) return replygcxeon(mess.group)
 if (!AntiNsfw) return replygcxeon(mess.nsfw)
 replygcxeon(mess.wait)
- waifudd = await axios.get(`https://waifu.pics/api/nsfw/${command}`)       
+    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random/nsfw/trap?apikey=Shirooo`)         
 XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
 break
-case 'hentai-neko' :
-case 'hneko' :
-if (!m.isGroup) return replygcxeon(mess.group)
-if (!AntiNsfw) return replygcxeon(mess.nsfw)
-    waifudd = await axios.get(`https://waifu.pics/api/nsfw/neko`)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
-break
-case 'hentai-waifu' :
-case 'nwaifu' :
+case '18ahegao' :
 if (!m.isGroup) return replygcxeon(mess.group)
 if (!AntiNsfw) return replygcxeon(mess.nsfw)
 replygcxeon(mess.wait)
-    waifudd = await axios.get(`https://waifu.pics/api/nsfw/waifu`)         
+    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random/nsfw/ahegao?apikey=Shirooo`)         
+XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
+break
+case '18anal' :
+if (!m.isGroup) return replygcxeon(mess.group)
+if (!AntiNsfw) return replygcxeon(mess.nsfw)
+replygcxeon(mess.wait)
+    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random2/anal?apikey=Shirooo`)         
+XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
+break
+case '18armpits' :
+if (!m.isGroup) return replygcxeon(mess.group)
+if (!AntiNsfw) return replygcxeon(mess.nsfw)
+replygcxeon(mess.wait)
+    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random/nsfw/armpits?apikey=Shirooo`)         
+XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
+break
+case '18booty' :
+if (!m.isGroup) return replygcxeon(mess.group)
+if (!AntiNsfw) return replygcxeon(mess.nsfw)
+replygcxeon(mess.wait)
+    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random/nsfw/booty?apikey=Shirooo`)         
+XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
+break
+case '18feets' :
+if (!m.isGroup) return replygcxeon(mess.group)
+if (!AntiNsfw) return replygcxeon(mess.nsfw)
+replygcxeon(mess.wait)
+    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random/nsfw/feets?apikey=Shirooo`)         
+XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
+break
+case '18bigtiddies' :
+if (!m.isGroup) return replygcxeon(mess.group)
+if (!AntiNsfw) return replygcxeon(mess.nsfw)
+replygcxeon(mess.wait)
+    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random/nsfw/bigtiddies?apikey=Shirooo`)         
+XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
+break
+case '18blowjob' :
+if (!m.isGroup) return replygcxeon(mess.group)
+if (!AntiNsfw) return replygcxeon(mess.nsfw)
+replygcxeon(mess.wait)
+    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random/nsfw/blowjob?apikey=Shirooo`)         
+XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
+break
+case '18blowjob2' :
+if (!m.isGroup) return replygcxeon(mess.group)
+if (!AntiNsfw) return replygcxeon(mess.nsfw)
+replygcxeon(mess.wait)
+    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random2/blowjob?apikey=Shirooo`)         
+XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
+break
+case '18cum' :
+if (!m.isGroup) return replygcxeon(mess.group)
+if (!AntiNsfw) return replygcxeon(mess.nsfw)
+replygcxeon(mess.wait)
+    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random2/cum_jpg?apikey=Shirooo`)         
+XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
+break
+case '18ecchi' :
+if (!m.isGroup) return replygcxeon(mess.group)
+if (!AntiNsfw) return replygcxeon(mess.nsfw)
+replygcxeon(mess.wait)
+    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random2/cum_jpg?apikey=Shirooo`)         
+XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
+break
+case '18ero' :
+if (!m.isGroup) return replygcxeon(mess.group)
+if (!AntiNsfw) return replygcxeon(mess.nsfw)
+replygcxeon(mess.wait)
+    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random/nsfw/ero?apikey=Shirooo`)         
+XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
+break
+case '18erokemo' :
+if (!m.isGroup) return replygcxeon(mess.group)
+if (!AntiNsfw) return replygcxeon(mess.nsfw)
+replygcxeon(mess.wait)
+    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random2/erokemo?apikey=Shirooo`)         
+XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
+break
+case '18eroyuri' :
+if (!m.isGroup) return replygcxeon(mess.group)
+if (!AntiNsfw) return replygcxeon(mess.nsfw)
+replygcxeon(mess.wait)
+    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random2/eroyuri?apikey=Shirooo`)         
+XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
+break
+case '18feetg' :
+if (!m.isGroup) return replygcxeon(mess.group)
+if (!AntiNsfw) return replygcxeon(mess.nsfw)
+replygcxeon(mess.wait)
+    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random2/feetg?apikey=Shirooo`)         
+XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
+break
+case '18femdom' :
+if (!m.isGroup) return replygcxeon(mess.group)
+if (!AntiNsfw) return replygcxeon(mess.nsfw)
+replygcxeon(mess.wait)
+    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random2/femdom?apikey=Shirooo`)         
+XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
+break
+case '18futanari' :
+if (!m.isGroup) return replygcxeon(mess.group)
+if (!AntiNsfw) return replygcxeon(mess.nsfw)
+replygcxeon(mess.wait)
+    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random2/futanari?apikey=Shirooo`)         
+XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
+break
+case '18hentai' :
+if (!m.isGroup) return replygcxeon(mess.group)
+if (!AntiNsfw) return replygcxeon(mess.nsfw)
+replygcxeon(mess.wait)
+    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random2/hentai?apikey=Shirooo`)         
+XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
+break
+case '18holoero' :
+if (!m.isGroup) return replygcxeon(mess.group)
+if (!AntiNsfw) return replygcxeon(mess.nsfw)
+replygcxeon(mess.wait)
+    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random2/holoero?apikey=Shirooo`)         
+XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
+break
+case '18kuni' :
+if (!m.isGroup) return replygcxeon(mess.group)
+if (!AntiNsfw) return replygcxeon(mess.nsfw)
+replygcxeon(mess.wait)
+    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random2/kuni?apikey=Shirooo`)         
+XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
+break
+case '18lewd' :
+if (!m.isGroup) return replygcxeon(mess.group)
+if (!AntiNsfw) return replygcxeon(mess.nsfw)
+replygcxeon(mess.wait)
+    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random2/lewd?apikey=Shirooo`)         
+XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
+break
+case '18lewdk' :
+if (!m.isGroup) return replygcxeon(mess.group)
+if (!AntiNsfw) return replygcxeon(mess.nsfw)
+replygcxeon(mess.wait)
+    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random2/lewdk?apikey=Shirooo`)         
+XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
+break
+case '18loli' :
+if (!m.isGroup) return replygcxeon(mess.group)
+if (!AntiNsfw) return replygcxeon(mess.nsfw)
+replygcxeon(mess.wait)
+    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random/loli?apikey=Shirooo`)         
+XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
+break
+case 'elaina':
+  if (!m.isGroup) return replygcxeon(mess.group);
+  replygcxeon(mess.wait);
+  try {
+    const waifudd = await axios.get('https://api.lolhuman.xyz/api/random/elaina?apikey=Shirooo');
+    XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: waifudd.data.url } }, { quoted: m });
+  } catch (error) {
+    console.log(error);
+    // handle error appropriately
+  }
+  break;
+case '18loli2' :
+if (!m.isGroup) return replygcxeon(mess.group)
+if (!AntiNsfw) return replygcxeon(mess.nsfw)
+replygcxeon(mess.wait)
+    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random/nsfw/loli?apikey=Shirooo`)         
+XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
+break
+case '18milf' :
+if (!m.isGroup) return replygcxeon(mess.group)
+if (!AntiNsfw) return replygcxeon(mess.nsfw)
+replygcxeon(mess.wait)
+    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random/nsfw/milf?apikey=Shirooo`)         
+XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
+break
+case '18neko' :
+if (!m.isGroup) return replygcxeon(mess.group)
+if (!AntiNsfw) return replygcxeon(mess.nsfw)
+replygcxeon(mess.wait)
+    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random/nsfw/neko?apikey=Shirooo`)         
+XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
+break
+case '18pussy' :
+if (!m.isGroup) return replygcxeon(mess.group)
+if (!AntiNsfw) return replygcxeon(mess.nsfw)
+replygcxeon(mess.wait)
+    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random2/pussy?apikey=Shirooo`)         
+XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
+break
+case '18solog' :
+if (!m.isGroup) return replygcxeon(mess.group)
+if (!AntiNsfw) return replygcxeon(mess.nsfw)
+replygcxeon(mess.wait)
+    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random2/solog?apikey=Shirooo`)         
+XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
+break
+case '18tits' :
+if (!m.isGroup) return replygcxeon(mess.group)
+if (!AntiNsfw) return replygcxeon(mess.nsfw)
+replygcxeon(mess.wait)
+    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random2/tits?apikey=Shirooo`)         
+XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
+break
+case '18waifu' :
+if (!m.isGroup) return replygcxeon(mess.group)
+if (!AntiNsfw) return replygcxeon(mess.nsfw)
+replygcxeon(mess.wait)
+    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random/nsfw/waifu?apikey=Shirooo`)         
+XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
+break
+case 'fanart' :
+if (!m.isGroup) return replygcxeon(mess.group)
+replygcxeon(mess.wait)
+    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random/art?apikey=Shirooo`)         
 XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
 break
 case 'gasm':
@@ -4653,14 +4828,448 @@ if (!m.isGroup) return replygcxeon(mess.group)
 replygcxeon(mess.wait)						
  waifudd = await axios.get(`https://nekos.life/api/v2/img/${command}`)
 XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
-break  
-case 'milf':
-if (!m.isGroup) return replygcxeon(mess.group)
-replygcxeon(mess.wait)
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/milf.json'))
-var xeonyresult = pickRandom(ahegaonsfw)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
 break 
+case 'anime': {
+  if (!q) return replygcxeon(`Format: *.anime Judul Anime*`)
+  
+  const apiKey = 'Shirooo'
+  const apiUrl = `https://api.lolhuman.xyz/api/anime?apikey=${apiKey}&query=${encodeURIComponent(q)}`
+  
+  axios.get(apiUrl)
+    .then((response) => {
+      const result = response.data.result
+      const {
+        id,
+        title,
+        coverImage,
+        format,
+        episodes,
+        duration,
+        status,
+        season,
+        seasonYear,
+        source,
+        genres,
+        startDate,
+        endDate,
+        description,
+        averageScore,
+        synonyms,
+        characters
+      } = result
+      
+      const characterNames = characters.nodes.map(node => node.name.full).join(', ')
+      
+      const animeInfo = `
+Judul: *${title.romaji} (${title.native})*
+Format: *${format}*
+Episode: *${episodes}*
+Durasi: *${duration} Minute*
+Status: *${status}*
+Musim: *${season} ${seasonYear}*
+Sumber: *${source}*
+Genre: *${genres.join(', ')}*
+Mulai Tanggal: *${startDate.year}-${startDate.month}-${startDate.day}*
+Tanggal Berakhir: *${endDate.year}-${endDate.month}-${endDate.day}*
+Deskripsi: *${description}*
+Skor Rata-Rata: *${averageScore}*
+Synonyms: *${synonyms.join(', ')}*
+Characters: *${characterNames}*
+      `
+      
+      const coverImageUrl = coverImage.large
+      const replyMessage = `${animeInfo}\n\nCover Image: *${coverImageUrl}*`
+      replygcxeon(replyMessage)
+    })
+    .catch((error) => {
+      console.log(error)
+      replygcxeon('*Terjadi kesalahan saat mencari informasi anime.*')
+    })
+}
+break 
+case 'artimimpi': {
+  if (!q) return replygcxeon(`Format: *.artimimpi Mimpimu*`)
+
+  const axios = require('axios')
+  const apikey = 'Shirooo' // Ganti dengan API key Anda
+  
+  const query = encodeURIComponent(q)
+  const apiUrl = `https://api.lolhuman.xyz/api/primbon/artimimpi?apikey=${apikey}&query=${query}`
+  
+  axios.get(apiUrl)
+    .then(response => {
+      const result = response.data.result
+      
+      const meanings = result.join('\n')
+
+      const message = `Arti Mimpi "${q}":\n${meanings}`
+
+      // Mengirimkan arti mimpi sebagai pesan
+      replygcxeon(message)
+    })
+    .catch(error => {
+      console.error('Error:', error)
+      replygcxeon(`*Terjadi kesalahan dalam mencari arti mimpi*`)
+    })
+  
+  break
+}
+case 'brainly': {
+  if (!q) return replygcxeon(`Format: *.brainly Pertanyaan*`)
+
+  const axios = require('axios')
+  const apikey = 'Shirooo' // Ganti dengan API key Anda
+  
+  const query = encodeURIComponent(q)
+  const apiUrl = `https://api.lolhuman.xyz/api/brainly?apikey=${apikey}&query=${query}`
+  
+  axios.get(apiUrl)
+    .then(response => {
+      const result = response.data.result
+
+      if (result.length === 0) {
+        replygcxeon(`Tidak ditemukan jawaban untuk pertanyaan tersebut`)
+      } else {
+        let answerText = ''
+        for (const item of result) {
+          const questionContent = item.question.content
+          const answerContent = item.answer.content
+
+          answerText += `Pertanyaan: ${questionContent}\n` +
+                        `Jawaban: ${answerContent}\n\n`
+        }
+
+        replygcxeon(answerText)
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error)
+      replygcxeon(`*Terjadi kesalahan dalam mencari jawaban*`)
+    })
+  
+  break
+}
+case 'character': {
+  if (!q) return replygcxeon(`Format: *.character Nama*`)
+
+  const axios = require('axios')
+  const apikey = 'Shirooo' // Ganti dengan API key Anda
+  
+  const characterName = encodeURIComponent(q)
+  const apiUrl = `https://api.lolhuman.xyz/api/character?apikey=${apikey}&query=${characterName}`
+  
+  axios.get(apiUrl)
+    .then(response => {
+      const result = response.data.result
+      
+      const characterFullName = result.name.full
+      const characterNativeName = result.name.native
+      const characterImageLarge = result.image.large
+      const characterImageMedium = result.image.medium
+      const characterDescription = result.description
+      const characterFavorites = result.favourites
+      const characterMedia = result.media.nodes
+
+      const message = `Nama: ${characterFullName}\n` +
+        `Nama Asli: ${characterNativeName}\n` +
+        `Deskripsi: ${characterDescription}\n` +
+        `Favorit: ${characterFavorites}\n\n` +
+        `Media:\n`
+
+      let mediaList = ''
+      characterMedia.forEach(media => {
+        const mediaType = media.type
+        const mediaTitleRomaji = media.title.romaji
+        const mediaTitleNative = media.title.native
+
+        mediaList += `- ${mediaType}: ${mediaTitleRomaji} (${mediaTitleNative})\n`
+      })
+
+      const characterInfo = {
+        title: characterFullName,
+        message: message + mediaList,
+        thumbnail: characterImageLarge,
+        url: characterImageMedium
+      }
+
+      // Mengirimkan info karakter sebagai pesan atau media
+      XeonBotInc.sendTextWithMentions(from, characterInfo.message)
+      XeonBotInc.sendImage(from, characterInfo.thumbnail, characterInfo.title, characterInfo.message)
+    })
+    .catch(error => {
+      console.error('Error:', error)
+      replygcxeon(`*Terjadi kesalahan dalam mengambil informasi karakter*`)
+    })
+  
+  break
+}
+case 'checkresi': {
+  if (!q) return replygcxeon(`Format: *.checkresi No Resi*`)
+
+  const axios = require('axios')
+  const apikey = 'Shirooo' // Ganti dengan API key Anda
+  
+  const resi = encodeURIComponent(q)
+  const apiUrl = `https://api.lolhuman.xyz/api/checkresi?apikey=${apikey}&resi=${resi}`
+  
+  axios.get(apiUrl)
+    .then(response => {
+      const result = response.data.result
+      
+      const courier = result.courier
+      const originName = result.origin.name
+      const originAddress = result.origin.address
+      const destinationName = result.destination.name
+      const destinationAddress = result.destination.address
+      const history = result.history
+
+      let message = `Informasi Resi\n` +
+        `Nomor Resi: ${resi}\n` +
+        `Kurir: ${courier}\n\n` +
+        `Asal:\n` +
+        `Nama: ${originName}\n` +
+        `Alamat: ${originAddress}\n\n` +
+        `Tujuan:\n` +
+        `Nama: ${destinationName}\n` +
+        `Alamat: ${destinationAddress}\n\n` +
+        `Riwayat:\n`
+
+      history.forEach(item => {
+        const note = item.note
+        const time = item.time
+
+        message += `Catatan: ${note}\n` +
+          `Waktu: ${time}\n\n`
+      })
+
+      // Mengirimkan informasi resi sebagai pesan
+      replygcxeon(message)
+    })
+    .catch(error => {
+      console.error('Error:', error)
+      replygcxeon(`*Terjadi kesalahan dalam mengambil informasi resi*`)
+    })
+  
+  break
+}
+case 'coronaglobal': {
+  if (!XeonTheCreator) return replygcxeon(mess.owner)
+  
+  const axios = require('axios')
+  const apikey = 'Shirooo' // Ganti dengan API key Anda
+  
+  const apiUrl = `https://api.lolhuman.xyz/api/corona/global?apikey=${apikey}`
+  
+  axios.get(apiUrl)
+    .then(response => {
+      const result = response.data.result
+      
+      const positif = result.positif
+      const meninggal = result.meninggal
+      const sembuh = result.sembuh
+      const dirawat = result.dirawat
+
+      const message = `*Data COVID-19 Global*\n` +
+        `Positif: *${positif}*\n` +
+        `Meninggal: *${meninggal}*\n` +
+        `Sembuh: *${sembuh}*\n` +
+        `Dirawat: *${dirawat}*`
+
+      // Mengirimkan informasi COVID-19 global sebagai pesan
+      replygcxeon(message)
+    })
+    .catch(error => {
+      console.error('Error:', error)
+      replygcxeon(`*Terjadi kesalahan dalam mengambil informasi COVID-19 global*`)
+    })
+  
+  break
+}
+case 'coronaindonesia': {
+  if (!XeonTheCreator) return replygcxeon(mess.owner)
+
+  const axios = require('axios')
+  const apikey = 'Shirooo' // Ganti dengan API key Anda
+  const apiUrl = `https://api.lolhuman.xyz/api/corona/indonesia?apikey=${apikey}`
+  
+  axios.get(apiUrl)
+    .then(response => {
+      const result = response.data.result
+      
+      const positif = result.positif
+      const meninggal = result.meninggal
+      const sembuh = result.sembuh
+      const dirawat = result.dirawat
+
+      const message = `*Data COVID-19 di Indonesia*\n` +
+        `Positif: *${positif}*\n` +
+        `Meninggal: *${meninggal}*\n` +
+        `Sembuh: *${sembuh}*\n` +
+        `Dirawat: *${dirawat}*`
+
+      // Mengirimkan informasi COVID-19 di Indonesia sebagai pesan
+      replygcxeon(message)
+    })
+    .catch(error => {
+      console.error('Error:', error)
+      replygcxeon(`*Terjadi kesalahan dalam mengambil informasi COVID-19 di Indonesia*`)
+    })
+  
+  break
+}
+case 'drakorongoing': {
+  const axios = require('axios')
+  const apiUrl = 'https://api.lolhuman.xyz/api/drakorongoing?apikey=Shirooo'
+
+  axios.get(apiUrl)
+    .then(response => {
+      const result = response.data.result
+      
+      let message = ''
+      result.forEach(drama => {
+        const title = drama.title
+        const link = drama.link
+        const thumbnail = drama.thumbnail
+        const year = drama.year
+        const totalEpisodes = drama.total_episode
+        const genres = drama.genre.join(', ')
+
+        message += `Judul: ${title}\n` +
+                   `Link: ${link}\n` +
+                   `Thumbnail: ${thumbnail}\n` +
+                   `Tahun: ${year}\n` +
+                   `Total Episode: ${totalEpisodes}\n` +
+                   `Genre: ${genres}\n\n`
+      })
+
+      // Mengirimkan informasi drakor ongoing sebagai pesan
+      replygcxeon(message)
+    })
+    .catch(error => {
+      console.error('Error:', error)
+      replygcxeon(`Terjadi kesalahan dalam mengambil informasi drakor ongoing`)
+    })
+  
+  break
+}
+case 'doujinlatest': {
+  const axios = require('axios')
+  const apikey = 'Shirooo' // Ganti dengan API key Anda
+  const apiUrl = `https://api.lolhuman.xyz/api/doujindesulatest?apikey=${apikey}`
+  
+  axios.get(apiUrl)
+    .then(response => {
+      const result = response.data.result
+      
+      let message = ''
+      for (const doujin of result) {
+        const title = doujin.title
+        const link = doujin.link
+        const thumbnail = doujin.thumbnail
+        const episode = doujin.episode
+        const type = doujin.type
+
+        message += `Title: ${title}\n` +
+                   `Link: ${link}\n` +
+                   `Thumbnail: ${thumbnail}\n` +
+                   `Episode: ${episode}\n` +
+                   `Type: ${type}\n\n`
+      }
+
+      // Mengirimkan hasil doujindesu terbaru sebagai pesan
+      replygcxeon(message)
+    })
+    .catch(error => {
+      console.error('Error:', error)
+      replygcxeon(`Terjadi kesalahan dalam mengambil doujindesu terbaru`)
+    })
+  
+  break
+}
+case 'doujinsearch': {
+  if (!q) return replygcxeon(`Format: .doujindesu Query`)
+
+  const axios = require('axios')
+  const apikey = 'Shirooo' // Ganti dengan API key Anda
+  
+  const query = encodeURIComponent(q)
+  const apiUrl = `https://api.lolhuman.xyz/api/doujindesusearch?apikey=${apikey}&query=${query}`
+  
+  axios.get(apiUrl)
+    .then(response => {
+      const result = response.data.result
+      
+      if (result.length === 0) {
+        replygcxeon(`Tidak ditemukan hasil untuk pencarian tersebut`)
+      } else {
+        const firstResult = result[0]
+        const title = firstResult.title
+        const link = firstResult.link
+        const thumbnail = firstResult.thumbnail
+        const type = firstResult.type
+
+        const message = `Judul: ${title}\n` +
+          `Link: ${link}\n` +
+          `Thumbnail: ${thumbnail}\n` +
+          `Tipe: ${type}`
+
+        // Mengirimkan informasi doujindesu sebagai pesan
+        replygcxeon(message)
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error)
+      replygcxeon(`Terjadi kesalahan dalam mencari doujindesu`)
+    })
+  
+  break
+}
+case 'cuaca': {
+  if (!XeonTheCreator) return replygcxeon(mess.owner)
+  if (!q) return replygcxeon(`Format: *.cuaca Nama Kota*`)
+
+  const axios = require('axios')
+  const apikey = 'Shirooo' // Ganti dengan API key Anda
+  
+  const city = encodeURIComponent(q)
+  const apiUrl = `https://api.lolhuman.xyz/api/cuaca/${city}?apikey=${apikey}`
+  
+  axios.get(apiUrl)
+    .then(response => {
+      const result = response.data.result
+      
+      const tempat = result.tempat
+      const latitude = result.latitude
+      const longitude = result.longitude
+      const cuaca = result.cuaca
+      const angin = result.angin
+      const description = result.description
+      const kelembapan = result.kelembapan
+      const suhu = result.suhu
+      const udara = result.udara
+      const permukaanLaut = result.permukaan_laut
+
+      const message = `Tempat: ${tempat}\n` +
+        `Latitude: ${latitude}\n` +
+        `Longitude: ${longitude}\n` +
+        `Cuaca: ${cuaca}\n` +
+        `Angin: ${angin}\n` +
+        `Deskripsi: ${description}\n` +
+        `Kelembapan: ${kelembapan}\n` +
+        `Suhu: ${suhu}\n` +
+        `Tekanan Udara: ${udara}\n` +
+        `Tekanan Permukaan Laut: ${permukaanLaut}`
+
+      // Mengirimkan informasi cuaca sebagai pesan
+      replygcxeon(message)
+    })
+    .catch(error => {
+      console.error('Error:', error)
+      replygcxeon(`Terjadi kesalahan dalam mengambil informasi cuaca`)
+    })
+  
+  break
+}
 case 'animespank':
 if (!m.isGroup) return m.reply(mess.group)
 if (!AntiNsfw) return m.reply(mess.nsfw)
@@ -4669,14 +5278,6 @@ m.reply(mess.wait)
             await XeonBotInc.sendMessage(m.chat, { caption:  `Here you go!`, image: {url:waifudd.data.url} },{ quoted:m }).catch(err => {
                     return('Error!')
                 })
-break
-case 'ahegao':
-if (!m.isGroup) return replygcxeon(mess.group)
-	if (!AntiNsfw) return replygcxeon(mess.nsfw)
-replygcxeon(mess.wait)
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/ahegao.json'))
-var xeonyresult = pickRandom(ahegaonsfw)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
 break
 case 'ass':
 if (!m.isGroup) return replygcxeon(mess.group)
@@ -4694,14 +5295,6 @@ var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/bdsm.json'))
 var xeonyresult = pickRandom(ahegaonsfw)
 XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
 break
-case 'blowjob':
-if (!m.isGroup) return replygcxeon(mess.group)
-	if (!AntiNsfw) return replygcxeon(mess.nsfw)
-replygcxeon(mess.wait)
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/blowjob.json'))
-var xeonyresult = pickRandom(ahegaonsfw)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
-break
 case 'cuckold':
 if (!m.isGroup) return replygcxeon(mess.group)
 	if (!AntiNsfw) return replygcxeon(mess.nsfw)
@@ -4710,35 +5303,11 @@ var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/cuckold.json'))
 var xeonyresult = pickRandom(ahegaonsfw)
 XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
 break
-case 'cum':
-if (!m.isGroup) return replygcxeon(mess.group)
-	if (!AntiNsfw) return replygcxeon(mess.nsfw)
-replygcxeon(mess.wait)
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/cum.json'))
-var xeonyresult = pickRandom(ahegaonsfw)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
-break
 case 'eba':
 if (!m.isGroup) return replygcxeon(mess.group)
 	if (!AntiNsfw) return replygcxeon(mess.nsfw)
 replygcxeon(mess.wait)
 var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/eba.json'))
-var xeonyresult = pickRandom(ahegaonsfw)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
-break
-case 'ero':
-if (!m.isGroup) return replygcxeon(mess.group)
-	if (!AntiNsfw) return replygcxeon(mess.nsfw)
-replygcxeon(mess.wait)
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/ero.json'))
-var xeonyresult = pickRandom(ahegaonsfw)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
-break
-case 'femdom':
-if (!m.isGroup) return replygcxeon(mess.group)
-	if (!AntiNsfw) return replygcxeon(mess.nsfw)
-replygcxeon(mess.wait)
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/femdom.json'))
 var xeonyresult = pickRandom(ahegaonsfw)
 XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
 break
@@ -4763,14 +5332,6 @@ if (!m.isGroup) return replygcxeon(mess.group)
 	if (!AntiNsfw) return replygcxeon(mess.nsfw)
 replygcxeon(mess.wait)
 var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/glasses.json'))
-var xeonyresult = pickRandom(ahegaonsfw)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
-break
-case 'hentai':
-if (!m.isGroup) return replygcxeon(mess.group)
-	if (!AntiNsfw) return replygcxeon(mess.nsfw)
-replygcxeon(mess.wait)
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/hentai.json'))
 var xeonyresult = pickRandom(ahegaonsfw)
 XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
 break
@@ -4838,14 +5399,6 @@ var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/panties.json'))
 var xeonyresult = pickRandom(ahegaonsfw)
 XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
 break
-case 'pussy':
-if (!m.isGroup) return replygcxeon(mess.group)
-	if (!AntiNsfw) return replygcxeon(mess.nsfw)
-replygcxeon(mess.wait)
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/pussy.json'))
-var xeonyresult = pickRandom(ahegaonsfw)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
-break
 case 'tentacles':
 if (!m.isGroup) return replygcxeon(mess.group)
 	if (!AntiNsfw) return replygcxeon(mess.nsfw)
@@ -4908,6 +5461,26 @@ let heyy
 XeonBotInc.sendMessage(m.chat, { image: { url: yeha }, caption : mess.success }, { quoted: m })
 }
 break
+case 'alay': {
+  if (!XeonTheCreator) return replygcxeon(mess.owner);
+  if (!q) return replygcxeon('Masukkan teks yang ingin diubah menjadi alay.');
+
+  const axios = require('axios');
+  const apiKey = 'Shirooo';
+  const apiUrl = `https://api.lolhuman.xyz/api/alay?apikey=${apiKey}&text=${encodeURIComponent(q)}`;
+
+  axios
+    .get(apiUrl)
+    .then((response) => {
+      const result = response.data.result;
+      replygcxeon(result);
+    })
+    .catch((error) => {
+      console.log(error);
+      replygcxeon('Terjadi kesalahan saat mengubah teks menjadi alay.');
+    });
+}
+break;
     case 'igemoji': 
 case 'instagramemoji': 
 if (!q) return replygcxeon("Format: " + `*${prefix + command} Emoji*`)
@@ -5145,7 +5718,7 @@ case 'rate': {
             await replygcxeon(jawab)
             }
             break
-            case 'runtime': {
+            case 'jwjwjbsvs': {
             	let lowq = `*Bot Telah Online Selama:*\n*${runtime(process.uptime())}*`
                 replygcxeon(lowq)
             	}
