@@ -67,7 +67,7 @@ XeonBotInc.ws.on('CB:Blocklist', json => {
 if (blocked.length > 2) return
 for (let i of json[1].blocklist) {
 blocked.push(i.replace('c.us','s.whatsapp.net'))}})
-	
+
 XeonBotInc.ev.on('messages.upsert', async chatUpdate => {
   try {
     kay = chatUpdate.messages[0]
@@ -90,7 +90,7 @@ XeonBotInc.ev.on('messages.upsert', async chatUpdate => {
     require('./XeonCheems7')(XeonBotInc, m, chatUpdate, store)
   } catch (err) {
     console.log(err)}})
-	
+
 	// detect group update
 		XeonBotInc.ev.on("groups.update", async (json) => {
 			try {
