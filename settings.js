@@ -26,12 +26,12 @@ global.ownerweb = "https://youtube.com"
 global.websitex = "https://youtu.be"
 global.wagc = "https://chat.whatsapp.com/HanfYszpKzbGcCGgWdHLTa"
 global.themeemoji = '🍀'
-global.wm = "𝗔𝘀𝘁𝗿𝗲𝘆𝗮-𝗠𝗗"
+global.wm = "𝗛𝗼𝘀𝗵𝗶𝗻𝗼 - 𝗠𝗗"
 global.botscript = 'Berada Digithub Saya' //script link
 global.packname = ""
-global.author = "𝗛𝗼𝘀𝗵𝗶𝗻𝗼 - 𝗠𝗗\n\n\nA Whatsapp Bot Created By\n𝗞𝗲𝗶𝘇𝗵𝗮\n\n\n\n\n\n\n\n       ━━━━━━━━━━━━━━━\n\n\n\n\n\n\n\nContact Bot: +62851-5925-8830"
+global.author = "𝗛𝗼𝘀𝗵𝗶𝗻𝗼 - 𝗠𝗗\n\n\nA Whatsapp Bot Created By\n𝗞𝗲𝗶𝘇𝗵𝗮\n\n\n\n\n\n\n\n       ━━━━━━━━━━━━━━━\n\n\n\n\n\n\n\nContact Bot: +62856-0611-4293"
 global.creator = "6281249122429@s.whatsapp.net"
-global.prefa = ['','!','.','#','/']
+global.prefa = [',','!','.','#','/']
 global.hituet = 0
 
 //media target

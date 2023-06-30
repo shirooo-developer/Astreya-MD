@@ -1174,47 +1174,6 @@ case 'juzamma': {
                 }
             }
             break
-case 'hadis':
-            case 'hadist': {
-                if (!args[0]) return replygcxeon(`Contoh:
-*${prefix + command} bukhari 1*
-*${prefix + command} abu-daud 1*
-
-Pilihan Tersedia:
-abu-daud
-1 - 4590
-ahmad
-1 - 26363
-bukhari
-1 - 7008
-darimi
-1 - 3367
-ibnu-majah
-1 - 4331
-nasai
-1 - 5662
-malik
-1 - 1594
-muslim
-1 - 5362`)
-                if (!args[1]) return replygcxeon(`Format: *${prefix + command} Hadis Nomor*`)
-                try {
-                    let res = await fetchJson(`https://islamic-api-indonesia.herokuapp.com/api/data/json/hadith/${args[0]}`)
-                    let {
-                        number,
-                        arab,
-                        id
-                    } = res.find(v => v.number == args[1])
-                    replygcxeon(`No. *${number}*
-
-🇸🇦: *${arab}*
-
-🇮🇩: *${id}*`)
-                } catch (e) {
-                    replygcxeon(`*Hadis Tidak Ditemukan*`)
-                }
-            }
-            break
             case 'asmaulhusna':
             if (!text) return replygcxeon('Format: *.asmaulhusna Nomor*')
             replygcxeon(mess.wait)
@@ -1229,58 +1188,21 @@ muslim
 				})
 				.catch(console.error)
 			break
-case 'iwush': case 'vfghg': case 'ggdxcghh': case 'gvcfg': case 'jgccvhj': case 'hgcccv': {
-	        let ownernya = ownernomer + '@s.whatsapp.net'
-            let me = m.sender
-            let timestampe = speed();
-            let latensie = speed() - timestampe
-            xeonezy = `*Hai 👋 ${pushname}, ${xeonytimewisher}*
+case 'menu': case 'help': case 'ggdxcghh': case 'gvcfg': case 'jgccvhj': case 'hgcccv': {
+const messages = ["*🔖 PRICE LIST.*\n\nUji Coba = *Gratis*\n30 Hari = *Rp 15.000*\nPermanen = *Rp 20.000*\n48 Minggu = *Rp 30.000*\n\nPayment 💳\n*Dana, Alfamart, Alfamidi, Indomaret, Gopay, & Pulsa Telkom*\n\n\n☎️ Hubungi *wa.me/6281249122429*\n", "*🔖 PLACING AD*\n\n30 Hari = *Rp 12.000*\n60 Hari = *Rp 20.000*\n120 Hari = *Rp 35.000*\n\nPayment 💳\n*Dana, Alfamart, Alfamidi, Indomaret, Gopay, & Pulsa Telkom*\n\n*- Iklan Berbentuk Teks*\n*- Iklan Akan Ditampilkan Disini*\n\n\n☎️ Hubungi *wa.me/6281249122429*\n","*Announcement 📣*\n\nGunakan perintah *.hoshino* untuk mengobrol dengan Hoshino yang ramah atau *.hoshino2* untuk Hoshino yang Toxic.\n","*Announcement 📣*\n\nKalau tidak mengerti menggunakan bot ini atau ada masalah bisa langsung hubungi *wa.me/6281249122429*\n","*Announcement 📣*\n\nCoba juga bot saya lainnya *wa.me/6285163083750* (Felicia)\n","*Announcement 📣*\n\nKalau mau uji coba *Gratis* bot ini untuk grupmu, bisa langsung kirimkan tautan grupmu ke *is.keizha@gmail.com*\n","*Announcement 📣*\n\nUpdate ke V4 membuat Hoshino yang sebelumnya *400 Fitur* menjadi *900 Fitur.*\n","*Announcement 📣*\n\nMasuk sini kak *https://chat.whatsapp.com/HanfYszpKzbGcCGgWdHLTa* tapi pelan-pelan ya.\n","*Announcement 📣*\n\nAyo dong disewa botnya, fiturnya gak mengecewakan kok:)\n"];
+let randomMessageIndex = Math.floor(Math.random() * messages.length);
+let ownernya = ownernomer + '@s.whatsapp.net'
+let me = m.sender
+let timestampe = speed();
+let latensie = speed() - timestampe
+xeonezy = ``
+let ments = [ownernya, me, mark]
 
-*INFO BOT*       
-*⚡ Kecepatan:* ${latensie.toFixed(4)} miliseconds
-*⏳ Waktu Proses:* ${runtime(process.uptime())}
-*💬 Nama Bot:* ${global.botname}
-*👑 Pemilik:* ${ownernumber}
-*🔑 Awalan:*  NO-PREFIX 
-*📳 Mode:* ${XeonBotInc.public ? 'Public' : `Self`}
-*👨‍💻 Nama Host:* ${os.hostname()}
-*🌐 Platform:* ${os.platform()}
-
-*INFO PENGGUNA*
-*☁️ Nama:* ${pushname}
-*🔗 Nomor:* @${me.split('@')[0]}
-*⭐ Premium:* ${isPrem ? '✅' : `❌`}
-
-*INFO WAKTU*
-*🕒 Waktu:* ${xtime}
-*🗓️ Tanggal:* ${xdate}
-
-*DAFTAR MENU*
-.allmenu
-.downloadmenu
-.funmenu
-.groupmenu
-.ownermenu
-.photooxymenu
-.textpromenu
-.ephoto360menu
-.suaramenu
-.animemenu
-.nsfwmenu
-.randomphotomenu
-.randomvideomenu
-.stalkermenu
-.islammenu
-.toolsmenu
-.infomenu
-
-`
-            let ments = [ownernya, me, mark]        
-           XeonBotInc.sendMessage(from, { 
-text: xeonezy,
+XeonBotInc.sendMessage(from, {
+text: messages[randomMessageIndex],
 contextInfo:{
 forwardingScore: 9999999,
-isForwarded: true, 
+isForwarded: true,
 mentionedJid:[sender],
 "externalAdReply": {
 "showAdAttribution": true,
@@ -1294,27 +1216,6 @@ mentionedJid:[sender],
 }
 }
 }, { quoted: m })
-           }
-           break
-case 'hehehvss': {
-var unicorn = await getBuffer(picak+'All Menu')
-sendXeonBotIncMessage(from, { 
-text: `Hai 👋 @${sender.split("@")[0]}\n\n${allmenu(prefix, hituet)}`,
-mentions:[sender],
-contextInfo:{
-mentionedJid:[sender],
-"externalAdReply": {
-"showAdAttribution": true,
-"renderLargerThumbnail": true,
-"title": botname, 
-"containsAutoReply": true,
-"mediaType": 1, 
-"thumbnail": fs.readFileSync("./XeonMedia/theme/cheemspic.jpg"),
-"mediaUrl": `${wagc}`,
-"sourceUrl": `${wagc}`
-}
-}
-})
 }
 break
 case 'ownermenu': {
@@ -3233,6 +3134,7 @@ replygcxeon("*Kesalahan*")
 break
 case 'stickernobg':
 case 'snobg': {
+ replygcxeon(mess.wait)
 if (!quoted) return replygcxeon(`Kirim Atau Repy Media Dengan Perintah *${prefix+command}*\n\n*Maksimal Durasi Vidio 9 Detik*`)
 if (/image/.test(mime)) {
 let media = await XeonBotInc.downloadAndSaveMediaMessage(quoted)
@@ -3248,7 +3150,9 @@ case 'kiss': case 'bite': case 'yeet': case 'bully': case 'bonk':
 case 'wink': case 'poke': case 'nom': case 'slap': case 'smile': 
 case 'wave': case 'awoo': case 'blush': case 'smug': case 'glomp': 
 case 'happy': case 'dance': case 'cringe': case 'cuddle': case 'highfive': 
-case 'shinobu': case 'handhold': {
+case 'handhold': {
+  replygcxeon(mess.wait)
+const axios = require('axios')
 axios.get(`https://api.waifu.pics/sfw/${command}`)
 .then(({data}) => {
 XeonBotInc.sendImageAsSticker(from, data.url, m, { packname: global.packname, author: global.author })
@@ -3740,11 +3644,6 @@ isForwarded: true,
 "sourceUrl": `${wagc}`}}},
 { quoted: m})
 }
-break
-case 'quotes':
-const quotexeony = await axios.get(`https://favqs.com/api/qotd`)
-        const textquotes = `*${themeemoji} Mengutip:* ${quotexeony.data.quote.body}\n\n*${themeemoji} Pengarang:* ${quotexeony.data.quote.author}`
-return replygcxeon(textquotes)
 break
 case 'handsomecheck':
 				if (!text) return replygcxeon(`Format: *${prefix + command} Tag*`)
@@ -4595,228 +4494,331 @@ if (!AntiNsfw) return m.reply(mess.nsfw)
                 XeonBotInc.sendMessage(m.chat, { video: { url: result912.video_1 }, caption: `Judul: *${result912.title}*\nKategori: *${result912.category}*\nJenis Mime: *${result912.type}*\nPenonton: *${result912.views_count}*\nShare: *${result912.share_count}*\n${themeemoji} Source : ${result912.link}\n${themeemoji} Media Url : ${result912.video_1}` }, { quoted: m })
             }
             break
-case '18trap' :
-if (!m.isGroup) return replygcxeon(mess.group)
-if (!AntiNsfw) return replygcxeon(mess.nsfw)
-replygcxeon(mess.wait)
-    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random/nsfw/trap?apikey=Shirooo`)         
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
-break
-case '18ahegao' :
-if (!m.isGroup) return replygcxeon(mess.group)
-if (!AntiNsfw) return replygcxeon(mess.nsfw)
-replygcxeon(mess.wait)
-    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random/nsfw/ahegao?apikey=Shirooo`)         
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
-break
-case '18anal' :
-if (!m.isGroup) return replygcxeon(mess.group)
-if (!AntiNsfw) return replygcxeon(mess.nsfw)
-replygcxeon(mess.wait)
-    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random2/anal?apikey=Shirooo`)         
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
-break
-case '18armpits' :
-if (!m.isGroup) return replygcxeon(mess.group)
-if (!AntiNsfw) return replygcxeon(mess.nsfw)
-replygcxeon(mess.wait)
-    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random/nsfw/armpits?apikey=Shirooo`)         
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
-break
-case '18booty' :
-if (!m.isGroup) return replygcxeon(mess.group)
-if (!AntiNsfw) return replygcxeon(mess.nsfw)
-replygcxeon(mess.wait)
-    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random/nsfw/booty?apikey=Shirooo`)         
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
-break
-case '18feets' :
-if (!m.isGroup) return replygcxeon(mess.group)
-if (!AntiNsfw) return replygcxeon(mess.nsfw)
-replygcxeon(mess.wait)
-    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random/nsfw/feets?apikey=Shirooo`)         
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
-break
-case '18bigtiddies' :
-if (!m.isGroup) return replygcxeon(mess.group)
-if (!AntiNsfw) return replygcxeon(mess.nsfw)
-replygcxeon(mess.wait)
-    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random/nsfw/bigtiddies?apikey=Shirooo`)         
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
-break
-case '18blowjob' :
-if (!m.isGroup) return replygcxeon(mess.group)
-if (!AntiNsfw) return replygcxeon(mess.nsfw)
-replygcxeon(mess.wait)
-    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random/nsfw/blowjob?apikey=Shirooo`)         
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
-break
-case '18blowjob2' :
-if (!m.isGroup) return replygcxeon(mess.group)
-if (!AntiNsfw) return replygcxeon(mess.nsfw)
-replygcxeon(mess.wait)
-    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random2/blowjob?apikey=Shirooo`)         
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
-break
-case '18cum' :
-if (!m.isGroup) return replygcxeon(mess.group)
-if (!AntiNsfw) return replygcxeon(mess.nsfw)
-replygcxeon(mess.wait)
-    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random2/cum_jpg?apikey=Shirooo`)         
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
-break
-case '18ecchi' :
-if (!m.isGroup) return replygcxeon(mess.group)
-if (!AntiNsfw) return replygcxeon(mess.nsfw)
-replygcxeon(mess.wait)
-    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random2/cum_jpg?apikey=Shirooo`)         
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
-break
-case '18ero' :
-if (!m.isGroup) return replygcxeon(mess.group)
-if (!AntiNsfw) return replygcxeon(mess.nsfw)
-replygcxeon(mess.wait)
-    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random/nsfw/ero?apikey=Shirooo`)         
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
-break
-case '18erokemo' :
-if (!m.isGroup) return replygcxeon(mess.group)
-if (!AntiNsfw) return replygcxeon(mess.nsfw)
-replygcxeon(mess.wait)
-    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random2/erokemo?apikey=Shirooo`)         
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
-break
-case '18eroyuri' :
-if (!m.isGroup) return replygcxeon(mess.group)
-if (!AntiNsfw) return replygcxeon(mess.nsfw)
-replygcxeon(mess.wait)
-    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random2/eroyuri?apikey=Shirooo`)         
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
-break
-case '18feetg' :
-if (!m.isGroup) return replygcxeon(mess.group)
-if (!AntiNsfw) return replygcxeon(mess.nsfw)
-replygcxeon(mess.wait)
-    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random2/feetg?apikey=Shirooo`)         
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
-break
-case '18femdom' :
-if (!m.isGroup) return replygcxeon(mess.group)
-if (!AntiNsfw) return replygcxeon(mess.nsfw)
-replygcxeon(mess.wait)
-    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random2/femdom?apikey=Shirooo`)         
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
-break
-case '18futanari' :
-if (!m.isGroup) return replygcxeon(mess.group)
-if (!AntiNsfw) return replygcxeon(mess.nsfw)
-replygcxeon(mess.wait)
-    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random2/futanari?apikey=Shirooo`)         
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
-break
-case '18hentai' :
-if (!m.isGroup) return replygcxeon(mess.group)
-if (!AntiNsfw) return replygcxeon(mess.nsfw)
-replygcxeon(mess.wait)
-    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random2/hentai?apikey=Shirooo`)         
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
-break
-case '18holoero' :
-if (!m.isGroup) return replygcxeon(mess.group)
-if (!AntiNsfw) return replygcxeon(mess.nsfw)
-replygcxeon(mess.wait)
-    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random2/holoero?apikey=Shirooo`)         
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
-break
-case '18kuni' :
-if (!m.isGroup) return replygcxeon(mess.group)
-if (!AntiNsfw) return replygcxeon(mess.nsfw)
-replygcxeon(mess.wait)
-    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random2/kuni?apikey=Shirooo`)         
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
-break
-case '18lewd' :
-if (!m.isGroup) return replygcxeon(mess.group)
-if (!AntiNsfw) return replygcxeon(mess.nsfw)
-replygcxeon(mess.wait)
-    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random2/lewd?apikey=Shirooo`)         
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
-break
-case '18lewdk' :
-if (!m.isGroup) return replygcxeon(mess.group)
-if (!AntiNsfw) return replygcxeon(mess.nsfw)
-replygcxeon(mess.wait)
-    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random2/lewdk?apikey=Shirooo`)         
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
-break
-case '18loli' :
-if (!m.isGroup) return replygcxeon(mess.group)
-if (!AntiNsfw) return replygcxeon(mess.nsfw)
-replygcxeon(mess.wait)
-    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random/loli?apikey=Shirooo`)         
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
-break
-case 'elaina':
-  {
-    replygcxeon(mess.wait);
-    XeonBotInc.sendMessage(m.chat, { image: { url: 'https://api.lolhuman.xyz/api/random/elaina?apikey=Shirooo' } });
-  }
+case '18trap': {
+  if (!m.isGroup) return replygcxeon(mess.group)
+  if (!AntiNsfw) return replygcxeon(mess.nsfw)
+  replygcxeon(mess.wait);
+  const imageUrl = 'https://api.lolhuman.xyz/api/random/nsfw/trap?apikey=Shirooo';
+  XeonBotInc.sendMessage(m.chat, { image: { url: imageUrl } }, { quoted: m });
   break;
-case '18loli2' :
+}
+case '18ahegao': {
+  if (!m.isGroup) return replygcxeon(mess.group)
+  if (!AntiNsfw) return replygcxeon(mess.nsfw)
+  replygcxeon(mess.wait);
+  const imageUrl = 'https://api.lolhuman.xyz/api/random/nsfw/ahegao?apikey=Shirooo';
+  XeonBotInc.sendMessage(m.chat, { image: { url: imageUrl } }, { quoted: m });
+  break;
+}
+case '18anal': {
+  if (!m.isGroup) return replygcxeon(mess.group)
+  if (!AntiNsfw) return replygcxeon(mess.nsfw)
+  replygcxeon(mess.wait);
+  const imageUrl = 'https://api.lolhuman.xyz/api/random2/anal?apikey=Shirooo';
+  XeonBotInc.sendMessage(m.chat, { image: { url: imageUrl } }, { quoted: m });
+}
+ break;
+case '18armpits': {
+  if (!m.isGroup) return replygcxeon(mess.group)
+  if (!AntiNsfw) return replygcxeon(mess.nsfw)
+  replygcxeon(mess.wait);
+  const imageUrl = 'https://api.lolhuman.xyz/api/random/nsfw/armpits?apikey=Shirooo';
+  XeonBotInc.sendMessage(m.chat, { image: { url: imageUrl } }, { quoted: m });
+}
+  break;
+case '18booty': {
+  if (!m.isGroup) return replygcxeon(mess.group)
+  if (!AntiNsfw) return replygcxeon(mess.nsfw)
+  replygcxeon(mess.wait);
+  const imageUrl = 'https://api.lolhuman.xyz/api/random/nsfw/booty?apikey=Shirooo';
+  XeonBotInc.sendMessage(m.chat, { image: { url: imageUrl } }, { quoted: m });
+}
+  break;
+case '18feets': {
+  if (!m.isGroup) return replygcxeon(mess.group)
+  if (!AntiNsfw) return replygcxeon(mess.nsfw)
+  replygcxeon(mess.wait);
+  const imageUrl = 'https://api.lolhuman.xyz/api/random/nsfw/feets?apikey=Shirooo';
+  XeonBotInc.sendMessage(m.chat, { image: { url: imageUrl } }, { quoted: m });
+}
+  break;
+case '18bigtiddies': {
+  if (!m.isGroup) return replygcxeon(mess.group)
+  if (!AntiNsfw) return replygcxeon(mess.nsfw)
+  replygcxeon(mess.wait);
+  const imageUrl = 'https://api.lolhuman.xyz/api/random/nsfw/bigtiddies?apikey=Shirooo';
+  XeonBotInc.sendMessage(m.chat, { image: { url: imageUrl } }, { quoted: m });
+}
+  break;
+case '18blowjob': {
+  if (!m.isGroup) return replygcxeon(mess.group)
+  if (!AntiNsfw) return replygcxeon(mess.nsfw)
+  replygcxeon(mess.wait);
+  const imageUrl = 'https://api.lolhuman.xyz/api/random/nsfw/blowjob?apikey=Shirooo';
+  XeonBotInc.sendMessage(m.chat, { image: { url: imageUrl } }, { quoted: m });
+}
+  break;
+case '18blowjob2' : {
 if (!m.isGroup) return replygcxeon(mess.group)
 if (!AntiNsfw) return replygcxeon(mess.nsfw)
 replygcxeon(mess.wait)
-    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random/nsfw/loli?apikey=Shirooo`)         
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
-break
-case '18milf' :
+    const imageUrl = 'https://api.lolhuman.xyz/api/random2/blowjob?apikey=Shirooo';         
+XeonBotInc.sendMessage(m.chat, { image: { url: imageUrl } }, { quoted: m });
+}
+  break;
+case '18cum' : {
 if (!m.isGroup) return replygcxeon(mess.group)
 if (!AntiNsfw) return replygcxeon(mess.nsfw)
 replygcxeon(mess.wait)
-    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random/nsfw/milf?apikey=Shirooo`)         
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
-break
-case '18neko' :
+    const imageUrl = 'https://api.lolhuman.xyz/api/random2/cum_jpg?apikey=Shirooo';         
+XeonBotInc.sendMessage(m.chat, { image: { url: imageUrl } }, { quoted: m });
+}
+  break;
+case '18ecchi' : {
 if (!m.isGroup) return replygcxeon(mess.group)
 if (!AntiNsfw) return replygcxeon(mess.nsfw)
 replygcxeon(mess.wait)
-    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random/nsfw/neko?apikey=Shirooo`)         
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
-break
-case '18pussy' :
+    const imageUrl = 'https://api.lolhuman.xyz/api/random2/cum_jpg?apikey=Shirooo';         
+XeonBotInc.sendMessage(m.chat, { image: { url: imageUrl } }, { quoted: m });
+}
+  break;
+case '18ero' : {
 if (!m.isGroup) return replygcxeon(mess.group)
 if (!AntiNsfw) return replygcxeon(mess.nsfw)
 replygcxeon(mess.wait)
-    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random2/pussy?apikey=Shirooo`)         
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
-break
-case '18solog' :
+    const imageUrl = 'https://api.lolhuman.xyz/api/random/nsfw/ero?apikey=Shirooo';         
+XeonBotInc.sendMessage(m.chat, { image: { url: imageUrl } }, { quoted: m });
+}
+  break;
+case '18erokemo' : {
 if (!m.isGroup) return replygcxeon(mess.group)
 if (!AntiNsfw) return replygcxeon(mess.nsfw)
 replygcxeon(mess.wait)
-    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random2/solog?apikey=Shirooo`)         
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
-break
-case '18tits' :
+    const imageUrl = 'https://api.lolhuman.xyz/api/random2/erokemo?apikey=Shirooo';         
+XeonBotInc.sendMessage(m.chat, { image: { url: imageUrl } }, { quoted: m });
+}
+  break;
+case '18eroyuri' : {
 if (!m.isGroup) return replygcxeon(mess.group)
 if (!AntiNsfw) return replygcxeon(mess.nsfw)
 replygcxeon(mess.wait)
-    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random2/tits?apikey=Shirooo`)         
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
-break
-case '18waifu' :
+    const imageUrl = 'https://api.lolhuman.xyz/api/random2/eroyuri?apikey=Shirooo';         
+XeonBotInc.sendMessage(m.chat, { image: { url: imageUrl } }, { quoted: m });
+}
+  break;
+case '18feetg' : {
 if (!m.isGroup) return replygcxeon(mess.group)
 if (!AntiNsfw) return replygcxeon(mess.nsfw)
 replygcxeon(mess.wait)
-    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random/nsfw/waifu?apikey=Shirooo`)         
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
-break
-case 'fanart' :
+    const imageUrl = 'https://api.lolhuman.xyz/api/random2/feetg?apikey=Shirooo';         
+XeonBotInc.sendMessage(m.chat, { image: { url: imageUrl } }, { quoted: m });
+}
+  break;
+case '18femdom' : {
+if (!m.isGroup) return replygcxeon(mess.group)
+if (!AntiNsfw) return replygcxeon(mess.nsfw)
+replygcxeon(mess.wait)
+    const imageUrl = 'https://api.lolhuman.xyz/api/random2/femdom?apikey=Shirooo';         
+XeonBotInc.sendMessage(m.chat, { image: { url: imageUrl } }, { quoted: m });
+}
+  break;
+case '18futanari' : {
+if (!m.isGroup) return replygcxeon(mess.group)
+if (!AntiNsfw) return replygcxeon(mess.nsfw)
+replygcxeon(mess.wait)
+    const imageUrl = 'https://api.lolhuman.xyz/api/random2/futanari?apikey=Shirooo';         
+XeonBotInc.sendMessage(m.chat, { image: { url: imageUrl } }, { quoted: m });
+}
+  break;
+case '18hentai' : {
+if (!m.isGroup) return replygcxeon(mess.group)
+if (!AntiNsfw) return replygcxeon(mess.nsfw)
+replygcxeon(mess.wait)
+    const imageUrl = 'https://api.lolhuman.xyz/api/random2/hentai?apikey=Shirooo';         
+XeonBotInc.sendMessage(m.chat, { image: { url: imageUrl } }, { quoted: m });
+}
+  break;
+case '18holoero' : {
+if (!m.isGroup) return replygcxeon(mess.group)
+if (!AntiNsfw) return replygcxeon(mess.nsfw)
+replygcxeon(mess.wait)
+    const imageUrl = 'https://api.lolhuman.xyz/api/random2/holoero?apikey=Shirooo';         
+XeonBotInc.sendMessage(m.chat, { image: { url: imageUrl } }, { quoted: m });
+}
+  break;
+case '18kuni' : {
+if (!m.isGroup) return replygcxeon(mess.group)
+if (!AntiNsfw) return replygcxeon(mess.nsfw)
+replygcxeon(mess.wait)
+    const imageUrl = 'https://api.lolhuman.xyz/api/random2/kuni?apikey=Shirooo';         
+XeonBotInc.sendMessage(m.chat, { image: { url: imageUrl } }, { quoted: m });
+}
+  break;
+case '18lewd' : {
+if (!m.isGroup) return replygcxeon(mess.group)
+if (!AntiNsfw) return replygcxeon(mess.nsfw)
+replygcxeon(mess.wait)
+    const imageUrl = 'https://api.lolhuman.xyz/api/random2/lewd?apikey=Shirooo';         
+XeonBotInc.sendMessage(m.chat, { image: { url: imageUrl } }, { quoted: m });
+}
+  break;
+case '18lewdk' : {
+if (!m.isGroup) return replygcxeon(mess.group)
+if (!AntiNsfw) return replygcxeon(mess.nsfw)
+replygcxeon(mess.wait)
+    const imageUrl = 'https://api.lolhuman.xyz/api/random2/lewdk?apikey=Shirooo';         
+XeonBotInc.sendMessage(m.chat, { image: { url: imageUrl } }, { quoted: m });
+}
+  break;
+case '18loli' : {
+if (!m.isGroup) return replygcxeon(mess.group)
+if (!AntiNsfw) return replygcxeon(mess.nsfw)
+replygcxeon(mess.wait)
+    const imageUrl = 'https://api.lolhuman.xyz/api/random/loli?apikey=Shirooo';         
+XeonBotInc.sendMessage(m.chat, { image: { url: imageUrl } }, { quoted: m });
+}
+  break;
+case 'elaina': {
+  replygcxeon(mess.wait);
+  const imageUrl = 'https://api.lolhuman.xyz/api/random/elaina?apikey=Shirooo';
+  XeonBotInc.sendMessage(m.chat, { image: { url: imageUrl } }, { quoted: m });
+  break;
+}
+case 'shota': {
+  replygcxeon(mess.wait);
+  const imageUrl = 'https://api.lolhuman.xyz/api/random/shota?apikey=Shirooo';
+  XeonBotInc.sendMessage(m.chat, { image: { url: imageUrl } }, { quoted: m });
+  break;
+}
+case 'shinobu': {
+  replygcxeon(mess.wait);
+  const imageUrl = 'https://api.lolhuman.xyz/api/random/sfw/shinobu?apikey=Shirooo';
+  XeonBotInc.sendMessage(m.chat, { image: { url: imageUrl } }, { quoted: m });
+  break;
+}
+case '18loli2' : {
+if (!m.isGroup) return replygcxeon(mess.group)
+if (!AntiNsfw) return replygcxeon(mess.nsfw)
+replygcxeon(mess.wait)
+    const imageUrl = 'https://api.lolhuman.xyz/api/random/nsfw/loli?apikey=Shirooo';         
+XeonBotInc.sendMessage(m.chat, { image: { url: imageUrl } }, { quoted: m });
+}
+  break;
+case '18milf' : {
+if (!m.isGroup) return replygcxeon(mess.group)
+if (!AntiNsfw) return replygcxeon(mess.nsfw)
+replygcxeon(mess.wait)
+    const imageUrl = 'https://api.lolhuman.xyz/api/random/nsfw/milf?apikey=Shirooo';         
+XeonBotInc.sendMessage(m.chat, { image: { url: imageUrl } }, { quoted: m });
+}
+  break;
+case '18neko' : {
+if (!m.isGroup) return replygcxeon(mess.group)
+if (!AntiNsfw) return replygcxeon(mess.nsfw)
+replygcxeon(mess.wait)
+    const imageUrl = 'https://api.lolhuman.xyz/api/random/nsfw/neko?apikey=Shirooo';         
+XeonBotInc.sendMessage(m.chat, { image: { url: imageUrl } }, { quoted: m });
+}
+  break;
+case '18pussy' : {
+if (!m.isGroup) return replygcxeon(mess.group)
+if (!AntiNsfw) return replygcxeon(mess.nsfw)
+replygcxeon(mess.wait)
+    const imageUrl = 'https://api.lolhuman.xyz/api/random2/pussy?apikey=Shirooo';         
+XeonBotInc.sendMessage(m.chat, { image: { url: imageUrl } }, { quoted: m });
+}
+  break;
+case '18solog' : {
+if (!m.isGroup) return replygcxeon(mess.group)
+if (!AntiNsfw) return replygcxeon(mess.nsfw)
+replygcxeon(mess.wait)
+    const imageUrl = 'https://api.lolhuman.xyz/api/random2/solog?apikey=Shirooo';         
+XeonBotInc.sendMessage(m.chat, { image: { url: imageUrl } }, { quoted: m });
+}
+  break;
+case '18tits' : {
+if (!m.isGroup) return replygcxeon(mess.group)
+if (!AntiNsfw) return replygcxeon(mess.nsfw)
+replygcxeon(mess.wait)
+    const imageUrl = 'https://api.lolhuman.xyz/api/random2/tits?apikey=Shirooo';         
+XeonBotInc.sendMessage(m.chat, { image: { url: imageUrl } }, { quoted: m });
+}
+  break;
+case '18waifu' : {
+if (!m.isGroup) return replygcxeon(mess.group)
+if (!AntiNsfw) return replygcxeon(mess.nsfw)
+replygcxeon(mess.wait)
+    const imageUrl = 'https://api.lolhuman.xyz/api/random/nsfw/waifu?apikey=Shirooo';         
+XeonBotInc.sendMessage(m.chat, { image: { url: imageUrl } }, { quoted: m });
+}
+  break;
+case 'fanart' : {
 if (!m.isGroup) return replygcxeon(mess.group)
 replygcxeon(mess.wait)
-    waifudd = await axios.get(`https://api.lolhuman.xyz/api/random/art?apikey=Shirooo`)         
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
-break
+    const imageUrl = 'https://api.lolhuman.xyz/api/random/art?apikey=Shirooo';         
+XeonBotInc.sendMessage(m.chat, { image: { url: imageUrl } }, { quoted: m });
+}
+  break;
+case 'elf' : {
+if (!m.isGroup) return replygcxeon(mess.group)
+replygcxeon(mess.wait)
+    const imageUrl = 'https://api.lolhuman.xyz/api/random/elf?apikey=Shirooo';         
+XeonBotInc.sendMessage(m.chat, { image: { url: imageUrl } }, { quoted: m });
+}
+  break;
+case 'foxgirl' : {
+if (!m.isGroup) return replygcxeon(mess.group)
+replygcxeon(mess.wait)
+    const imageUrl = 'https://api.lolhuman.xyz/api/random2/fox_girl?apikey=Shirooo';         
+XeonBotInc.sendMessage(m.chat, { image: { url: imageUrl } }, { quoted: m });
+}
+  break;
+case 'film': {
+replygcxeon(mess.wait)
+  if (!q) return replygcxeon(`Format: *.film Judul Film*`)
+
+  const axios = require('axios')
+  const apikey = 'Shirooo' // Ganti dengan API key Anda
+  
+  const query = encodeURIComponent(q)
+  const apiUrl = `https://api.lolhuman.xyz/api/filmapik?apikey=${apikey}&query=${query}`
+  
+  axios.get(apiUrl)
+    .then(response => {
+      const result = response.data.result
+
+      if (result.length === 0) {
+        replygcxeon(`*Tidak ditemukan informasi untuk film tersebut*`)
+      } else {
+        let filmText = ''
+        for (const item of result) {
+          const title = item.title
+          const thumbnail = item.thumbnailPotrait
+          const rating = item.rating
+          const quality = item.quality
+          const episode = item.episode
+          const officialWeb = item.officialWeb
+          const movieId = item.movieId
+
+          filmText += `Judul: *${title}*\n` +
+                      `Rating: *${rating}*\n` +
+                      `Kualitas: *${quality}*\n` +
+                      `Episode: *${episode}*\n` +
+                      `Web Resmi: *${officialWeb}*\n\n` +
+                      `ID Film:* ${movieId}*\n` +
+                      `Thumbnail: *${thumbnail}*\n\n`
+        }
+
+        replygcxeon(filmText)
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error)
+      replygcxeon(`*Terjadi kesalahan dalam mencari informasi film*`)
+    })
+  
+  break
+}
 case 'gasm':
 if (!m.isGroup) return replygcxeon(mess.group)
 	if (!AntiNsfw) return replygcxeon(mess.nsfw)
@@ -4824,7 +4826,1825 @@ replygcxeon(mess.wait)
  waifudd = await axios.get(`https://nekos.life/api/v2/img/${command}`)
 XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
 break 
+case 'playstore': {
+replygcxeon(mess.wait)
+  if (!q) return replygcxeon(`Format: *.playstore Nama Aplikasi*`)
+
+  const axios = require('axios')
+  const apikey = 'Shirooo' // Ganti dengan API key Anda
+  
+  const query = encodeURIComponent(q)
+  const apiUrl = `https://api.lolhuman.xyz/api/playstore?apikey=${apikey}&query=${query}`
+  
+  axios.get(apiUrl)
+    .then(response => {
+      const result = response.data.result
+
+      if (result.length === 0) {
+        replygcxeon(`*Tidak ditemukan informasi untuk aplikasi tersebut*`)
+      } else {
+        let appInfo = ''
+        for (const item of result) {
+          const title = item.title
+          const appId = item.appId
+          const url = item.url
+          const icon = item.icon
+          const developer = item.developer
+          const currency = item.currency
+          const price = item.price
+          const isFree = item.free
+          const summary = item.summary
+          const scoreText = item.scoreText
+          const score = item.score
+
+          appInfo += `Nama Aplikasi: *${title}*\n` +
+                     `ID Aplikasi: *${appId}*\n` +
+                     `URL: *${url}*\n` +
+                     `Icon: *${icon}*\n` +
+                     `Developer: *${developer}*\n` +
+                     `Mata Uang: *${currency}*\n` +
+                     `Harga: *${price}*\n` +
+                     `Gratis: *${isFree ? 'Ya' : 'Tidak'}*\n` +
+                     `Ringkasan: *${summary}*\n` +
+                     `Skor Tekstual: *${scoreText}*\n` +
+                     `Skor: *${score}*\n\n`
+        }
+
+        replygcxeon(appInfo)
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error)
+      replygcxeon(`*Terjadi kesalahan dalam mencari informasi aplikasi di Play Store*`)
+    })
+  
+  break
+}
+case 'hashtag': {
+replygcxeon(mess.wait)
+  if (!q) return replygcxeon(`Format: .hashtag NamaHashtag`)
+
+  const axios = require('axios')
+  const apikey = 'Shirooo' // Replace with your API key
+
+  const hashtagQuery = encodeURIComponent(q)
+  const apiUrl = `https://api.lolhuman.xyz/api/ighashtag?apikey=${apikey}&query=${hashtagQuery}`
+
+  axios.get(apiUrl)
+    .then(response => {
+      const result = response.data.result
+
+      if (result.length === 0) {
+        replygcxeon(`Tidak ditemukan postingan dengan hashtag tersebut.`)
+      } else {
+        let postUrls = ''
+        for (const url of result) {
+          postUrls += `${url}\n`
+        }
+
+        replygcxeon(postUrls)
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error)
+      replygcxeon(`Terjadi kesalahan dalam mencari postingan dengan hashtag tersebut.`)
+    })
+
+  break
+}
+case 'spotifydownload': {
+  replygcxeon(mess.wait)
+  if (!q) return replygcxeon('Format: *.spotifydownload Tautan Spotify*')
+
+  const axios = require('axios')
+  const apiKey = 'Shirooo' // Replace with your API key
+  const apiUrl = `https://api.lolhuman.xyz/api/spotify?apikey=${apiKey}&url=${encodeURIComponent(q)}`
+
+  axios.get(apiUrl)
+    .then(response => {
+      const result = response.data.result
+
+      const songId = result.id
+      const songTitle = result.title
+      const songArtists = result.artists
+      const songDuration = result.duration
+      const songPopularity = result.popularity
+      const songUrl = result.external_urls.spotify
+      const songPreviewUrl = result.preview_url
+      const songThumbnail = result.thumbnail
+      const songDownloadUrl = result.link
+
+      const message = `ID: *${songId}*\n` +
+        `Title: *${songTitle}*\n` +
+        `Artists: *${songArtists}*\n` +
+        `Duration: *${songDuration} Seconds*\n` +
+        `Popularity: *${songPopularity}*\n` +
+        `Spotify URL: *${songUrl}*\n` +
+        `Preview URL: *${songPreviewUrl}*\n` +
+        `Thumbnail: *${songThumbnail}*\n` +
+        `Download URL: *${songDownloadUrl}*`
+
+      // Sending the song information as a reply
+      replygcxeon(message)
+    })
+    .catch(error => {
+      console.error('Error:', error)
+      replygcxeon('An error occurred while downloading the Spotify song.')
+    })
+
+  break
+}
+case 'ttstalk': {
+  replygcxeon(mess.wait)
+  if (!q) return replygcxeon(`Format: *.ttstalk Username TikTok*`)
+  
+  const axios = require('axios')
+  const apiKey = 'Shirooo'
+  const apiUrl = `https://api.lolhuman.xyz/api/stalktiktok/${encodeURIComponent(q)}?apikey=${apiKey}`
+
+  axios.get(apiUrl)
+    .then(response => {
+      const result = response.data.result
+      
+      const userPicture = result.user_picture
+      const username = result.username
+      const nickname = result.nickname
+      const bio = result.bio
+      const followers = result.followers
+      const followings = result.followings
+      const likes = result.likes
+      const videoCount = result.video
+
+      const message = `
+Username: *${username}*
+Nickname: *${nickname}*
+Bio: *${bio}*
+Followers: *${followers}*
+Followings: *${followings}*
+Likes: *${likes}*
+Video Count: *${videoCount}*
+      `
+
+      replygcxeon(message, userPicture)
+    })
+    .catch(error => {
+      console.error('Error:', error)
+      replygcxeon('*Akun Tik Tok Tidak Ditemukan*')
+    })
+}
+break
+case 'ytstalk': {
+  replygcxeon(mess.wait)
+  if (!q) return replygcxeon(`Format: *.ytstalk Nama Saluran Youtube*`)
+  
+  const axios = require('axios')
+  const apiKey = 'Shirooo' // Replace with your API key
+  
+  const query = encodeURIComponent(q)
+  const apiUrl = `https://api.lolhuman.xyz/api/ytchannel?apikey=${apiKey}&query=${query}`
+  
+  axios.get(apiUrl)
+    .then(response => {
+      const result = response.data.result
+
+      if (result.length === 0) {
+        replygcxeon(`Tidak ditemukan informasi tentang channel YouTube tersebut.`)
+      } else {
+        let replyMessage = ''
+        result.forEach(channel => {
+          const channelId = channel.channel_id
+          const channelName = channel.channel_name
+          const channelAbout = channel.channel_about
+          const channelCreated = channel.channel_created
+          const channelPicture = channel.channel_picture
+
+          const defaultPicture = channelPicture.default.url
+          const mediumPicture = channelPicture.medium.url
+          const highPicture = channelPicture.high.url
+
+          replyMessage += `Channel ID: *${channelId}*\n` +
+                          `Nama Channel: *${channelName}*\n` +
+                          `Tentang Channel: *${channelAbout}*\n` +
+                          `Tanggal Dibuat: *${channelCreated}*\n` +
+                          `Gambar Channel:\n` +
+                          `Default: *${defaultPicture}*\n` +
+                          `Medium: *${mediumPicture}*\n` +
+                          `High: *${highPicture}*\n\n`
+        })
+
+        replygcxeon(replyMessage)
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error)
+      replygcxeon(`*Terjadi kesalahan dalam mencari informasi channel YouTube.*`)
+    })
+
+  break
+}
+case 'strtohex': {
+  replygcxeon(mess.wait)
+  const axios = require('axios')
+  if (!q) return replygcxeon('Format: *.strtohex Teks*')
+  
+  const apiKey = 'Shirooo'
+  const text = encodeURIComponent(q)
+  const apiUrl = `https://api.lolhuman.xyz/api/convert/strtohex?apikey=${apiKey}&text=${text}`
+  
+  axios.get(apiUrl)
+    .then((response) => {
+      const result = response.data.result
+      replygcxeon(`Hasil Konversi: *${result}*`)
+    })
+    .catch((error) => {
+      console.log(error)
+      replygcxeon('*Terjadi kesalahan saat melakukan konversi*')
+    })
+  
+  break
+}
+case 'wikipedia': {
+  replygcxeon(mess.wait)
+  if (!q) return replygcxeon(`Format: *.wikipedia Kata Kunci*`)
+
+  const axios = require('axios')
+  const apikey = 'Shirooo' // Replace with your API key
+  
+  const query = encodeURIComponent(q)
+  const apiUrl = `https://api.lolhuman.xyz/api/wiki?apikey=${apikey}&query=${query}`
+  
+  axios.get(apiUrl)
+    .then(response => {
+      const result = response.data.result
+      
+      const message = `*Hasil Wikipedia:*\n\n${result}`
+      
+      // Sending the Wikipedia result as a reply
+      replygcxeon(message)
+    })
+    .catch(error => {
+      console.error('Error:', error)
+      replygcxeon(`*Terjadi kesalahan dalam mencari informasi dari Wikipedia*`)
+    })
+  
+  break
+}
+case 'xnxxdownload': {
+  if (!q) return replygcxeon(`Format: .xnxxdownload [URL]`)
+
+  const axios = require('axios')
+  const apikey = 'Shirooo' // Replace with your API key
+  const url = encodeURIComponent(q)
+  const apiUrl = `https://api.lolhuman.xyz/api/xnxx?apikey=${apikey}&url=${url}`
+
+  axios.get(apiUrl)
+    .then(response => {
+      const result = response.data.result
+
+      const title = result.title
+      const thumbnail = result.thumbnail
+      const duration = result.duration
+      const view = result.view
+      const rating = result.rating
+      const like = result.like
+      const dislike = result.dislike
+      const comment = result.comment
+      const tags = result.tag.join(', ')
+      const description = result.description
+      const links = result.link
+
+      const message = `Title: ${title}\n` +
+        `Duration: ${duration}\n` +
+        `Views: ${view}\n` +
+        `Rating: ${rating}\n` +
+        `Likes: ${like}\n` +
+        `Dislikes: ${dislike}\n` +
+        `Comments: ${comment}\n` +
+        `Tags: ${tags}\n` +
+        `Description: ${description}\n\n` +
+        `Links:\n`
+
+      let linkList = ''
+      links.forEach(link => {
+        const linkType = link.type
+        const linkUrl = link.link
+
+        linkList += `- ${linkType}: ${linkUrl}\n`
+      })
+
+      const xnxxInfo = {
+        title: title,
+        message: message + linkList,
+        thumbnail: thumbnail
+      }
+
+      // Sending the information as a message or media
+      XeonBotInc.sendTextWithMentions(from, xnxxInfo.message)
+      XeonBotInc.sendImage(from, xnxxInfo.thumbnail, xnxxInfo.title, xnxxInfo.message)
+    })
+    .catch(error => {
+      console.error('Error:', error)
+      replygcxeon(`An error occurred while fetching xnxx information`)
+    })
+
+  break
+}
+case 'xnxx': {
+  if (!q) return replygcxeon(`Format: *.xnxx Kata Kunci*`)
+  
+  const axios = require('axios')
+  const apiKey = 'Shirooo' // Replace with your API key
+  
+  const query = encodeURIComponent(q)
+  const apiUrl = `https://api.lolhuman.xyz/api/xnxxsearch?apikey=${apiKey}&query=${query}`
+  
+  axios.get(apiUrl)
+    .then(response => {
+      const result = response.data.result
+
+      if (result.length === 0) {
+        replygcxeon(`No search results found for "${q}"`)
+      } else {
+        let replyMessage = ''
+
+        for (const item of result) {
+          const title = item.title
+          const views = item.views
+          const duration = item.duration
+          const uploader = item.uploader
+          const link = item.link
+          const thumbnail = item.thumbnail
+
+          replyMessage += `Title: ${title}\n` +
+                          `Views: ${views}\n` +
+                          `Duration: ${duration}\n` +
+                          `Uploader: ${uploader}\n` +
+                          `Link: ${link}\n` +
+                          `Thumbnail: ${thumbnail}\n\n`
+        }
+
+        replygcxeon(replyMessage)
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error)
+      replygcxeon(`An error occurred while searching for xnxx videos`)
+    })
+
+  break
+}
+case 'superhero': {
+  replygcxeon(mess.wait)
+  if (!q) return replygcxeon(`Format: .superhero Nama Superhero`)
+
+  const axios = require('axios')
+  const apiKey = 'Shirooo' // Replace with your API key
+
+  const superheroName = encodeURIComponent(q)
+  const apiUrl = `https://api.lolhuman.xyz/api/superhero?apikey=${apiKey}&query=${superheroName}`
+
+  axios.get(apiUrl)
+    .then(response => {
+      const result = response.data.result
+
+      const superheroName = result.name
+      const powerstats = result.powerstats
+      const biography = result.biography
+      const appearance = result.appearance
+      const work = result.work
+      const connections = result.connections
+      const imageUrl = result.image.url
+
+      const message = `
+Nama Superhero: ${superheroName}
+Powerstats:
+- Intelligence: ${powerstats.intelligence}
+- Strength: ${powerstats.strength}
+- Speed: ${powerstats.speed}
+- Durability: ${powerstats.durability}
+- Power: ${powerstats.power}
+- Combat: ${powerstats.combat}
+
+Biography:
+- Full Name: ${biography['full-name']}
+- Alter Egos: ${biography['alter-egos']}
+- Aliases: ${biography.aliases.join(', ')}
+- Place of Birth: ${biography['place-of-birth']}
+- First Appearance: ${biography['first-appearance']}
+- Publisher: ${biography.publisher}
+- Alignment: ${biography.alignment}
+
+Appearance:
+- Gender: ${appearance.gender}
+- Race: ${appearance.race}
+- Height: ${appearance.height.join(', ')}
+- Weight: ${appearance.weight.join(', ')}
+- Eye Color: ${appearance['eye-color']}
+- Hair Color: ${appearance['hair-color']}
+
+Work:
+- Occupation: ${work.occupation}
+- Base: ${work.base}
+
+Connections:
+- Group Affiliation: ${connections['group-affiliation']}
+- Relatives: ${connections.relatives}
+
+Image: ${imageUrl}
+      `
+
+      replygcxeon(message)
+    })
+    .catch(error => {
+      console.error('Error:', error)
+      replygcxeon(`Terjadi kesalahan dalam mengambil informasi superhero`)
+    })
+
+  break
+}
+case 'hextostr': {
+  replygcxeon(mess.wait)
+  if (!q) return replygcxeon(`Format: *.hextostr Hex*`)
+  const axios = require('axios')
+  const apiKey = 'Shirooo'
+  const hexString = encodeURIComponent(q)
+  const apiUrl = `https://api.lolhuman.xyz/api/convert/hextostr?apikey=${apiKey}&hex=${hexString}`
+
+  axios.get(apiUrl)
+    .then((response) => {
+      const result = response.data.result
+      replygcxeon(`Hasil Konversi: *${result}*`)
+    })
+    .catch((error) => {
+      console.error('Error:', error)
+      replygcxeon('*Itu bukan HEX*')
+    })
+
+  break
+}
+case 'spotify': {
+  replygcxeon(mess.wait)
+  if (!q) return replygcxeon(`Format: *.spotify Nama Lagu*`)
+  const axios = require('axios')
+  const apiKey = 'Shirooo'
+  const apiUrl = `https://api.lolhuman.xyz/api/spotifysearch?apikey=${apiKey}&query=${encodeURIComponent(q)}`
+  
+  axios.get(apiUrl)
+    .then((response) => {
+      const result = response.data.result
+
+      let replyMessage = ''
+      for (const track of result) {
+        const {
+          id,
+          link,
+          title,
+          artists,
+          duration,
+          popularity,
+          external_urls,
+          preview_url
+        } = track
+        
+        replyMessage += `
+ID: *${id}*
+Link: *${link}*
+Title: *${title}*
+Artists: *${artists}*
+Duration: *${duration} Seconds*
+Popularity: *${popularity}*
+External URL: *${external_urls.spotify}*
+Preview URL: *${preview_url}*
+`
+      }
+
+      replygcxeon(replyMessage)
+    })
+    .catch((error) => {
+      console.log(error)
+      replygcxeon('Terjadi kesalahan saat mencari lagu di Spotify.')
+    })
+}
+break
+case 'hoshino': {
+  if (!q) return replygcxeon('*Iya?*')
+
+  const axios = require('axios')
+  const apikey = 'Shirooo' // Replace with your API key
+  
+  const query = encodeURIComponent(q)
+  const apiUrl = `https://api.lolhuman.xyz/api/simi?apikey=${apikey}&text=${query}&badword=false`
+
+  axios.get(apiUrl)
+    .then(response => {
+      const result = response.data.result
+      
+      // Reply with the generated response from the API
+      replygcxeon(result)
+    })
+    .catch(error => {
+      console.error('Error:', error)
+      replygcxeon('*???*')
+    })
+
+  break
+}
+case 'hoshino2': {
+  if (!q) return replygcxeon('*Kenapa?*')
+
+  const axios = require('axios')
+  const apikey = 'Shirooo' // Replace with your API key
+  
+  const query = encodeURIComponent(q)
+  const apiUrl = `https://api.lolhuman.xyz/api/simi?apikey=${apikey}&text=${query}&badword=true`
+
+  axios.get(apiUrl)
+    .then(response => {
+      const result = response.data.result
+      
+      // Reply with the generated response from the API
+      replygcxeon(result)
+    })
+    .catch(error => {
+      console.error('Error:', error)
+      replygcxeon('*gk jelas lu ngentot*')
+    })
+
+  break
+}
+case 'ipaddress': {
+replygcxeon(mess.wait)
+  if (!q) return replygcxeon(`Format: *.ipaddress IP_Address*`)
+
+  const axios = require('axios')
+  const apiKey = 'Shirooo' // Replace with your API key
+
+  const query = encodeURIComponent(q)
+  const apiUrl = `https://api.lolhuman.xyz/api/ipaddress/${query}?apikey=${apiKey}`
+
+  axios.get(apiUrl)
+    .then(response => {
+      const result = response.data.result
+
+      const country = result.country
+      const countryCode = result.countryCode
+      const region = result.region
+      const regionName = result.regionName
+      const city = result.city
+      const zip = result.zip
+      const latitude = result.lat
+      const longitude = result.lon
+      const timezone = result.timezone
+      const isp = result.isp
+      const organization = result.org
+      const as = result.as
+      const ipAddress = result.query
+
+      const message = `
+Alamat IP: *${ipAddress}*
+Negara: *${country} (${countryCode})*
+Wilayah: *${region} (${regionName})*
+Kota: *${city}*
+Zip: *${zip}*
+Garis Lintang: *${latitude}*
+Garis Bujur: *${longitude}*
+Zona Waktu: *${timezone}*
+ISP: *${isp}*
+Organisasi: *${organization}*
+AS: *${as}*
+      `
+
+      // Send the IP address information as a reply
+      replygcxeon(message)
+    })
+    .catch(error => {
+      console.error('Error:', error)
+      replygcxeon(`Format: *.ipaddress IP_Address*`)
+    })
+
+  break
+}
+case 'jadwalbola' : {
+  replygcxeon(mess.wait)
+  const axios = require('axios');
+  const apiKey = 'Shirooo';
+  const apiUrl = `https://api.lolhuman.xyz/api/jadwalbola?apikey=${apiKey}`;
+
+  axios.get(apiUrl)
+    .then((response) => {
+      const result = response.data.result;
+      let replyMessage = '';
+
+      result.forEach((schedule) => {
+        const { time, event, match, tv } = schedule;
+        replyMessage += `Time: *${time}*\nEvent: *${event}*\nMatch: *${match}*\nTV: *${tv}*\n\n`;
+      });
+
+      if (replyMessage !== '') {
+        replygcxeon(replyMessage);
+      } else {
+        replygcxeon('*Jadwal sepak bola tidak ditemukan*');
+      }
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+      replygcxeon('*Terjadi kesalahan saat mengambil jadwal sepak bola*');
+    });
+
+  break;
+}
+case 'jadwalsholat': {
+replygcxeon(mess.wait)
+  if (!q) return replygcxeon(`Format: *.jadwalsholat Nama Tempat*`)
+
+  const axios = require('axios')
+  const apiKey = 'Shirooo' // Replace with your API key
+
+  const location = encodeURIComponent(q)
+  const apiUrl = `https://api.lolhuman.xyz/api/sholat/${location}?apikey=${apiKey}`
+
+  axios.get(apiUrl)
+    .then(response => {
+      const result = response.data.result
+
+      const wilayah = result.wilayah
+      const tanggal = result.tanggal
+      const sahur = result.sahur
+      const imsak = result.imsak
+      const subuh = result.subuh
+      const terbit = result.terbit
+      const dhuha = result.dhuha
+      const dzuhur = result.dzuhur
+      const ashar = result.ashar
+      const maghrib = result.maghrib
+      const isya = result.isya
+
+      const prayerSchedule = `
+Jadwal Sholat untuk *${wilayah}* pada tanggal *${tanggal}*:
+Sahur: *${sahur}*
+Imsak: *${imsak}*
+Subuh: *${subuh}*
+Terbit: *${terbit}*
+Dhuha: *${dhuha}*
+Dzuhur: *${dzuhur}*
+Ashar: *${ashar}*
+Maghrib: *${maghrib}*
+Isya: *${isya}*
+`
+
+      replygcxeon(prayerSchedule)
+    })
+    .catch(error => {
+      console.error('Error:', error)
+      replygcxeon(`*Tempat tidak ditemukan*`)
+    })
+
+  break
+}
+case 'jadwaltvnow' : {
+  replygcxeon(mess.wait)
+  const axios = require('axios');
+  const apiKey = 'Shirooo';
+  const apiUrl = `https://api.lolhuman.xyz/api/jadwaltv/now?apikey=${apiKey}`;
+
+  axios.get(apiUrl)
+    .then((response) => {
+      const result = response.data.result;
+      let scheduleMessage = '';
+
+      for (const channel in result) {
+        scheduleMessage += `${channel}: *${result[channel]}*\n`;
+      }
+
+      replygcxeon(scheduleMessage);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+      replygcxeon('*Terjadi kesalahan saat mendapatkan jadwal TV*');
+    });
+
+  break;
+}
+case 'jalantikus' : {
+  replygcxeon(mess.wait)
+  const axios = require('axios');
+  const apikey = 'Shirooo';
+  const apiUrl = `https://api.lolhuman.xyz/api/jalantikus?apikey=${apikey}`;
+
+  axios.get(apiUrl)
+    .then(response => {
+      const result = response.data.result;
+
+      let newsList = '';
+      result.forEach(news => {
+        const title = news.title;
+        const link = news.link;
+        const category = news.category;
+        const time = news.time;
+
+        newsList += `- *${title}*\n` +
+          `Category: *${category}*\n` +
+          `Time: *${time}*\n` +
+          `Link: *${link}*\n\n`;
+      });
+
+      const message = `*Latest News from Jalan Tikus:*\n\n${newsList}`;
+
+      replygcxeon(message);
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      replygcxeon('An error occurred while retrieving news from Jalan Tikus.');
+    });
+
+  break;
+}
+case 'jodoh': {
+replygcxeon(mess.wait)
+  if (!q) return replygcxeon(`Format: *.jodoh Nama1 Nama2*`)
+  
+  const axios = require('axios')
+  const apikey = 'Shirooo' // Replace with your API key
+  
+  const names = q.trim().split(/\s+/)
+  const name1 = names[0]
+  const name2 = names[1]
+  
+  const apiUrl = `https://api.lolhuman.xyz/api/jodoh/${encodeURIComponent(name1)}/${encodeURIComponent(name2)}?apikey=${apikey}`
+  
+  axios.get(apiUrl)
+    .then(response => {
+      const result = response.data.result
+      
+      const image = result.image
+      const positif = result.positif
+      const negatif = result.negatif
+      const deskripsi = result.deskripsi
+      
+      const message = `Kecocokan Jodoh antara *${name1}* dan *${name2}:*\n` +
+                      `Positif: *${positif}*\n` +
+                      `Negatif: *${negatif}*\n` +
+                      `Deskripsi: *${deskripsi}*`
+      
+      // Sending the compatibility information as a reply
+      replygcxeon(message)
+      
+      // Sending the image as well
+      XeonBotInc.sendImage(from, image, 'Kecocokan Jodoh')
+    })
+    .catch(error => {
+      console.error('Error:', error)
+      replygcxeon('*Terjadi kesalahan saat mencari informasi kecocokan jodoh*')
+    })
+  
+  break
+}
+case 'katabijak' : {
+  replygcxeon(mess.wait)
+  const axios = require('axios');
+  const apiKey = 'Shirooo';
+  const apiUrl = `https://api.lolhuman.xyz/api/random/katabijak?apikey=${apiKey}`;
+
+  axios.get(apiUrl)
+    .then((response) => {
+      const result = response.data.result;
+      replygcxeon(result);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+      replygcxeon('*Terjadi kesalahan saat mencari kata bijak*');
+    });
+
+  break;
+}
+case 'pantun' : {
+  replygcxeon(mess.wait)
+  const axios = require('axios');
+  const apiKey = 'Shirooo';
+  const apiUrl = `https://api.lolhuman.xyz/api/random/pantun?apikey=${apiKey}`;
+
+  axios.get(apiUrl)
+    .then((response) => {
+      const result = response.data.result;
+      replygcxeon(result);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+      replygcxeon('*Terjadi kesalahan saat mencari pantun*');
+    });
+
+  break;
+}
+case 'puisi' : {
+  replygcxeon(mess.wait)
+  const axios = require('axios');
+  const apiKey = 'Shirooo';
+  const apiUrl = `https://api.lolhuman.xyz/api/random/puisi?apikey=${apiKey}`;
+
+  axios.get(apiUrl)
+    .then((response) => {
+      const result = response.data.result;
+      replygcxeon(result);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+      replygcxeon('*Terjadi kesalahan saat mencari puisi*');
+    });
+
+  break;
+}
+case 'quotesdilan' : {
+  replygcxeon(mess.wait)
+  const axios = require('axios');
+  const apiKey = 'Shirooo';
+  const apiUrl = `https://api.lolhuman.xyz/api/quotes/dilan?apikey=${apiKey}`;
+
+  axios.get(apiUrl)
+    .then((response) => {
+      const result = response.data.result;
+      replygcxeon(result);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+      replygcxeon('*Terjadi kesalahan saat mencari quotes dilan*');
+    });
+
+  break;
+}
+case 'quotesislami' : {
+  replygcxeon(mess.wait)
+  const axios = require('axios');
+  const apiKey = 'Shirooo';
+  const apiUrl = `https://api.lolhuman.xyz/api/quotes/islami?apikey=${apiKey}`;
+
+  axios.get(apiUrl)
+    .then((response) => {
+      const result = response.data.result;
+      replygcxeon(result);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+      replygcxeon('*Terjadi kesalahan saat mencari quotes islami*');
+    });
+
+  break;
+}
+case 'hadist': {
+  replygcxeon(mess.wait)
+  if (!q) return replygcxeon(`Format: *.hadist Kata Kunci*`)
+
+  const axios = require('axios')
+  const apikey = 'Shirooo' // Replace with your API key
+  
+  const query = encodeURIComponent(q)
+  const apiUrl = `https://api.lolhuman.xyz/api/hadits/search?apikey=${apikey}&query=${query}`
+
+  axios.get(apiUrl)
+    .then(response => {
+      const result = response.data.result
+      
+      let hadistText = ''
+      for (const item of result) {
+        const kitab = item.kitab
+        const hadits = item.hadits.map(h => `- ${h}`).join('\n')
+
+        hadistText += `Kitab: *${kitab}*\n*${hadits}*\n\n`
+      }
+
+      replygcxeon(hadistText)
+    })
+    .catch(error => {
+      console.error('Error:', error)
+      replygcxeon(`*Hadist Tidak Ditemukan*`)
+    })
+
+  break
+}
+case 'sfile': {
+  replygcxeon(mess.wait)
+  if (!q) return replygcxeon(`Format: *.sfile Tautan Sfile*`)
+
+  const axios = require('axios')
+  const apikey = 'Shirooo' // Ganti dengan API key Anda
+
+  const apiUrl = `https://api.lolhuman.xyz/api/sfile?apikey=${apikey}&url=${encodeURIComponent(q)}`
+
+  axios.get(apiUrl)
+    .then(response => {
+      const result = response.data.result
+
+      const title = result.title
+      const uploaded = result.uploaded
+      const downloaded = result.downloaded
+      const size = result.size
+      const link = result.link
+
+      const message = `Title: *${title}*\n` +
+                      `Uploaded: *${uploaded}*\n` +
+                      `Downloaded: *${downloaded}*\n` +
+                      `Size: *${size}*\n` +
+                      `Link: *${link}*`
+
+      replygcxeon(message)
+    })
+    .catch(error => {
+      console.error('Error:', error)
+      replygcxeon(`*Terjadi kesalahan dalam mendapatkan detail dan alternatif download link*`)
+    })
+
+  break
+}
+case 'searchbijak': {
+  replygcxeon(mess.wait)
+  if (!q) return replygcxeon(`Format: *.searchbijak Kata Kunci*`)
+  
+  const axios = require('axios')
+  const apiKey = 'Shirooo' // Replace with your API key
+  
+  const query = encodeURIComponent(q)
+  const apiUrl = `https://api.lolhuman.xyz/api/searchbijak?apikey=${apiKey}&query=${query}`
+  
+  axios.get(apiUrl)
+    .then(response => {
+      const result = response.data.result
+
+      if (result.length === 0) {
+        replygcxeon(`*Tidak ditemukan kutipan bijak untuk kata kunci tersebut*`)
+      } else {
+        let quoteText = ''
+        for (const item of result) {
+          const quoteContent = item.quote
+          const author = item.author
+
+          quoteText += `Kutipan: *${quoteContent}*\n` +
+                        `Penulis: *${author}*\n\n`
+        }
+
+        replygcxeon(quoteText)
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error)
+      replygcxeon(`Terjadi kesalahan dalam mencari kutipan bijak`)
+    })
+  
+  break
+}
+case 'randombahasa': {
+ replygcxeon(mess.wait)
+  if (!q) return replygcxeon(`Format: *.randombahasa Teks*`)
+  
+  const axios = require('axios')
+  const apiKey = 'Shirooo' // Replace with your API key
+  const query = encodeURIComponent(q)
+  const apiUrl = `https://api.lolhuman.xyz/api/randombahasa?apikey=${apiKey}&text=${query}`
+
+  axios.get(apiUrl)
+    .then((response) => {
+      const result = response.data.result
+      const replyMessage = `Hasil: *${result}*`
+
+      replygcxeon(replyMessage)
+    })
+    .catch((error) => {
+      console.error('Error:', error)
+      replygcxeon('Terjadi kesalahan dalam memuat teks random bahasa.')
+    })
+  
+  break
+}
+case 'roboguru': {
+  replygcxeon(mess.wait)
+  if (!q) return replygcxeon(`Format: *.roboguru Pertanyaan*`)
+
+  const axios = require('axios')
+  const apiKey = 'Shirooo' // Replace with your API key
+
+  const query = encodeURIComponent(q)
+  const grade = 'sma' // Replace with the desired grade
+  const subject = 'sejarah' // Replace with the desired subject
+
+  const apiUrl = `https://api.lolhuman.xyz/api/roboguru?apikey=${apiKey}&query=${query}&grade=${grade}&subject=${subject}`
+
+  axios.get(apiUrl)
+    .then(response => {
+      const result = response.data.result
+
+      if (result.length === 0) {
+        replygcxeon(`*Tidak ditemukan jawaban untuk pertanyaan tersebut*`)
+      } else {
+        let answerText = ''
+        for (const item of result) {
+          const question = item.question
+          const answer = item.answer
+
+          answerText += `Pertanyaan: *${question}*\n` +
+            `Jawaban: *${answer}*\n\n`
+        }
+
+        replygcxeon(answerText)
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error)
+      replygcxeon(`*Terjadi kesalahan dalam mencari jawaban*`)
+    })
+
+  break
+}
+case 'niatsholat': {
+  replygcxeon(mess.wait)
+  if (!q) return replygcxeon(`Format: *.niatsholat JenisSholat*`)
+  
+  const axios = require('axios')
+  const apiKey = 'Shirooo'
+  const prayerType = encodeURIComponent(q)
+  const apiUrl = `https://api.lolhuman.xyz/api/niatsholat/${prayerType}?apikey=${apiKey}`
+  
+  axios.get(apiUrl)
+    .then((response) => {
+      const result = response.data.result
+      const niatName = result.name
+      const niatArabic = result.ar
+      const niatLatin = result.latin
+      const niatIndonesian = result.id
+      
+      const niatMessage = `
+Jenis Sholat: *${niatName}*
+Arab: *${niatArabic}*
+Latin: *${niatLatin}*
+Indonesia: *${niatIndonesian}*
+      `
+      
+      replygcxeon(niatMessage)
+    })
+    .catch((error) => {
+      console.log(error)
+      replygcxeon('Niat sholat tersebut ditemukan, niat sholat yang tersedia *subuh, dzuhur, ashar, maghrib, isya*')
+    })
+}
+break
+case 'quotes': {
+ replygcxeon(mess.wait)
+  const axios = require('axios');
+  const apiKey = 'Shirooo';
+  const apiUrl = `https://api.lolhuman.xyz/api/random/quotes?apikey=${apiKey}`;
+  
+  axios.get(apiUrl)
+    .then((response) => {
+      const result = response.data.result;
+      const author = result.by;
+      const quote = result.quote;
+      
+      const replyMessage = `*"${quote}"* - *${author}*`;
+      replygcxeon(replyMessage);
+    })
+    .catch((error) => {
+      console.log(error);
+      replygcxeon('Terjadi kesalahan saat mengambil quotes.');
+    });
+  
+  break;
+}
+case 'quotesanime': {
+  replygcxeon(mess.wait)
+  const axios = require('axios');
+  const apikey = 'Shirooo'; // Replace with your API key
+
+  const apiUrl = `https://api.lolhuman.xyz/api/random/quotesnime?apikey=${apikey}`;
+
+  axios.get(apiUrl)
+    .then(response => {
+      const result = response.data.result;
+
+      const quote = result.quote;
+      const character = result.character;
+      const anime = result.anime;
+      const episode = result.episode;
+
+      const message = `Mengutip: *${quote}*\n` +
+        `Karakter: *${character}*\n` +
+        `Anime: *${anime}*\n` +
+        `Episode: *${episode}*`;
+
+      replygcxeon(message);
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      replygcxeon('*Terjadi kesalahan dalam mengambil quotes anime*');
+    });
+
+  break;
+}
+case 'kbbi': {
+replygcxeon(mess.wait)
+  if (!q) return replygcxeon(`Format: *.kbbi Kata*`)
+  
+  const axios = require('axios')
+  const apiKey = 'Shirooo'
+  const query = encodeURIComponent(q)
+  const apiUrl = `https://api.lolhuman.xyz/api/kbbi?apikey=${apiKey}&query=${query}`
+  
+  axios.get(apiUrl)
+    .then(response => {
+      const result = response.data.result[0]
+      
+      const nama = result.nama
+      const kelas = result.makna.map(m => m.kelas[0].nama).join(', ')
+      const submakna = result.makna.map(m => m.submakna.join(', ')).join('\n\n')
+      const contoh = result.makna.map(m => m.contoh.join('\n')).join('\n\n')
+      
+      const wordInfo = `
+*Kata:* ${nama}
+*Kelas:* ${kelas}
+*Submakna:*\n${submakna}
+*Contoh:*\n${contoh}
+      `
+      
+      replygcxeon(wordInfo)
+    })
+    .catch(error => {
+      console.error('Error:', error)
+      replygcxeon('Terjadi kesalahan saat mencari informasi kata di KBBI.')
+    })
+  
+  break
+}
+case 'kisahnabi': {
+replygcxeon(mess.wait)
+  if (!q) return replygcxeon(`Format: *.kisahnabi Nama*`)
+  
+  const axios = require('axios')
+  const apiKey = 'Shirooo' // Replace with your API key
+  
+  const namaNabi = encodeURIComponent(q)
+  const apiUrl = `https://api.lolhuman.xyz/api/kisahnabi/${namaNabi}?apikey=${apiKey}`
+  
+  axios.get(apiUrl)
+    .then(response => {
+      const result = response.data.result
+      
+      const name = result.name
+      const birthYear = result.thn_kelahiran
+      const age = result.age
+      const place = result.place
+      const story = result.story
+
+      const message = `*Nama Nabi:* ${name}\n` +
+        `*Tahun Kelahiran:* ${birthYear}\n` +
+        `*Usia:* ${age}\n` +
+        `*Tempat Lahir:* ${place}\n\n` +
+        `*Kisah:*\n${story}`
+
+      // Sending the Prophet/Messenger's story as a reply
+      replygcxeon(message)
+    })
+    .catch(error => {
+      console.error('Error:', error)
+      replygcxeon(`*Tidak Ditemukan*`)
+    })
+  
+  break
+}
+case 'kodepos': {
+replygcxeon(mess.wait)
+  if (!q) return replygcxeon(`Format: *.kodepos Nama Tempat*`)
+  
+  const axios = require('axios')
+  const apiKey = 'Shirooo' // Replace with your API key
+  
+  const query = encodeURIComponent(q)
+  const apiUrl = `https://api.lolhuman.xyz/api/kodepos?apikey=${apiKey}&query=${query}`
+  
+  axios.get(apiUrl)
+    .then(response => {
+      const result = response.data.result
+      
+      if (result.length === 0) {
+        replygcxeon(`*Tidak ditemukan kode pos untuk tempat tersebut*`)
+      } else {
+        let postalCodeText = ''
+        for (const item of result) {
+          const province = item.province
+          const city = item.city
+          const subdistrict = item.subdistrict
+          const urban = item.urban
+          const postalCode = item.postalcode
+
+          postalCodeText += `Provinsi: *${province}*\n` +
+                            `Kota: *${city}*\n` +
+                            `Kecamatan: *${subdistrict}*\n` +
+                            `Kelurahan: *${urban}*\n` +
+                            `Kode Pos: *${postalCode}*\n\n`
+        }
+
+        replygcxeon(postalCodeText)
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error)
+      replygcxeon(`*Terjadi kesalahan dalam mencari kode pos*`)
+    })
+
+  break
+}
+case 'katabucin' : {
+  replygcxeon(mess.wait)
+  const axios = require('axios');
+  const apiUrl = 'https://api.lolhuman.xyz/api/random/bucin?apikey=Shirooo';
+
+  axios.get(apiUrl)
+    .then((response) => {
+      const result = response.data.result;
+      replygcxeon(result);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+      replygcxeon('Terjadi kesalahan saat mencari kata bucin.');
+    });
+  
+  break;
+}
+case 'nekopoisearch': {
+  replygcxeon(mess.wait)
+  if (!q) return replygcxeon(`Format: *.nekopoi Judul*`)
+
+  const axios = require('axios')
+  const apiKey = 'Shirooo' // Replace with your API key
+  
+  const query = encodeURIComponent(q)
+  const apiUrl = `https://api.lolhuman.xyz/api/nekopoisearch?apikey=${apiKey}&query=${query}`
+
+  axios.get(apiUrl)
+    .then(response => {
+      const result = response.data.result
+
+      if (result.length === 0) {
+        replygcxeon(`No videos found for the query "${q}"`)
+      } else {
+        let videoText = ''
+        for (const item of result) {
+          const title = item.title
+          const link = item.link
+          const thumbnail = item.thumbnail
+
+          videoText += `Title: *${title}*\n` +
+                       `Link: *${link}*\n` +
+                       `Thumbnail: *${thumbnail}*\n\n`
+        }
+
+        replygcxeon(videoText)
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error)
+      replygcxeon(`An error occurred while searching for videos`)
+    })
+
+  break
+}
+case 'nhentai': {
+  replygcxeon(mess.wait)
+  if (!q) return replygcxeon(`Format: *.nhentai KodeDoujin*`)
+  const axios = require('axios')
+  const apiKey = 'Shirooo'
+  const apiUrl = `https://api.lolhuman.xyz/api/nhentai/${q}?apikey=${apiKey}`
+  
+  axios.get(apiUrl)
+    .then((response) => {
+      const result = response.data.result
+      const {
+        title_romaji,
+        title_native,
+        read,
+        tags,
+        image
+      } = result
+      
+      const tagsList = tags.join(', ')
+      
+      const nhentaiInfo = `
+Title (Romaji): *${title_romaji}*
+Title (Native): *${title_native}*
+Tags: *${tagsList}*
+      `
+      
+      const imageUrls = image.map(url => `- ${url}`).join('\n')
+      
+      const replyMessage = `${nhentaiInfo}\n\nImages:\n${imageUrls}\n\nRead Online: *${read}*`
+      replygcxeon(replyMessage)
+    })
+    .catch((error) => {
+      console.log(error)
+      replygcxeon('Terjadi kesalahan saat mencari informasi doujin di nhentai.')
+    })
+}
+break
+case 'nhentaisearch': {
+  replygcxeon(mess.wait)
+  if (!q) return replygcxeon(`Format: *.nhentaisearch Judul Doujin*`)
+  const axios = require('axios')
+  const apiKey = 'Shirooo'
+  const apiUrl = `https://api.lolhuman.xyz/api/nhentaisearch?apikey=${apiKey}&query=${encodeURIComponent(q)}`
+  
+  axios.get(apiUrl)
+    .then((response) => {
+      const result = response.data.result
+
+      if (result.length === 0) {
+        replygcxeon(`*Tidak ditemukan doujin dengan judul tersebut*`)
+      } else {
+        let doujinList = ''
+        for (const doujin of result) {
+          const doujinId = doujin.id
+          const doujinTitleEnglish = doujin.title_english
+          const doujinTitleJapanese = doujin.title_japanese
+          const doujinTitleNative = doujin.title_native
+          const doujinPage = doujin.page
+
+          doujinList += `ID: *${doujinId}*\n` +
+                        `Judul (Bahasa Inggris): *${doujinTitleEnglish}*\n` +
+                        `Judul (Bahasa Jepang): *${doujinTitleJapanese}*\n` +
+                        `Judul (Asli): *${doujinTitleNative}*\n` +
+                        `Halaman: *${doujinPage}*\n\n`
+        }
+
+        replygcxeon(doujinList)
+      }
+    })
+    .catch((error) => {
+      console.log(error)
+      replygcxeon('*Terjadi kesalahan saat mencari doujin.*')
+    })
+}
+break
+case 'otakudesu': {
+  if (!q) return replygcxeon(`Format: *.otakudesu Tautan Otakudesu*`)
+  
+  const axios = require('axios')
+  const apikey = 'Shirooo' // Ganti dengan API key Anda
+  const apiUrl = `https://api.lolhuman.xyz/api/otakudesu?apikey=${apikey}&url=${encodeURIComponent(q)}`
+  
+  axios.get(apiUrl)
+    .then(response => {
+      const result = response.data.result
+      
+      const title = result.title
+      const japanese = result.japanese
+      const judul = result.judul
+      const type = result.type
+      const episodes = result.episodes
+      const aired = result.aired
+      const producers = result.producers
+      const genres = result.genres
+      const duration = result.duration
+      const studios = result.studios
+      const rating = result.rating
+      const credit = result.credit
+      const link_dl = result.link_dl
+      
+      let links = ''
+      link_dl.forEach(link => {
+        const title = link.title
+        const linkDl = link.link_dl
+        
+        links += `- ${title}\n`
+        
+        for (const reso in linkDl) {
+          const size = linkDl[reso].size
+          const url = linkDl[reso].link_dl
+          
+          links += `  - Reso: ${reso}\n`
+          links += `    Size: ${size}\n`
+          links += `    URL: ${url}\n`
+        }
+      })
+      
+      const message = `Title: ${title}\n` +
+        `Japanese: ${japanese}\n` +
+        `Judul: ${judul}\n` +
+        `Type: ${type}\n` +
+        `Episodes: ${episodes}\n` +
+        `Aired: ${aired}\n` +
+        `Producers: ${producers}\n` +
+        `Genres: ${genres}\n` +
+        `Duration: ${duration}\n` +
+        `Studios: ${studios}\n` +
+        `Rating: ${rating}\n` +
+        `Credit: ${credit}\n` +
+        `Download Links:\n${links}`
+      
+      // Mengirimkan informasi otakudesu sebagai pesan
+      replygcxeon(message)
+    })
+    .catch(error => {
+      console.error('Error:', error)
+      replygcxeon(`Format: *.otakudesu Tautan Otakudesu*`)
+    })
+  
+  break
+}
+case 'nekopoi': {
+  replygcxeon(mess.wait)
+  if (!q) return replygcxeon('Format: *.nekopoi Tautan Nekopoi*')
+
+  const axios = require('axios')
+  const apikey = 'Shirooo' // Ganti dengan API key Anda
+  
+  const url = encodeURIComponent(q)
+  const apiUrl = `https://api.lolhuman.xyz/api/nekopoi?apikey=${apikey}&url=${url}`
+  
+  axios.get(apiUrl)
+    .then(response => {
+      const result = response.data.result
+      
+      const thumbnail = result.thumbnail
+      const sinopsis = result.sinopsis
+      const genre = result.genre.join(', ')
+      const title = result.title
+      const producers = result.producers
+      const duration = result.duration
+      const links = result.link
+
+      let linkText = ''
+
+      Object.keys(links).forEach(quality => {
+        linkText += `${quality}:\n`
+        
+        Object.keys(links[quality]).forEach(source => {
+          linkText += `${source}: *${links[quality][source]}*\n`
+        })
+
+        linkText += '\n'
+      })
+
+      const message = `Title: *${title}*\n` +
+        `Producers: *${producers}*\n` +
+        `Duration: *${duration}*\n` +
+        `Genre: *${genre}*\n` +
+        `Sinopsis: *${sinopsis}*\n\n` +
+        `Download Links:\n${linkText}`
+
+      // Sending the nekopoi information as a reply
+      replygcxeon(message)
+      XeonBotInc.sendImage(from, thumbnail, title, message)
+    })
+    .catch(error => {
+      console.error('Error:', error)
+      replygcxeon('Terjadi kesalahan saat mencari informasi nekopoi.')
+    })
+
+  break
+}
+case 'mangasearch': {
+replygcxeon(mess.wait)
+  if (!q) return replygcxeon(`Format: *.manga Judul Manga*`)
+
+  const axios = require('axios')
+  const apiKey = 'Shirooo' // Replace with your API key
+  
+  const query = encodeURIComponent(q)
+  const apiUrl = `https://api.lolhuman.xyz/api/manga?apikey=${apiKey}&query=${query}`
+
+  axios.get(apiUrl)
+    .then(response => {
+      const result = response.data.result
+      
+      const mangaId = result.id
+      const mangaIdMal = result.idMal
+      const mangaTitleRomaji = result.title.romaji
+      const mangaTitleEnglish = result.title.english
+      const mangaTitleNative = result.title.native
+      const mangaCoverImageLarge = result.coverImage.large
+      const mangaCoverImageMedium = result.coverImage.medium
+      const mangaFormat = result.format
+      const mangaChapters = result.chapters
+      const mangaVolumes = result.volumes
+      const mangaStatus = result.status
+      const mangaSource = result.source
+      const mangaGenres = result.genres
+      const mangaStartDate = result.startDate
+      const mangaEndDate = result.endDate
+      const mangaDescription = result.description
+      const mangaAverageScore = result.averageScore
+      const mangaSynonyms = result.synonyms
+      const mangaCharacters = result.characters.nodes
+
+      const characterNames = mangaCharacters.map(node => node.name.full).join(', ')
+      
+      const mangaInfo = `
+Title: *${mangaTitleRomaji} (${mangaTitleNative})*
+English Title: *${mangaTitleEnglish}*
+Format: *${mangaFormat}*
+Chapters: *${mangaChapters}*
+Volumes: *${mangaVolumes}*
+Status: *${mangaStatus}*
+Source: *${mangaSource}*
+Genres: *${mangaGenres.join(', ')}*
+Start Date: *${mangaStartDate.year}-${mangaStartDate.month}-${mangaStartDate.day}*
+End Date: *${mangaEndDate.year}-${mangaEndDate.month}-${mangaEndDate.day}*
+Description: *${mangaDescription}*
+Average Score: *${mangaAverageScore}*
+Synonyms: *${mangaSynonyms.join(', ')}*
+Characters: *${characterNames}*
+      `
+      
+      const coverImageUrl = mangaCoverImageLarge
+      const replyMessage = `${mangaInfo}\n\nCover Image: *${coverImageUrl}*`
+      replygcxeon(replyMessage)
+    })
+    .catch(error => {
+      console.error('Error:', error)
+      replygcxeon('An error occurred while searching for manga information.')
+    })
+  
+  break
+}
+case 'lirik2': {
+replygcxeon(mess.wait)
+  if (!q) return replygcxeon(`Format: *.lirik2 Nama Lagu*`)
+  
+  const axios = require('axios')
+  const apiKey = 'Shirooo' // Replace with your API key
+  
+  const query = encodeURIComponent(q)
+  const apiUrl = `https://api.lolhuman.xyz/api/lirik?apikey=${apiKey}&query=${query}`
+  
+  axios.get(apiUrl)
+    .then(response => {
+      const result = response.data.result
+      
+      const lyrics = result
+      
+      const message = `Lirik Lagu "${q}":\n${lyrics}`
+      
+      // Send the lyrics as a reply
+      replygcxeon(message)
+    })
+    .catch(error => {
+      console.error('Error:', error)
+      replygcxeon('Terjadi kesalahan saat mencari lirik lagu.')
+    })
+}
+break
+case 'kumparan' : {
+  replygcxeon(mess.wait)
+  const axios = require('axios');
+  const apikey = 'Shirooo'; // Replace with your API key
+  
+  const apiUrl = `https://api.lolhuman.xyz/api/kumparan?apikey=${apikey}`;
+  
+  axios.get(apiUrl)
+    .then(response => {
+      const result = response.data.result;
+      
+      let newsList = '';
+      result.forEach(news => {
+        const title = news.title;
+        const link = news.link;
+        const desc = news.desc;
+        const category = news.category;
+        const publish = news.publish;
+        
+        const newsInfo = `
+Title: *${title}*
+Link: *${link}*
+Description: *${desc}*
+Category: *${category}*
+Publish Date: *${publish}*
+        `;
+        
+        newsList += `${newsInfo}\n\n`;
+      });
+      
+      const replyMessage = `*Latest News from Kumparan:*\n\n${newsList}`;
+      replygcxeon(replyMessage);
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      replygcxeon('An error occurred while fetching news from Kumparan.');
+    });
+  
+  break;
+}
+case 'genshin': {
+replygcxeon(mess.wait)
+  if (!q) return replygcxeon(`Format: *.genshin Nama Karakter*`)
+
+  const axios = require('axios')
+  const apikey = 'Shirooo' // Ganti dengan API key Anda
+  
+  const character = encodeURIComponent(q)
+  const apiUrl = `https://api.lolhuman.xyz/api/genshin/${character}?apikey=${apikey}`
+  
+  axios.get(apiUrl)
+    .then(response => {
+      const result = response.data.result
+      
+      const title = result.title
+      const icon = result.icon
+      const cover1 = result.cover1
+      const cover2 = result.cover2
+      const name = result.name
+      const attr = result.attr
+      const intro = result.intro
+      const sen = result.sen
+      const cv = result.cv
+
+      const message = `*Karakter:* ${title}\n` +
+        `*Gambar:* ${icon}\n` +
+        `*Cover 1:* ${cover1}\n` +
+        `*Cover 2:* ${cover2}\n` +
+        `*Nama:* ${name}\n` +
+        `*Atribut:* ${attr}\n` +
+        `*Intro:* ${intro}\n` +
+        `*Sen:* ${sen}\n\n` +
+        `CV:\n`
+
+      let cvList = ''
+      cv.forEach(cvItem => {
+        const cvName = cvItem.name
+        const cvAudio = cvItem.audio.join('\n')
+
+        cvList += `- Nama: ${cvName}\n` +
+                  `  Audio:\n${cvAudio}\n\n`
+      })
+
+      const characterInfo = {
+        title: title,
+        message: message + cvList,
+        thumbnail: icon,
+        url: cover1
+      }
+
+      // Mengirimkan informasi karakter Genshin Impact sebagai pesan atau media
+      XeonBotInc.sendTextWithMentions(from, characterInfo.message)
+      XeonBotInc.sendImage(from, characterInfo.thumbnail, characterInfo.title, characterInfo.message)
+    })
+    .catch(error => {
+      console.error('Error:', error)
+      replygcxeon(`Karakter Tersebut Tidak Tersedia. Karakter Yang Tersedia *jean, amber, lisa, kaeya, barbara, diluc, razor, venti, klee, bennett, noelle, fischl, sucrose, mona, diona, albedo, rosaria, eula, aloy, xiao, beidou, ningguang, xiangling, xingqiu, chongyun, qiqi, keqing, tartaglia, zhongli, xinyan, ganyu, hu tao, yanfei, shenhe, yun jin, yelan, kamisato ayaka, kaedehara kazuha, yoimiya, sayu, raiden shogun, kujou sara, sangonomiya kokomi, thoma, arataki itto, gorou, yae miko, kamisato ayato, kuki shinobu, shikanoin heizou, tighnari, collei, dori, cyno, candace, nilou, nahida, layla, wanderer, faruzan*`)
+    })
+  
+  break
+}
+case 'growiki': {
+replygcxeon(mess.wait)
+  if (!q) return replygcxeon(`Format: *.growiki Nama Item*`)
+
+  const axios = require('axios')
+  const apikey = 'Shirooo' // Ganti dengan API key Anda
+  
+  const itemQuery = encodeURIComponent(q)
+  const apiUrl = `https://api.lolhuman.xyz/api/growiki?apikey=${apikey}&query=${itemQuery}`
+  
+  axios.get(apiUrl)
+    .then(response => {
+      const result = response.data.result
+
+      const itemName = result.name
+      const itemDescription = result.desc
+      const itemProperties = result.prop
+      const itemImage = result.img
+      const itemRecipe = result.recipe
+      const itemInfo = result.info
+
+      let message = `Nama Item: *${itemName}*\n` +
+        `Deskripsi: *${itemDescription}*\n` +
+        `Properti: *${itemProperties}*\n\n` +
+        `Resep: \n`
+
+      if (itemRecipe.length === 0) {
+        message += `*Tidak ada informasi resep untuk item ini.*\n`
+      } else {
+        itemRecipe.forEach(recipe => {
+          message += `*${recipe}*\n`
+        })
+      }
+
+      message += `\nInformasi Tambahan: *${itemInfo}*`
+
+      // Mengirimkan informasi item Growtopia sebagai pesan
+      replygcxeon(message)
+    })
+    .catch(error => {
+      console.error('Error:', error)
+      replygcxeon(`*Item Tidak Ditemukan*`)
+    })
+  
+  break
+}
+case 'growtopia' : {
+  replygcxeon(mess.wait)
+  const axios = require('axios')
+  const apikey = 'Shirooo' // Ganti dengan API key Anda
+  const apiUrl = `https://api.lolhuman.xyz/api/growtopia?apikey=${apikey}`
+
+  axios.get(apiUrl)
+    .then(response => {
+      const result = response.data.result
+      
+      const playerOnline = result.player_online
+      const wotdName = result.wotd.name
+      const wotdPreview = result.wotd.preview
+
+      const message = `*Informasi Growtopia*\n` +
+        `Jumlah Pemain Online: *${playerOnline}*\n` +
+        `WOTD (World of The Day): *${wotdName}*\n` +
+        `Pratinjau WOTD: *${wotdPreview}*`
+
+      // Mengirimkan informasi Growtopia sebagai pesan
+      replygcxeon(message)
+    })
+    .catch(error => {
+      console.error('Error:', error)
+      replygcxeon(`*Terjadi kesalahan dalam mengambil informasi Growtopia*`)
+    })
+  
+  break
+}
+case 'gsmarena':
+replygcxeon(mess.wait)
+  if (!q) return replygcxeon(`Format: *.gsmarena Nama Handphone*`);
+
+  const axios = require('axios');
+  const apikey = 'Shirooo'; // Ganti dengan API key Anda
+  const apiUrl = `https://api.lolhuman.xyz/api/gsmarenadetail?apikey=${apikey}&url=https://www.gsmarena.com/${encodeURIComponent(q)}.php`;
+
+  axios.get(apiUrl)
+    .then(response => {
+      const result = response.data.result;
+
+      const phoneName = result.phone_name;
+      const phoneImage = result.phone_image;
+      const specification = result.specification;
+
+      const message = `Informasi Handphone\n` +
+        `Nama: ${phoneName}\n` +
+        `Gambar: ${phoneImage}\n` +
+        `Spesifikasi:\n` +
+        `- Jaringan: ${specification.network}\n` +
+        `- Peluncuran: ${specification.launch}\n` +
+        `- Body: ${specification.body}\n` +
+        `- Layar: ${specification.display}\n` +
+        `- Platform: ${specification.platform}\n` +
+        `- Memori: ${specification.memory}\n` +
+        `- Kamera Utama: ${specification.main_camera}\n` +
+        `- Kamera Selfie: ${specification.selfie_camera}\n` +
+        `- Suara: ${specification.sound}\n` +
+        `- Komunikasi: ${specification.comms}\n` +
+        `- Fitur: ${specification.features}\n` +
+        `- Baterai: ${specification.battery}\n` +
+        `- Lainnya: ${specification.misc}\n` +
+        `- Pengujian: ${specification.tests}`;
+
+      // Mengirimkan informasi handphone sebagai pesan
+      replygcxeon(message);
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      replygcxeon(`Terjadi kesalahan dalam mengambil informasi handphone`);
+    });
+
+  break;
+case 'gempa' : {
+  replygcxeon(mess.wait)
+  const axios = require('axios');
+  const apiKey = 'Shirooo';
+  const apiUrl = `https://api.lolhuman.xyz/api/infogempa?apikey=${apiKey}`;
+  
+  axios.get(apiUrl)
+    .then((response) => {
+      const result = response.data.result;
+      const mapUrl = result.map;
+      const waktu = result.waktu;
+      const magnitude = result.magnitude;
+      const kedalaman = result.kedalaman;
+      const koordinat = result.koordinat;
+      const lokasi = result.lokasi;
+      const potensi = result.potensi;
+      
+      const message = `
+*Informasi Gempa Terkini:*
+Waktu: *${waktu}*
+Besarnya: *${magnitude}*
+Kedalaman: *${kedalaman}*
+Koordinat: *${koordinat}*
+Lokasi: *${lokasi}*
+Potensi Tsunami: *${potensi}*
+Peta: *${mapUrl}*
+      `;
+      
+      replygcxeon(message);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+      replygcxeon('*Terjadi kesalahan saat mencari informasi gempa*');
+    });
+}
+break;
 case 'anime': {
+replygcxeon(mess.wait)
   if (!q) return replygcxeon(`Format: *.anime Judul Anime*`)
   
   const apiKey = 'Shirooo'
@@ -4883,6 +6703,7 @@ Characters: *${characterNames}*
 }
 break 
 case 'artimimpi': {
+replygcxeon(mess.wait)
   if (!q) return replygcxeon(`Format: *.artimimpi Mimpimu*`)
 
   const axios = require('axios')
@@ -4910,6 +6731,7 @@ case 'artimimpi': {
   break
 }
 case 'brainly': {
+replygcxeon(mess.wait)
   if (!q) return replygcxeon(`Format: *.brainly Pertanyaan*`)
 
   const axios = require('axios')
@@ -4945,6 +6767,7 @@ case 'brainly': {
   break
 }
 case 'character': {
+replygcxeon(mess.wait)
   if (!q) return replygcxeon(`Format: *.character Nama*`)
 
   const axios = require('axios')
@@ -4999,6 +6822,7 @@ case 'character': {
   break
 }
 case 'checkresi': {
+replygcxeon(mess.wait)
   if (!q) return replygcxeon(`Format: *.checkresi No Resi*`)
 
   const axios = require('axios')
@@ -5048,7 +6872,7 @@ case 'checkresi': {
   break
 }
 case 'coronaglobal': {
-  if (!XeonTheCreator) return replygcxeon(mess.owner)
+  replygcxeon(mess.wait)
   
   const axios = require('axios')
   const apikey = 'Shirooo' // Ganti dengan API key Anda
@@ -5081,7 +6905,7 @@ case 'coronaglobal': {
   break
 }
 case 'coronaindonesia': {
-  if (!XeonTheCreator) return replygcxeon(mess.owner)
+  replygcxeon(mess.wait)
 
   const axios = require('axios')
   const apikey = 'Shirooo' // Ganti dengan API key Anda
@@ -5112,7 +6936,8 @@ case 'coronaindonesia': {
   
   break
 }
-case 'drakorongoing': {
+case 'drakorongoing' : {
+  replygcxeon(mess.wait)
   const axios = require('axios')
   const apiUrl = 'https://api.lolhuman.xyz/api/drakorongoing?apikey=Shirooo'
 
@@ -5147,7 +6972,8 @@ case 'drakorongoing': {
   
   break
 }
-case 'doujinlatest': {
+case 'doujinlatest' : {
+  replygcxeon(mess.wait)
   const axios = require('axios')
   const apikey = 'Shirooo' // Ganti dengan API key Anda
   const apiUrl = `https://api.lolhuman.xyz/api/doujindesulatest?apikey=${apikey}`
@@ -5182,6 +7008,7 @@ case 'doujinlatest': {
   break
 }
 case 'doujinsearch': {
+replygcxeon(mess.wait)
   if (!q) return replygcxeon(`Format: .doujindesu Query`)
 
   const axios = require('axios')
@@ -5220,7 +7047,7 @@ case 'doujinsearch': {
   break
 }
 case 'cuaca': {
-  if (!XeonTheCreator) return replygcxeon(mess.owner)
+replygcxeon(mess.wait)
   if (!q) return replygcxeon(`Format: *.cuaca Nama Kota*`)
 
   const axios = require('axios')
@@ -5457,7 +7284,7 @@ XeonBotInc.sendMessage(m.chat, { image: { url: yeha }, caption : mess.success },
 }
 break
 case 'alay': {
-  if (!XeonTheCreator) return replygcxeon(mess.owner);
+replygcxeon(mess.wait)
   if (!q) return replygcxeon('Masukkan teks yang ingin diubah menjadi alay.');
 
   const axios = require('axios');
