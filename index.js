@@ -68,30 +68,18 @@ if (blocked.length > 2) return
 for (let i of json[1].blocklist) {
 blocked.push(i.replace('c.us','s.whatsapp.net'))}})
 
-function sendMessageReadStatus(remoteJid, messageId) {
-  // Code to send the message read status
-}
-
-module.exports = {
-  sendMessageReadStatus: sendMessageReadStatus
-};
-
 XeonBotInc.ev.on('messages.upsert', async chatUpdate => {
-  try {
-    kay = chatUpdate.messages[0];
-    if (!kay.message) return;
-    kay.message = Object.keys(kay.message)[0] === 'ephemeralMessage' ? kay.message.ephemeralMessage.message : kay.message;
-    if (kay.key && kay.key.remoteJid === 'status@broadcast') return;
-    if (!XeonBotInc.public && !kay.key.fromMe && chatUpdate.type === 'notify') return;
-    if (kay.key.id.startsWith('BAE5') && kay.key.id.length === 16) return;
-
-    // Process the message
-    m = smsg(XeonBotInc, kay, store);
-    require('./XeonCheems7')(XeonBotInc, m, chatUpdate, store);
-  } catch (err) {
-    console.log(err);
-  }
-});
+try {
+kay = chatUpdate.messages[0]
+if (!kay.message) return
+kay.message = (Object.keys(kay.message)[0] === 'ephemeralMessage') ? kay.message.ephemeralMessage.message : kay.message
+if (kay.key && kay.key.remoteJid === 'status@broadcast') return
+if (!XeonBotInc.public && !kay.key.fromMe && chatUpdate.type === 'notify') return
+if (kay.key.id.startsWith('BAE5') && kay.key.id.length === 16) return
+m = smsg(XeonBotInc, kay, store)
+require('./XeonCheems7')(XeonBotInc, m, chatUpdate, store)
+} catch (err) {
+console.log(err)}})
 
 	// detect group update
 		XeonBotInc.ev.on("groups.update", async (json) => {
