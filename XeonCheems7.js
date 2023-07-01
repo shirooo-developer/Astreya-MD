@@ -4774,9 +4774,8 @@ XeonBotInc.sendMessage(m.chat, { image: { url: imageUrl } }, { quoted: m });
 }
   break;
 case 'film': {
-replygcxeon(mess.wait)
   if (!q) return replygcxeon(`Format: *.film Judul Film*`)
-
+replygcxeon(mess.wait)
   const axios = require('axios')
   const apikey = 'Shirooo' // Ganti dengan API key Anda
   
@@ -4827,9 +4826,8 @@ replygcxeon(mess.wait)
 XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url:waifudd.data.url } }, { quoted: m })
 break 
 case 'playstore': {
-replygcxeon(mess.wait)
   if (!q) return replygcxeon(`Format: *.playstore Nama Aplikasi*`)
-
+replygcxeon(mess.wait)
   const axios = require('axios')
   const apikey = 'Shirooo' // Ganti dengan API key Anda
   
@@ -4881,9 +4879,8 @@ replygcxeon(mess.wait)
   break
 }
 case 'hashtag': {
-replygcxeon(mess.wait)
   if (!q) return replygcxeon(`Format: .hashtag NamaHashtag`)
-
+replygcxeon(mess.wait)
   const axios = require('axios')
   const apikey = 'Shirooo' // Replace with your API key
 
@@ -4913,9 +4910,8 @@ replygcxeon(mess.wait)
   break
 }
 case 'spotifydownload': {
-  replygcxeon(mess.wait)
   if (!q) return replygcxeon('Format: *.spotifydownload Tautan Spotify*')
-
+replygcxeon(mess.wait)
   const axios = require('axios')
   const apiKey = 'Shirooo' // Replace with your API key
   const apiUrl = `https://api.lolhuman.xyz/api/spotify?apikey=${apiKey}&url=${encodeURIComponent(q)}`
@@ -4955,9 +4951,8 @@ case 'spotifydownload': {
   break
 }
 case 'ttstalk': {
-  replygcxeon(mess.wait)
   if (!q) return replygcxeon(`Format: *.ttstalk Username TikTok*`)
-  
+  replygcxeon(mess.wait)
   const axios = require('axios')
   const apiKey = 'Shirooo'
   const apiUrl = `https://api.lolhuman.xyz/api/stalktiktok/${encodeURIComponent(q)}?apikey=${apiKey}`
@@ -4994,9 +4989,8 @@ Video Count: *${videoCount}*
 }
 break
 case 'ytstalk': {
-  replygcxeon(mess.wait)
   if (!q) return replygcxeon(`Format: *.ytstalk Nama Saluran Youtube*`)
-  
+   replygcxeon(mess.wait)
   const axios = require('axios')
   const apiKey = 'Shirooo' // Replace with your API key
   
@@ -5043,10 +5037,9 @@ case 'ytstalk': {
   break
 }
 case 'strtohex': {
-  replygcxeon(mess.wait)
   const axios = require('axios')
   if (!q) return replygcxeon('Format: *.strtohex Teks*')
-  
+  replygcxeon(mess.wait)
   const apiKey = 'Shirooo'
   const text = encodeURIComponent(q)
   const apiUrl = `https://api.lolhuman.xyz/api/convert/strtohex?apikey=${apiKey}&text=${text}`
@@ -5064,9 +5057,8 @@ case 'strtohex': {
   break
 }
 case 'wikipedia': {
-  replygcxeon(mess.wait)
   if (!q) return replygcxeon(`Format: *.wikipedia Kata Kunci*`)
-
+replygcxeon(mess.wait)
   const axios = require('axios')
   const apikey = 'Shirooo' // Replace with your API key
   
@@ -5091,7 +5083,7 @@ case 'wikipedia': {
 }
 case 'xnxxdownload': {
   if (!q) return replygcxeon(`Format: .xnxxdownload [URL]`)
-
+replygcxeon(mess.wait)
   const axios = require('axios')
   const apikey = 'Shirooo' // Replace with your API key
   const url = encodeURIComponent(q)
@@ -5151,7 +5143,7 @@ case 'xnxxdownload': {
 }
 case 'xnxx': {
   if (!q) return replygcxeon(`Format: *.xnxx Kata Kunci*`)
-  
+  replygcxeon(mess.wait)
   const axios = require('axios')
   const apiKey = 'Shirooo' // Replace with your API key
   
@@ -5194,9 +5186,8 @@ case 'xnxx': {
   break
 }
 case 'superhero': {
-  replygcxeon(mess.wait)
   if (!q) return replygcxeon(`Format: .superhero Nama Superhero`)
-
+ replygcxeon(mess.wait)
   const axios = require('axios')
   const apiKey = 'Shirooo' // Replace with your API key
 
@@ -5263,8 +5254,8 @@ Image: ${imageUrl}
   break
 }
 case 'hextostr': {
-  replygcxeon(mess.wait)
   if (!q) return replygcxeon(`Format: *.hextostr Hex*`)
+ replygcxeon(mess.wait)
   const axios = require('axios')
   const apiKey = 'Shirooo'
   const hexString = encodeURIComponent(q)
@@ -5283,8 +5274,8 @@ case 'hextostr': {
   break
 }
 case 'spotify': {
-  replygcxeon(mess.wait)
   if (!q) return replygcxeon(`Format: *.spotify Nama Lagu*`)
+  replygcxeon(mess.wait)
   const axios = require('axios')
   const apiKey = 'Shirooo'
   const apiUrl = `https://api.lolhuman.xyz/api/spotifysearch?apikey=${apiKey}&query=${encodeURIComponent(q)}`
@@ -5373,9 +5364,8 @@ case 'hoshino2': {
   break
 }
 case 'ipaddress': {
-replygcxeon(mess.wait)
   if (!q) return replygcxeon(`Format: *.ipaddress IP_Address*`)
-
+replygcxeon(mess.wait)
   const axios = require('axios')
   const apiKey = 'Shirooo' // Replace with your API key
 
@@ -5454,9 +5444,8 @@ case 'jadwalbola' : {
   break;
 }
 case 'jadwalsholat': {
-replygcxeon(mess.wait)
   if (!q) return replygcxeon(`Format: *.jadwalsholat Nama Tempat*`)
-
+replygcxeon(mess.wait)
   const axios = require('axios')
   const apiKey = 'Shirooo' // Replace with your API key
 
@@ -5560,9 +5549,8 @@ case 'jalantikus' : {
   break;
 }
 case 'jodoh': {
-replygcxeon(mess.wait)
   if (!q) return replygcxeon(`Format: *.jodoh Nama1 Nama2*`)
-  
+  replygcxeon(mess.wait)
   const axios = require('axios')
   const apikey = 'Shirooo' // Replace with your API key
   
@@ -5690,9 +5678,8 @@ case 'quotesislami' : {
   break;
 }
 case 'hadist': {
-  replygcxeon(mess.wait)
   if (!q) return replygcxeon(`Format: *.hadist Kata Kunci*`)
-
+replygcxeon(mess.wait)
   const axios = require('axios')
   const apikey = 'Shirooo' // Replace with your API key
   
@@ -5721,9 +5708,8 @@ case 'hadist': {
   break
 }
 case 'sfile': {
-  replygcxeon(mess.wait)
   if (!q) return replygcxeon(`Format: *.sfile Tautan Sfile*`)
-
+replygcxeon(mess.wait)
   const axios = require('axios')
   const apikey = 'Shirooo' // Ganti dengan API key Anda
 
@@ -5755,9 +5741,8 @@ case 'sfile': {
   break
 }
 case 'searchbijak': {
-  replygcxeon(mess.wait)
   if (!q) return replygcxeon(`Format: *.searchbijak Kata Kunci*`)
-  
+  replygcxeon(mess.wait)
   const axios = require('axios')
   const apiKey = 'Shirooo' // Replace with your API key
   
@@ -5791,9 +5776,8 @@ case 'searchbijak': {
   break
 }
 case 'randombahasa': {
- replygcxeon(mess.wait)
   if (!q) return replygcxeon(`Format: *.randombahasa Teks*`)
-  
+  replygcxeon(mess.wait)
   const axios = require('axios')
   const apiKey = 'Shirooo' // Replace with your API key
   const query = encodeURIComponent(q)
@@ -5814,9 +5798,8 @@ case 'randombahasa': {
   break
 }
 case 'roboguru': {
-  replygcxeon(mess.wait)
   if (!q) return replygcxeon(`Format: *.roboguru Pertanyaan*`)
-
+replygcxeon(mess.wait)
   const axios = require('axios')
   const apiKey = 'Shirooo' // Replace with your API key
 
@@ -5853,9 +5836,8 @@ case 'roboguru': {
   break
 }
 case 'niatsholat': {
-  replygcxeon(mess.wait)
   if (!q) return replygcxeon(`Format: *.niatsholat JenisSholat*`)
-  
+  replygcxeon(mess.wait)
   const axios = require('axios')
   const apiKey = 'Shirooo'
   const prayerType = encodeURIComponent(q)
@@ -5937,9 +5919,8 @@ case 'quotesanime': {
   break;
 }
 case 'kbbi': {
-replygcxeon(mess.wait)
   if (!q) return replygcxeon(`Format: *.kbbi Kata*`)
-  
+  replygcxeon(mess.wait)
   const axios = require('axios')
   const apiKey = 'Shirooo'
   const query = encodeURIComponent(q)
@@ -5971,9 +5952,8 @@ replygcxeon(mess.wait)
   break
 }
 case 'kisahnabi': {
-replygcxeon(mess.wait)
   if (!q) return replygcxeon(`Format: *.kisahnabi Nama*`)
-  
+  replygcxeon(mess.wait)
   const axios = require('axios')
   const apiKey = 'Shirooo' // Replace with your API key
   
@@ -6007,9 +5987,8 @@ replygcxeon(mess.wait)
   break
 }
 case 'kodepos': {
-replygcxeon(mess.wait)
   if (!q) return replygcxeon(`Format: *.kodepos Nama Tempat*`)
-  
+  replygcxeon(mess.wait)
   const axios = require('axios')
   const apiKey = 'Shirooo' // Replace with your API key
   
@@ -6066,9 +6045,8 @@ case 'katabucin' : {
   break;
 }
 case 'nekopoisearch': {
-  replygcxeon(mess.wait)
   if (!q) return replygcxeon(`Format: *.nekopoi Judul*`)
-
+replygcxeon(mess.wait)
   const axios = require('axios')
   const apiKey = 'Shirooo' // Replace with your API key
   
@@ -6104,8 +6082,8 @@ case 'nekopoisearch': {
   break
 }
 case 'nhentai': {
-  replygcxeon(mess.wait)
   if (!q) return replygcxeon(`Format: *.nhentai KodeDoujin*`)
+  replygcxeon(mess.wait)
   const axios = require('axios')
   const apiKey = 'Shirooo'
   const apiUrl = `https://api.lolhuman.xyz/api/nhentai/${q}?apikey=${apiKey}`
@@ -6141,8 +6119,8 @@ Tags: *${tagsList}*
 }
 break
 case 'nhentaisearch': {
-  replygcxeon(mess.wait)
   if (!q) return replygcxeon(`Format: *.nhentaisearch Judul Doujin*`)
+  replygcxeon(mess.wait)
   const axios = require('axios')
   const apiKey = 'Shirooo'
   const apiUrl = `https://api.lolhuman.xyz/api/nhentaisearch?apikey=${apiKey}&query=${encodeURIComponent(q)}`
@@ -6180,7 +6158,7 @@ case 'nhentaisearch': {
 break
 case 'otakudesu': {
   if (!q) return replygcxeon(`Format: *.otakudesu Tautan Otakudesu*`)
-  
+  replygcxeon(mess.wait)
   const axios = require('axios')
   const apikey = 'Shirooo' // Ganti dengan API key Anda
   const apiUrl = `https://api.lolhuman.xyz/api/otakudesu?apikey=${apikey}&url=${encodeURIComponent(q)}`
@@ -6245,9 +6223,8 @@ case 'otakudesu': {
   break
 }
 case 'nekopoi': {
-  replygcxeon(mess.wait)
   if (!q) return replygcxeon('Format: *.nekopoi Tautan Nekopoi*')
-
+replygcxeon(mess.wait)
   const axios = require('axios')
   const apikey = 'Shirooo' // Ganti dengan API key Anda
   
@@ -6297,9 +6274,8 @@ case 'nekopoi': {
   break
 }
 case 'mangasearch': {
-replygcxeon(mess.wait)
   if (!q) return replygcxeon(`Format: *.manga Judul Manga*`)
-
+replygcxeon(mess.wait)
   const axios = require('axios')
   const apiKey = 'Shirooo' // Replace with your API key
   
@@ -6361,9 +6337,8 @@ Characters: *${characterNames}*
   break
 }
 case 'lirik2': {
-replygcxeon(mess.wait)
   if (!q) return replygcxeon(`Format: *.lirik2 Nama Lagu*`)
-  
+  replygcxeon(mess.wait)
   const axios = require('axios')
   const apiKey = 'Shirooo' // Replace with your API key
   
@@ -6428,9 +6403,8 @@ Publish Date: *${publish}*
   break;
 }
 case 'genshin': {
-replygcxeon(mess.wait)
   if (!q) return replygcxeon(`Format: *.genshin Nama Karakter*`)
-
+replygcxeon(mess.wait)
   const axios = require('axios')
   const apikey = 'Shirooo' // Ganti dengan API key Anda
   
@@ -6489,9 +6463,8 @@ replygcxeon(mess.wait)
   break
 }
 case 'growiki': {
-replygcxeon(mess.wait)
   if (!q) return replygcxeon(`Format: *.growiki Nama Item*`)
-
+replygcxeon(mess.wait)
   const axios = require('axios')
   const apikey = 'Shirooo' // Ganti dengan API key Anda
   
@@ -6564,9 +6537,8 @@ case 'growtopia' : {
   break
 }
 case 'gsmarena':
-replygcxeon(mess.wait)
   if (!q) return replygcxeon(`Format: *.gsmarena Nama Handphone*`);
-
+replygcxeon(mess.wait)
   const axios = require('axios');
   const apikey = 'Shirooo'; // Ganti dengan API key Anda
   const apiUrl = `https://api.lolhuman.xyz/api/gsmarenadetail?apikey=${apikey}&url=https://www.gsmarena.com/${encodeURIComponent(q)}.php`;
@@ -6644,9 +6616,8 @@ Peta: *${mapUrl}*
 }
 break;
 case 'anime': {
-replygcxeon(mess.wait)
   if (!q) return replygcxeon(`Format: *.anime Judul Anime*`)
-  
+  replygcxeon(mess.wait)
   const apiKey = 'Shirooo'
   const apiUrl = `https://api.lolhuman.xyz/api/anime?apikey=${apiKey}&query=${encodeURIComponent(q)}`
   
@@ -6703,9 +6674,8 @@ Characters: *${characterNames}*
 }
 break 
 case 'artimimpi': {
-replygcxeon(mess.wait)
   if (!q) return replygcxeon(`Format: *.artimimpi Mimpimu*`)
-
+replygcxeon(mess.wait)
   const axios = require('axios')
   const apikey = 'Shirooo' // Ganti dengan API key Anda
   
@@ -6731,9 +6701,8 @@ replygcxeon(mess.wait)
   break
 }
 case 'brainly': {
-replygcxeon(mess.wait)
   if (!q) return replygcxeon(`Format: *.brainly Pertanyaan*`)
-
+replygcxeon(mess.wait)
   const axios = require('axios')
   const apikey = 'Shirooo' // Ganti dengan API key Anda
   
@@ -6767,9 +6736,8 @@ replygcxeon(mess.wait)
   break
 }
 case 'character': {
-replygcxeon(mess.wait)
   if (!q) return replygcxeon(`Format: *.character Nama*`)
-
+replygcxeon(mess.wait)
   const axios = require('axios')
   const apikey = 'Shirooo' // Ganti dengan API key Anda
   
@@ -6822,9 +6790,8 @@ replygcxeon(mess.wait)
   break
 }
 case 'checkresi': {
-replygcxeon(mess.wait)
   if (!q) return replygcxeon(`Format: *.checkresi No Resi*`)
-
+replygcxeon(mess.wait)
   const axios = require('axios')
   const apikey = 'Shirooo' // Ganti dengan API key Anda
   
@@ -7008,9 +6975,8 @@ case 'doujinlatest' : {
   break
 }
 case 'doujinsearch': {
-replygcxeon(mess.wait)
   if (!q) return replygcxeon(`Format: .doujindesu Query`)
-
+replygcxeon(mess.wait)
   const axios = require('axios')
   const apikey = 'Shirooo' // Ganti dengan API key Anda
   
@@ -7047,9 +7013,8 @@ replygcxeon(mess.wait)
   break
 }
 case 'cuaca': {
-replygcxeon(mess.wait)
   if (!q) return replygcxeon(`Format: *.cuaca Nama Kota*`)
-
+ replygcxeon(mess.wait)
   const axios = require('axios')
   const apikey = 'Shirooo' // Ganti dengan API key Anda
   
