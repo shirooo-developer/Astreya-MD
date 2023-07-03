@@ -6545,7 +6545,6 @@ case 'growtopia' : {
 case 'gsmarena':
   if (!q) return replygcxeon(`Format: *.gsmarena Nama Handphone*`);
 replygcxeon(mess.wait)
-  const axios = require('axios');
   const apikey = 'Shirooo'; // Ganti dengan API key Anda
   const apiUrl = `https://api.lolhuman.xyz/api/gsmarenadetail?apikey=${apikey}&url=https://www.gsmarena.com/${encodeURIComponent(q)}.php`;
 
