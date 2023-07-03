@@ -4194,7 +4194,8 @@ case 'avatar':
 case 'lizard':
 case 'meow':
 case 'tickle':
-replygcxeon(mess.wait)						
+replygcxeon(mess.wait)	
+const axios = require('axios')
  waifudd = await axios.get(`https://nekos.life/api/v2/img/${command}`)
             await XeonBotInc.sendMessage(m.chat,{ caption: mess.success, image: {url:waifudd.data.url} },{ quoted:m }).catch(err => {
                     return('*Kesalahan*')
