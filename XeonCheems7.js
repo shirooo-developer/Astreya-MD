@@ -6623,6 +6623,7 @@ break;
 case 'anime': {
   if (!q) return replygcxeon(`Format: *.anime Judul Anime*`)
   replygcxeon(mess.wait)
+  const axios = require('axios')
   const apiKey = 'Shirooo'
   const apiUrl = `https://api.lolhuman.xyz/api/anime?apikey=${apiKey}&query=${encodeURIComponent(q)}`
   
