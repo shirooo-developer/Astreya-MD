@@ -8,8 +8,8 @@ services:
       - .:/code
       - logvolume02:/var/log
     links:
-      - redis2
+      - redis
   redis2:
-    image: redis2
+    image: redis
 volumes:
   logvolume02: {}
