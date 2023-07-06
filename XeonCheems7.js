@@ -1084,7 +1084,7 @@ case 'paptt':
             }
         break
 case 'cekapikey':
-            if (!text) return replygcxeon(`Format: ${prefix+command} *Apikey*`)
+            if (!text) return replygcxeon(`Format: *${prefix+command} Apikey*`)
             let lol = await fetchJson(`https://api.lolhuman.xyz/api/checkapikey?apikey=${text}`)
             replygcxeon(mess.wait)
             if (lol.message == 'success') {
@@ -2195,7 +2195,7 @@ let off = ntnsfw.indexOf(from)
 ntnsfw.splice(off, 1)
 fs.writeFileSync('./database/nsfw.json', JSON.stringify(ntnsfw))
 } else {
-  await replygcxeon(`*${prefix + command} on* - Untuk Mengaktifkan NSFW\n*${prefix + command} off* - Untuk Menonaktifkan NSFW`)
+  await replygcxeon(`*Not safe for work (NSFW) adalah bahasa gaul atau slang Internet yang digunakan untuk menandai tautan ke konten, video, atau halaman website yang mungkin tidak ingin dilihat oleh pemirsa di lingkungan publik, formal, atau terkontrol.*`)
   }
   }
   break
@@ -3134,8 +3134,8 @@ replygcxeon("*Kesalahan*")
 break
 case 'stickernobg':
 case 'snobg': {
- replygcxeon(mess.wait)
 if (!quoted) return replygcxeon(`Kirim Atau Repy Media Dengan Perintah *${prefix+command}*\n\n*Maksimal Durasi Vidio 9 Detik*`)
+replygcxeon(mess.wait)
 if (/image/.test(mime)) {
 let media = await XeonBotInc.downloadAndSaveMediaMessage(quoted)
 let encmedia = await XeonBotInc.sendImageAsSticker(m.chat, await rmbg(media), m, { packname: global.packname, author: global.author })
@@ -3214,6 +3214,7 @@ case 'jsksidi': case 'jgcfy': {
             break
             case 'toqr':{
   if (!q) return replygcxeon('Format: *.toqr Tautan Atau Teks*')
+  replygcxeon(mess.wait)
    const QrCode = require('qrcode-reader')
    const qrcode = require('qrcode')
    let qyuer = await qrcode.toDataURL(q, { scale: 35 })
@@ -3688,6 +3689,7 @@ break
 case 'style': case 'styletext': {
 		let { styletext } = require('./lib/scraper')
 		if (!text) return replygcxeon('Format: *.style Teks*')
+		replygcxeon(mess.wait)
                 let anu = await styletext(text)
                 let teks = `Gaya Teks Dari *${text}*\n\n`
                 for (let i of anu) {
@@ -4203,6 +4205,7 @@ const axios = require('axios')
 break
 case 'animewallpaper2': case 'animewall2': {
                 if (!args.join(" ")) return replygcxeon("Format: *.animewall2 Kata Kunci*")
+                replygcxeon(mess.wait)
 		let { wallpaper } = require('./lib/scraperW')
                 anu = await wallpaper(args)
                 result = anu[Math.floor(Math.random() * anu.length)]
@@ -4226,7 +4229,6 @@ const i = Math.floor(Math.random() * wallpaper.length);
 //XeonBotInc.sendMessage(m.chat,{image:{url:wallpaper[i].image},caption:`*Query :* ${q}`})            
 break
 case 'akira': case 'akiyama': case 'ana': case 'art': case 'asuna': case 'ayuzawa': case 'boruto': case 'bts': case 'chiho': case 'chitoge': case 'cosplay': case 'cosplayloli': case 'cosplaysagiri': case 'cyber': case 'deidara': case 'doraemon': case 'emilia': case 'erza': case 'exo':  case 'gamewallpaper': case 'gremory': case 'hacker': case 'hestia': case 'hinata': case 'husbu': case 'inori': case 'islamic': case 'isuzu': case 'itachi': case 'itori': case 'jennie': case 'jiso': case 'justina': case 'kaga': case 'kagura': case 'kakasih': case 'kaori': case 'cartoon': case 'shortquote': case 'keneki': case 'kotori': case 'kurumi': case 'lisa': case 'loli': case 'madara': case 'megumin': case 'mikasa': case 'mikey': case 'miku': case 'minato': case 'mountain': case 'naruto': case 'nekonime': case 'nezuko': case 'onepiece': case 'pentol': case 'pokemon': case 'programming':  case 'randomnime': case 'randomnime2': case 'rize': case 'rose': case 'sagiri': case 'sakura': case 'sasuke': case 'satanic': case 'shina': case 'shinka': case 'shinomiya': case 'shizuka': case 'shota': case 'space': case 'technology': case 'tejina': case 'toukachan': case 'tsunade': case 'waifu': case 'yotsuba': case 'yuki': case 'yulibocil': case 'yumeko':{
-if (!m.isGroup) return replygcxeon(`*Fitur Ini Hanya Berfungsi Di Grup*`)
 replygcxeon(mess.wait)
 let heyy
 if (/akira/.test(command)) heyy = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/master/akira.json')
@@ -4719,13 +4721,6 @@ replygcxeon(mess.wait)
     const imageUrl = 'https://api.lolhuman.xyz/api/random/nsfw/neko?apikey=Shirooo';         
 XeonBotInc.sendMessage(m.chat, { image: { url: imageUrl } }, { quoted: m });
 }
-case 'neko' : {
-if (!m.isGroup) return replygcxeon(mess.group)
-replygcxeon(mess.wait)
-    const imageUrl = 'https://api.lolhuman.xyz/api/random2/neko?apikey=Shirooo';         
-XeonBotInc.sendMessage(m.chat, { image: { url: imageUrl } }, { quoted: m });
-}
-  break;
 case '18pussy' : {
 if (!m.isGroup) return replygcxeon(mess.group)
 if (!AntiNsfw) return replygcxeon(mess.nsfw)
@@ -4806,12 +4801,12 @@ replygcxeon(mess.wait)
           const movieId = item.movieId
 
           filmText += `Judul: *${title}*\n` +
-                      `Rating: *${rating}*\n` +
+                      `Peringkat: *${rating}*\n` +
                       `Kualitas: *${quality}*\n` +
                       `Episode: *${episode}*\n` +
                       `Web Resmi: *${officialWeb}*\n\n` +
                       `ID Film:* ${movieId}*\n` +
-                      `Thumbnail: *${thumbnail}*\n\n`
+                      `Gambar Kecil: *${thumbnail}*\n\n`
         }
 
         replygcxeon(filmText)
@@ -4819,7 +4814,7 @@ replygcxeon(mess.wait)
     })
     .catch(error => {
       console.error('Error:', error)
-      replygcxeon(`*Terjadi kesalahan dalam mencari informasi film*`)
+      replygcxeon(`*Film tidak ditemukan.*`)
     })
   
   break
@@ -4845,7 +4840,7 @@ replygcxeon(mess.wait)
       const result = response.data.result
 
       if (result.length === 0) {
-        replygcxeon(`*Tidak ditemukan informasi untuk aplikasi tersebut*`)
+        replygcxeon(`*Aplikasi tidak ditemukan.*`)
       } else {
         let appInfo = ''
         for (const item of result) {
@@ -4863,9 +4858,9 @@ replygcxeon(mess.wait)
 
           appInfo += `Nama Aplikasi: *${title}*\n` +
                      `ID Aplikasi: *${appId}*\n` +
-                     `URL: *${url}*\n` +
-                     `Icon: *${icon}*\n` +
-                     `Developer: *${developer}*\n` +
+                     `Tautan: *${url}*\n` +
+                     `Ikon: *${icon}*\n` +
+                     `Pengembang: *${developer}*\n` +
                      `Mata Uang: *${currency}*\n` +
                      `Harga: *${price}*\n` +
                      `Gratis: *${isFree ? 'Ya' : 'Tidak'}*\n` +
@@ -4879,7 +4874,7 @@ replygcxeon(mess.wait)
     })
     .catch(error => {
       console.error('Error:', error)
-      replygcxeon(`*Terjadi kesalahan dalam mencari informasi aplikasi di Play Store*`)
+      replygcxeon(`*Aplikasi tidak ditemukan.*`)
     })
   
   break
@@ -4937,21 +4932,21 @@ replygcxeon(mess.wait)
       const songDownloadUrl = result.link
 
       const message = `ID: *${songId}*\n` +
-        `Title: *${songTitle}*\n` +
-        `Artists: *${songArtists}*\n` +
-        `Duration: *${songDuration} Seconds*\n` +
-        `Popularity: *${songPopularity}*\n` +
-        `Spotify URL: *${songUrl}*\n` +
-        `Preview URL: *${songPreviewUrl}*\n` +
-        `Thumbnail: *${songThumbnail}*\n` +
-        `Download URL: *${songDownloadUrl}*`
+        `Judul: *${songTitle}*\n` +
+        `Artis: *${songArtists}*\n` +
+        `Durasi: *${songDuration} Detik*\n` +
+        `Kepopuleran: *${songPopularity}*\n` +
+        `Tautan Spotify: *${songUrl}*\n` +
+        `Tautan Pratinjau: *${songPreviewUrl}*\n` +
+        `Gambar Kecil: *${songThumbnail}*\n` +
+        `Tautan Unduhan: *${songDownloadUrl}*`
 
       // Sending the song information as a reply
       replygcxeon(message)
     })
     .catch(error => {
       console.error('Error:', error)
-      replygcxeon('An error occurred while downloading the Spotify song.')
+      replygcxeon('*Terjadi kesalahan saat mengunduh lagu Spotify.*')
     })
 
   break
@@ -4977,20 +4972,20 @@ case 'ttstalk': {
       const videoCount = result.video
 
       const message = `
-Username: *${username}*
-Nickname: *${nickname}*
+Nama Belakang: *${username}*
+Nama Panggilan: *${nickname}*
 Bio: *${bio}*
-Followers: *${followers}*
-Followings: *${followings}*
-Likes: *${likes}*
-Video Count: *${videoCount}*
+Pengikut: *${followers}*
+Mengikuti: *${followings}*
+Suka: *${likes}*
+Jumlah Vidio: *${videoCount}*
       `
 
       replygcxeon(message, userPicture)
     })
     .catch(error => {
       console.error('Error:', error)
-      replygcxeon('*Akun Tik Tok Tidak Ditemukan*')
+      replygcxeon('*Akun tik tok tidak ditemukan.*')
     })
 }
 break
@@ -5008,7 +5003,7 @@ case 'ytstalk': {
       const result = response.data.result
 
       if (result.length === 0) {
-        replygcxeon(`Tidak ditemukan informasi tentang channel YouTube tersebut.`)
+        replygcxeon(`*Saluran youtube tidak ditemukan.*`)
       } else {
         let replyMessage = ''
         result.forEach(channel => {
@@ -5022,14 +5017,14 @@ case 'ytstalk': {
           const mediumPicture = channelPicture.medium.url
           const highPicture = channelPicture.high.url
 
-          replyMessage += `Channel ID: *${channelId}*\n` +
-                          `Nama Channel: *${channelName}*\n` +
-                          `Tentang Channel: *${channelAbout}*\n` +
+          replyMessage += `Saluran ID: *${channelId}*\n` +
+                          `Nama Saluran: *${channelName}*\n` +
+                          `Tentang Saluran: *${channelAbout}*\n` +
                           `Tanggal Dibuat: *${channelCreated}*\n` +
-                          `Gambar Channel:\n` +
-                          `Default: *${defaultPicture}*\n` +
-                          `Medium: *${mediumPicture}*\n` +
-                          `High: *${highPicture}*\n\n`
+                          `Gambar Saluran:\n` +
+                          `Bawaan: *${defaultPicture}*\n` +
+                          `Sedang: *${mediumPicture}*\n` +
+                          `Tinggi: *${highPicture}*\n\n`
         })
 
         replygcxeon(replyMessage)
@@ -5037,7 +5032,7 @@ case 'ytstalk': {
     })
     .catch(error => {
       console.error('Error:', error)
-      replygcxeon(`*Terjadi kesalahan dalam mencari informasi channel YouTube.*`)
+      replygcxeon(`*Saluran youtube tidak ditemukan.*`)
     })
 
   break
@@ -5057,7 +5052,7 @@ case 'strtohex': {
     })
     .catch((error) => {
       console.log(error)
-      replygcxeon('*Terjadi kesalahan saat melakukan konversi*')
+      replygcxeon('*Terjadi kesalahan saat melakukan konversi.*')
     })
   
   break
@@ -5082,13 +5077,13 @@ replygcxeon(mess.wait)
     })
     .catch(error => {
       console.error('Error:', error)
-      replygcxeon(`*Terjadi kesalahan dalam mencari informasi dari Wikipedia*`)
+      replygcxeon(`*Tidak ditemukan di Wikipedia.*`)
     })
   
   break
 }
 case 'xnxxdownload': {
-  if (!q) return replygcxeon(`Format: .xnxxdownload [URL]`)
+  if (!q) return replygcxeon(`Format: *.xnxxdownload Tautan*`)
 replygcxeon(mess.wait)
   const axios = require('axios')
   const apikey = 'Shirooo' // Replace with your API key
@@ -5111,23 +5106,23 @@ replygcxeon(mess.wait)
       const description = result.description
       const links = result.link
 
-      const message = `Title: ${title}\n` +
-        `Duration: ${duration}\n` +
-        `Views: ${view}\n` +
-        `Rating: ${rating}\n` +
-        `Likes: ${like}\n` +
-        `Dislikes: ${dislike}\n` +
-        `Comments: ${comment}\n` +
-        `Tags: ${tags}\n` +
-        `Description: ${description}\n\n` +
-        `Links:\n`
+      const message = `Judul: *${title}*\n` +
+        `Durasi: *${duration}*\n` +
+        `Penonton: *${view}*\n` +
+        `Peringkat: *${rating}*\n` +
+        `Suka: *${like}*\n` +
+        `Tidak Suka: *${dislike}*\n` +
+        `Komentar: *${comment}*\n` +
+        `Tag: *${tags}*\n` +
+        `Deskripsi: *${description}*\n\n` +
+        `Tautan:\n`
 
       let linkList = ''
       links.forEach(link => {
         const linkType = link.type
         const linkUrl = link.link
 
-        linkList += `- ${linkType}: ${linkUrl}\n`
+        linkList += `- ${linkType}: *${linkUrl}*\n`
       })
 
       const xnxxInfo = {
@@ -5142,7 +5137,7 @@ replygcxeon(mess.wait)
     })
     .catch(error => {
       console.error('Error:', error)
-      replygcxeon(`An error occurred while fetching xnxx information`)
+      replygcxeon(`*Terjadi kesalahan saat mengambil informasi xnxx.*`)
     })
 
   break
@@ -5161,7 +5156,7 @@ case 'xnxx': {
       const result = response.data.result
 
       if (result.length === 0) {
-        replygcxeon(`No search results found for "${q}"`)
+        replygcxeon(`*Tidak ditemukan "${q}"*`)
       } else {
         let replyMessage = ''
 
@@ -5173,12 +5168,12 @@ case 'xnxx': {
           const link = item.link
           const thumbnail = item.thumbnail
 
-          replyMessage += `Title: ${title}\n` +
-                          `Views: ${views}\n` +
-                          `Duration: ${duration}\n` +
-                          `Uploader: ${uploader}\n` +
-                          `Link: ${link}\n` +
-                          `Thumbnail: ${thumbnail}\n\n`
+          replyMessage += `Judul: *${title}*\n` +
+                          `Pentonton: *${views}*\n` +
+                          `Durasi: *${duration}*\n` +
+                          `Pengunggah: *${uploader}*\n` +
+                          `Tautan: *${link}*\n` +
+                          `Gambar Kecil: *${thumbnail}*\n\n`
         }
 
         replygcxeon(replyMessage)
@@ -5186,13 +5181,13 @@ case 'xnxx': {
     })
     .catch(error => {
       console.error('Error:', error)
-      replygcxeon(`An error occurred while searching for xnxx videos`)
+      replygcxeon(`*Terjadi kesalahan saat mencari video xnxx.*`)
     })
 
   break
 }
 case 'superhero': {
-  if (!q) return replygcxeon(`Format: .superhero Nama Superhero`)
+  if (!q) return replygcxeon(`Format: *.superhero Nama Superhero*`)
  replygcxeon(mess.wait)
   const axios = require('axios')
   const apiKey = 'Shirooo' // Replace with your API key
@@ -5213,48 +5208,48 @@ case 'superhero': {
       const imageUrl = result.image.url
 
       const message = `
-Nama Superhero: ${superheroName}
-Powerstats:
-- Intelligence: ${powerstats.intelligence}
-- Strength: ${powerstats.strength}
-- Speed: ${powerstats.speed}
-- Durability: ${powerstats.durability}
-- Power: ${powerstats.power}
-- Combat: ${powerstats.combat}
+Nama Superhero: *${superheroName}*
+Powerstat:
+- Kecerdasan: *${powerstats.intelligence}*
+- Kekuatan: *${powerstats.strength}*
+- Kecepatan: *${powerstats.speed}*
+- Daya Tahan: *${powerstats.durability}*
+- Kekuatan: *${powerstats.power}*
+- Tempur: *${powerstats.combat}*
 
-Biography:
-- Full Name: ${biography['full-name']}
-- Alter Egos: ${biography['alter-egos']}
-- Aliases: ${biography.aliases.join(', ')}
-- Place of Birth: ${biography['place-of-birth']}
-- First Appearance: ${biography['first-appearance']}
-- Publisher: ${biography.publisher}
-- Alignment: ${biography.alignment}
+Biografi:
+- Nama Lengkap: *${biography['full-name']}*
+- Alter Ego: *${biography['alter-egos']}*
+- Alias: *${biography.aliases.join(', ')}*
+- Tempat Lahir: *${biography['place-of-birth']}*
+- Penampilan Pertama: *${biography['first-appearance']}*
+- Penerbit: *${biography.publisher}*
+- Penyelarasan: *${biography.alignment}*
 
-Appearance:
-- Gender: ${appearance.gender}
-- Race: ${appearance.race}
-- Height: ${appearance.height.join(', ')}
-- Weight: ${appearance.weight.join(', ')}
-- Eye Color: ${appearance['eye-color']}
-- Hair Color: ${appearance['hair-color']}
+Penampilan:
+- Jenis Kelamin: *${appearance.gender}*
+- Balapan: *${appearance.race}*
+- Tinggi: *${appearance.height.join(', ')}*
+- Berat: *${appearance.weight.join(', ')}*
+- Warna Mata: *${appearance['eye-color']}*
+- Warna Rambut: *${appearance['hair-color']}*
 
-Work:
-- Occupation: ${work.occupation}
-- Base: ${work.base}
+Bekerja:
+- Pekerjaan: *${work.occupation}*
+- Basis: *${work.base}*
 
-Connections:
-- Group Affiliation: ${connections['group-affiliation']}
-- Relatives: ${connections.relatives}
+Koneksi:
+- Afiliasi Grup: *${connections['group-affiliation']}*
+- Kerabat: *${connections.relatives}*
 
-Image: ${imageUrl}
+Gambar: *${imageUrl}*
       `
 
       replygcxeon(message)
     })
     .catch(error => {
       console.error('Error:', error)
-      replygcxeon(`Terjadi kesalahan dalam mengambil informasi superhero`)
+      replygcxeon(`*Superhero tidak ditemukan.*`)
     })
 
   break
@@ -5305,13 +5300,13 @@ case 'spotify': {
         
         replyMessage += `
 ID: *${id}*
-Link: *${link}*
-Title: *${title}*
-Artists: *${artists}*
-Duration: *${duration} Seconds*
-Popularity: *${popularity}*
-External URL: *${external_urls.spotify}*
-Preview URL: *${preview_url}*
+Tautan: *${link}*
+Judul: *${title}*
+Artis: *${artists}*
+Durasi: *${duration} Detik*
+Kepopuleran: *${popularity}*
+Tautan Luar: *${external_urls.spotify}*
+Tautan Tinjau: *${preview_url}*
 `
       }
 
@@ -5319,7 +5314,7 @@ Preview URL: *${preview_url}*
     })
     .catch((error) => {
       console.log(error)
-      replygcxeon('Terjadi kesalahan saat mencari lagu di Spotify.')
+      replygcxeon('*Lagu spotify tidak ditemukan.*')
     })
 }
 break
@@ -5439,7 +5434,7 @@ case 'jadwalbola' : {
       if (replyMessage !== '') {
         replygcxeon(replyMessage);
       } else {
-        replygcxeon('*Jadwal sepak bola tidak ditemukan*');
+        replygcxeon('*Jadwal sepak bola tidak ditemukan.*');
       }
     })
     .catch((error) => {
@@ -5538,18 +5533,18 @@ case 'jalantikus' : {
         const time = news.time;
 
         newsList += `- *${title}*\n` +
-          `Category: *${category}*\n` +
-          `Time: *${time}*\n` +
-          `Link: *${link}*\n\n`;
+          `Kategori: *${category}*\n` +
+          `Waktu: *${time}*\n` +
+          `Tautan: *${link}*\n\n`;
       });
 
-      const message = `*Latest News from Jalan Tikus:*\n\n${newsList}`;
+      const message = `Berita terbaru dari Jalan Tikus:*\n\n${newsList}`;
 
       replygcxeon(message);
     })
     .catch(error => {
       console.error('Error:', error);
-      replygcxeon('An error occurred while retrieving news from Jalan Tikus.');
+      replygcxeon('*Terjadi kesalahan saat mengambil berita dari Jalan Tikus.*');
     });
 
   break;
@@ -5708,7 +5703,7 @@ replygcxeon(mess.wait)
     })
     .catch(error => {
       console.error('Error:', error)
-      replygcxeon(`*Hadist Tidak Ditemukan*`)
+      replygcxeon(`*Hadist tidak ditemukan.*`)
     })
 
   break
@@ -5731,17 +5726,17 @@ replygcxeon(mess.wait)
       const size = result.size
       const link = result.link
 
-      const message = `Title: *${title}*\n` +
-                      `Uploaded: *${uploaded}*\n` +
-                      `Downloaded: *${downloaded}*\n` +
-                      `Size: *${size}*\n` +
-                      `Link: *${link}*`
+      const message = `Judul: *${title}*\n` +
+                      `Diunggah: *${uploaded}*\n` +
+                      `Diunduh: *${downloaded}*\n` +
+                      `Ukuran: *${size}*\n` +
+                      `Tautan: *${link}*`
 
       replygcxeon(message)
     })
     .catch(error => {
       console.error('Error:', error)
-      replygcxeon(`*Terjadi kesalahan dalam mendapatkan detail dan alternatif download link*`)
+      replygcxeon(`*Terjadi kesalahan dalam mendapatkan detail dan alternatif download link.*`)
     })
 
   break
@@ -5776,7 +5771,7 @@ case 'searchbijak': {
     })
     .catch(error => {
       console.error('Error:', error)
-      replygcxeon(`Terjadi kesalahan dalam mencari kutipan bijak`)
+      replygcxeon(`*Terjadi kesalahan dalam mencari kutipan bijak.*`)
     })
   
   break
@@ -5798,7 +5793,7 @@ case 'randombahasa': {
     })
     .catch((error) => {
       console.error('Error:', error)
-      replygcxeon('Terjadi kesalahan dalam memuat teks random bahasa.')
+      replygcxeon('*Terjadi kesalahan dalam memuat teks random bahasa.*')
     })
   
   break
@@ -5836,7 +5831,7 @@ replygcxeon(mess.wait)
     })
     .catch(error => {
       console.error('Error:', error)
-      replygcxeon(`*Terjadi kesalahan dalam mencari jawaban*`)
+      replygcxeon(`*Terjadi kesalahan dalam mencari jawaban.*`)
     })
 
   break
@@ -5889,7 +5884,7 @@ case 'quotes': {
     })
     .catch((error) => {
       console.log(error);
-      replygcxeon('Terjadi kesalahan saat mengambil quotes.');
+      replygcxeon('*Terjadi kesalahan saat mengambil quotes.*');
     });
   
   break;
@@ -6082,7 +6077,7 @@ replygcxeon(mess.wait)
     })
     .catch(error => {
       console.error('Error:', error)
-      replygcxeon(`An error occurred while searching for videos`)
+      replygcxeon(`*Terjadi kesalahan saat menelusuri video.*`)
     })
 
   break
@@ -6108,19 +6103,19 @@ case 'nhentai': {
       const tagsList = tags.join(', ')
       
       const nhentaiInfo = `
-Title (Romaji): *${title_romaji}*
-Title (Native): *${title_native}*
-Tags: *${tagsList}*
+Judul (Romaji): *${title_romaji}*
+Judul (Native): *${title_native}*
+Tag: *${tagsList}*
       `
       
-      const imageUrls = image.map(url => `- ${url}`).join('\n')
+      const imageUrls = image.map(url => `- *${url}*`).join('\n')
       
-      const replyMessage = `${nhentaiInfo}\n\nImages:\n${imageUrls}\n\nRead Online: *${read}*`
+      const replyMessage = `${nhentaiInfo}\n\nGambar:\n${imageUrls}\n\nBaca Online: *${read}*`
       replygcxeon(replyMessage)
     })
     .catch((error) => {
       console.log(error)
-      replygcxeon('Terjadi kesalahan saat mencari informasi doujin di nhentai.')
+      replygcxeon('*Terjadi kesalahan saat mencari informasi doujin di nhentai.*')
     })
 }
 break
@@ -6136,7 +6131,7 @@ case 'nhentaisearch': {
       const result = response.data.result
 
       if (result.length === 0) {
-        replygcxeon(`*Tidak ditemukan doujin dengan judul tersebut*`)
+        replygcxeon(`*Tidak ditemukan doujin dengan judul tersebut.*`)
       } else {
         let doujinList = ''
         for (const doujin of result) {
@@ -6198,25 +6193,25 @@ case 'otakudesu': {
           const size = linkDl[reso].size
           const url = linkDl[reso].link_dl
           
-          links += `  - Reso: ${reso}\n`
-          links += `    Size: ${size}\n`
-          links += `    URL: ${url}\n`
+          links += `  - Resolusi: ${reso}\n`
+          links += `    Ukuran: ${size}\n`
+          links += `    Tautan: ${url}\n`
         }
       })
       
-      const message = `Title: ${title}\n` +
-        `Japanese: ${japanese}\n` +
-        `Judul: ${judul}\n` +
-        `Type: ${type}\n` +
-        `Episodes: ${episodes}\n` +
-        `Aired: ${aired}\n` +
-        `Producers: ${producers}\n` +
-        `Genres: ${genres}\n` +
-        `Duration: ${duration}\n` +
-        `Studios: ${studios}\n` +
-        `Rating: ${rating}\n` +
-        `Credit: ${credit}\n` +
-        `Download Links:\n${links}`
+      const message = `Judul: *${title}*\n` +
+        `Jepang: *${japanese}*\n` +
+        `Judul: *${judul}*\n` +
+        `Tipe: *${type}*\n` +
+        `Episode: *${episodes}*\n` +
+        `Ditayangkan: *${aired}*\n` +
+        `Produser: *${producers}*\n` +
+        `Genre: *${genres}*\n` +
+        `Durasi: *${duration}*\n` +
+        `Studio: *${studios}*\n` +
+        `Peringkat: *${rating}*\n` +
+        `Kredit: *${credit}*\n` +
+        `Tautan Unduhan:\n${links}`
       
       // Mengirimkan informasi otakudesu sebagai pesan
       replygcxeon(message)
@@ -6261,12 +6256,12 @@ replygcxeon(mess.wait)
         linkText += '\n'
       })
 
-      const message = `Title: *${title}*\n` +
-        `Producers: *${producers}*\n` +
-        `Duration: *${duration}*\n` +
+      const message = `Judul: *${title}*\n` +
+        `Produksi: *${producers}*\n` +
+        `Durasi: *${duration}*\n` +
         `Genre: *${genre}*\n` +
         `Sinopsis: *${sinopsis}*\n\n` +
-        `Download Links:\n${linkText}`
+        `Tautan Unduhan:\n${linkText}`
 
       // Sending the nekopoi information as a reply
       replygcxeon(message)
@@ -6315,29 +6310,29 @@ replygcxeon(mess.wait)
       const characterNames = mangaCharacters.map(node => node.name.full).join(', ')
       
       const mangaInfo = `
-Title: *${mangaTitleRomaji} (${mangaTitleNative})*
-English Title: *${mangaTitleEnglish}*
+Judul: *${mangaTitleRomaji} (${mangaTitleNative})*
+Judul Inggris: *${mangaTitleEnglish}*
 Format: *${mangaFormat}*
-Chapters: *${mangaChapters}*
-Volumes: *${mangaVolumes}*
+Bab: *${mangaChapters}*
+Volume: *${mangaVolumes}*
 Status: *${mangaStatus}*
-Source: *${mangaSource}*
-Genres: *${mangaGenres.join(', ')}*
-Start Date: *${mangaStartDate.year}-${mangaStartDate.month}-${mangaStartDate.day}*
-End Date: *${mangaEndDate.year}-${mangaEndDate.month}-${mangaEndDate.day}*
-Description: *${mangaDescription}*
-Average Score: *${mangaAverageScore}*
-Synonyms: *${mangaSynonyms.join(', ')}*
-Characters: *${characterNames}*
+Sumber: *${mangaSource}*
+Genre: *${mangaGenres.join(', ')}*
+Mulai Tanggal: *${mangaStartDate.year}-${mangaStartDate.month}-${mangaStartDate.day}*
+Tanggal Berakhir: *${mangaEndDate.year}-${mangaEndDate.month}-${mangaEndDate.day}*
+Deskripsi: *${mangaDescription}*
+Skor Rata-Rata: *${mangaAverageScore}*
+Sinonim: *${mangaSynonyms.join(', ')}*
+Karakter: *${characterNames}*
       `
       
       const coverImageUrl = mangaCoverImageLarge
-      const replyMessage = `${mangaInfo}\n\nCover Image: *${coverImageUrl}*`
+      const replyMessage = `${mangaInfo}\n\nGambar Sampul: *${coverImageUrl}*`
       replygcxeon(replyMessage)
     })
     .catch(error => {
       console.error('Error:', error)
-      replygcxeon('An error occurred while searching for manga information.')
+      replygcxeon('*Terjadi kesalahan saat mencari informasi manga.*')
     })
   
   break
@@ -6364,7 +6359,7 @@ case 'lirik2': {
     })
     .catch(error => {
       console.error('Error:', error)
-      replygcxeon('Terjadi kesalahan saat mencari lirik lagu.')
+      replygcxeon('*Terjadi kesalahan saat mencari lirik lagu.*')
     })
 }
 break
@@ -6388,22 +6383,22 @@ case 'kumparan' : {
         const publish = news.publish;
         
         const newsInfo = `
-Title: *${title}*
-Link: *${link}*
-Description: *${desc}*
-Category: *${category}*
-Publish Date: *${publish}*
+Judul: *${title}*
+Tautan: *${link}*
+Deskripsi: *${desc}*
+Kategori: *${category}*
+Tanggal Terbit: *${publish}*
         `;
         
         newsList += `${newsInfo}\n\n`;
       });
       
-      const replyMessage = `*Latest News from Kumparan:*\n\n${newsList}`;
+      const replyMessage = `*Berita terbaru dari Kumparan:*\n\n${newsList}`;
       replygcxeon(replyMessage);
     })
     .catch(error => {
       console.error('Error:', error);
-      replygcxeon('An error occurred while fetching news from Kumparan.');
+      replygcxeon('*Terjadi kesalahan saat mengambil berita dari Kumparan.*');
     });
   
   break;
@@ -6433,11 +6428,11 @@ replygcxeon(mess.wait)
 
       const message = `*Karakter:* ${title}\n` +
         `*Gambar:* ${icon}\n` +
-        `*Cover 1:* ${cover1}\n` +
-        `*Cover 2:* ${cover2}\n` +
+        `*Sampul 1:* ${cover1}\n` +
+        `*Sampul 2:* ${cover2}\n` +
         `*Nama:* ${name}\n` +
         `*Atribut:* ${attr}\n` +
-        `*Intro:* ${intro}\n` +
+        `*Pendahuluan:* ${intro}\n` +
         `*Sen:* ${sen}\n\n` +
         `CV:\n`
 
@@ -6670,7 +6665,7 @@ Characters: *${characterNames}*
       `
       
       const coverImageUrl = coverImage.large
-      const replyMessage = `${animeInfo}\n\nCover Image: *${coverImageUrl}*`
+      const replyMessage = `${animeInfo}\n\nGambar Sampul: *${coverImageUrl}*`
       replygcxeon(replyMessage)
     })
     .catch((error) => {
@@ -6927,12 +6922,12 @@ case 'drakorongoing' : {
         const totalEpisodes = drama.total_episode
         const genres = drama.genre.join(', ')
 
-        message += `Judul: ${title}\n` +
-                   `Link: ${link}\n` +
-                   `Thumbnail: ${thumbnail}\n` +
-                   `Tahun: ${year}\n` +
-                   `Total Episode: ${totalEpisodes}\n` +
-                   `Genre: ${genres}\n\n`
+        message += `Judul: *${title}*\n` +
+                   `Tautan: *${link}*\n` +
+                   `Gambar Kecil: *${thumbnail}*\n` +
+                   `Tahun: *${year}*\n` +
+                   `Total Episode: *${totalEpisodes}*\n` +
+                   `Genre: *${genres}*\n\n`
       })
 
       // Mengirimkan informasi drakor ongoing sebagai pesan
@@ -6940,7 +6935,7 @@ case 'drakorongoing' : {
     })
     .catch(error => {
       console.error('Error:', error)
-      replygcxeon(`Terjadi kesalahan dalam mengambil informasi drakor ongoing`)
+      replygcxeon(`*Terjadi kesalahan dalam mengambil informasi drakor ongoing.*`)
     })
   
   break
@@ -6963,11 +6958,11 @@ case 'doujinlatest' : {
         const episode = doujin.episode
         const type = doujin.type
 
-        message += `Title: ${title}\n` +
-                   `Link: ${link}\n` +
-                   `Thumbnail: ${thumbnail}\n` +
-                   `Episode: ${episode}\n` +
-                   `Type: ${type}\n\n`
+        message += `Judul: *${title}*\n` +
+                   `Tautan: *${link}*\n` +
+                   `Gambar Kecil: *${thumbnail}*\n` +
+                   `Episode: *${episode}*\n` +
+                   `Tipe: *${type}*\n\n`
       }
 
       // Mengirimkan hasil doujindesu terbaru sebagai pesan
@@ -6975,13 +6970,13 @@ case 'doujinlatest' : {
     })
     .catch(error => {
       console.error('Error:', error)
-      replygcxeon(`Terjadi kesalahan dalam mengambil doujindesu terbaru`)
+      replygcxeon(`*Terjadi kesalahan dalam mengambil doujindesu terbaru*`)
     })
   
   break
 }
 case 'doujinsearch': {
-  if (!q) return replygcxeon(`Format: .doujindesu Query`)
+  if (!q) return replygcxeon(`Format: *.doujindesu Kata Kunci*`)
 replygcxeon(mess.wait)
   const axios = require('axios')
   const apikey = 'Shirooo' // Ganti dengan API key Anda
@@ -6994,7 +6989,7 @@ replygcxeon(mess.wait)
       const result = response.data.result
       
       if (result.length === 0) {
-        replygcxeon(`Tidak ditemukan hasil untuk pencarian tersebut`)
+        replygcxeon(`*Tidak ditemukan hasil untuk pencarian tersebut*`)
       } else {
         const firstResult = result[0]
         const title = firstResult.title
@@ -7002,10 +6997,10 @@ replygcxeon(mess.wait)
         const thumbnail = firstResult.thumbnail
         const type = firstResult.type
 
-        const message = `Judul: ${title}\n` +
-          `Link: ${link}\n` +
-          `Thumbnail: ${thumbnail}\n` +
-          `Tipe: ${type}`
+        const message = `Judul: *${title}*\n` +
+          `Tautan: *${link}*\n` +
+          `Gambar Kecil: *${thumbnail}*\n` +
+          `Tipe: *${type}*`
 
         // Mengirimkan informasi doujindesu sebagai pesan
         replygcxeon(message)
@@ -7013,7 +7008,7 @@ replygcxeon(mess.wait)
     })
     .catch(error => {
       console.error('Error:', error)
-      replygcxeon(`Terjadi kesalahan dalam mencari doujindesu`)
+      replygcxeon(`*Terjadi kesalahan dalam mencari doujindesu.*`)
     })
   
   break
@@ -7042,23 +7037,23 @@ case 'cuaca': {
       const udara = result.udara
       const permukaanLaut = result.permukaan_laut
 
-      const message = `Tempat: ${tempat}\n` +
-        `Latitude: ${latitude}\n` +
-        `Longitude: ${longitude}\n` +
-        `Cuaca: ${cuaca}\n` +
-        `Angin: ${angin}\n` +
-        `Deskripsi: ${description}\n` +
-        `Kelembapan: ${kelembapan}\n` +
-        `Suhu: ${suhu}\n` +
-        `Tekanan Udara: ${udara}\n` +
-        `Tekanan Permukaan Laut: ${permukaanLaut}`
+      const message = `Tempat: *${tempat}*\n` +
+        `Latitude: *${latitude}*\n` +
+        `Longitude: *${longitude}*\n` +
+        `Cuaca: *${cuaca}*\n` +
+        `Angin: *${angin}*\n` +
+        `Deskripsi: *${description}*\n` +
+        `Kelembapan: *${kelembapan}*\n` +
+        `Suhu: *${suhu}*\n` +
+        `Tekanan Udara: *${udara}*\n` +
+        `Tekanan Permukaan Laut: *${permukaanLaut}*`
 
       // Mengirimkan informasi cuaca sebagai pesan
       replygcxeon(message)
     })
     .catch(error => {
       console.error('Error:', error)
-      replygcxeon(`Terjadi kesalahan dalam mengambil informasi cuaca`)
+      replygcxeon(`*Terjadi kesalahan dalam mengambil informasi cuaca.*`)
     })
   
   break

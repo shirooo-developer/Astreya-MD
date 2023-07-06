@@ -68,18 +68,30 @@ if (blocked.length > 2) return
 for (let i of json[1].blocklist) {
 blocked.push(i.replace('c.us','s.whatsapp.net'))}})
 
+function sendMessageReadStatus(remoteJid, messageId) {
+  // Code to send the message read status
+}
+
+module.exports = {
+  sendMessageReadStatus: sendMessageReadStatus
+};
+
 XeonBotInc.ev.on('messages.upsert', async chatUpdate => {
-try {
-kay = chatUpdate.messages[0]
-if (!kay.message) return
-kay.message = (Object.keys(kay.message)[0] === 'ephemeralMessage') ? kay.message.ephemeralMessage.message : kay.message
-if (kay.key && kay.key.remoteJid === 'status@broadcast') return
-if (!XeonBotInc.public && !kay.key.fromMe && chatUpdate.type === 'notify') return
-if (kay.key.id.startsWith('BAE5') && kay.key.id.length === 16) return
-m = smsg(XeonBotInc, kay, store)
-require('./XeonCheems7')(XeonBotInc, m, chatUpdate, store)
-} catch (err) {
-console.log(err)}})
+  try {
+    kay = chatUpdate.messages[0];
+    if (!kay.message) return;
+    kay.message = Object.keys(kay.message)[0] === 'ephemeralMessage' ? kay.message.ephemeralMessage.message : kay.message;
+    if (kay.key && kay.key.remoteJid === 'status@broadcast') return;
+    if (!XeonBotInc.public && !kay.key.fromMe && chatUpdate.type === 'notify') return;
+    if (kay.key.id.startsWith('BAE5') && kay.key.id.length === 16) return;
+
+    // Process the message
+    m = smsg(XeonBotInc, kay, store);
+    require('./XeonCheems7')(XeonBotInc, m, chatUpdate, store);
+  } catch (err) {
+    console.log(err);
+  }
+});
 
 	// detect group update
 		XeonBotInc.ev.on("groups.update", async (json) => {
@@ -93,32 +105,32 @@ ppgroup = 'https://i.ibb.co/RBx5SQC/avatar-group-large-v2.png?q=60'
 			if (res.announce == true) {
 				await sleep(2000)
 				XeonBotInc.sendMessage(res.id, {
-					text: `「 Group Settings Change 」\n\nGroup has been closed by admin, Now only admins can send messages !`,
+					text: `*「 PENGATURAN GRUP DIUBAH 」*\n\n*Grup telah ditutup oleh admin, sekarang hanya admin yang dapat mengirim pesan.*`,
 				});
 			} else if (res.announce == false) {
 				await sleep(2000)
 				XeonBotInc.sendMessage(res.id, {
-					text: `「 Group Settings Change 」\n\nThe group has been opened by admin, Now participants can send messages !`,
+					text: `*「 PENGATURAN GRUP DIUBAH 」*\n\n*Grup telah dibuka oleh admin, sekarang peserta dapat mengirim pesan.*`,
 				});
 			} else if (res.restrict == true) {
 				await sleep(2000)
 				XeonBotInc.sendMessage(res.id, {
-					text: `「 Group Settings Change 」\n\nGroup info has been restricted, Now only admin can edit group info !`,
+					text: `*「 PENGATURAN GRUP DIUBAH 」*\n\n*Info grup telah dibatasi, sekarang hanya admin yang dapat mengedit info grup.*`,
 				});
 			} else if (res.restrict == false) {
 				await sleep(2000)
 				XeonBotInc.sendMessage(res.id, {
-					text: `「 Group Settings Change 」\n\nGroup info has been opened, Now participants can edit group info !`,
+					text: `*「 PENGATURAN GRUP DIUBAH 」*\n\n*Info grup telah dibuka, sekarang peserta dapat mengedit info grup.*`,
 				});
 			} else if(!res.desc == ''){
 				await sleep(2000)
 				XeonBotInc.sendMessage(res.id, { 
-					text: `「 Group Settings Change 」\n\n*Group description has been changed to*\n\n${res.desc}`,
+					text: `*「 PENGATURAN GRUP DIUBAH 」*\n\n*Deskripsi grup telah diubah menjadi:*\n\n${res.desc}`,
 				});
       } else {
 				await sleep(2000)
 				XeonBotInc.sendMessage(res.id, {
-					text: `「 Group Settings Change 」\n\n*Group name has been changed to*\n\n*${res.subject}*`,
+					text: `*「 PENGATURAN GRUP DIUBAH 」*\n\n*Nama grup telah diubah menjadi:*\n\n*${res.subject}*`,
 				});
 			} 
 			
@@ -150,16 +162,7 @@ XeonLft = await getBuffer(ppuser)
                 const xtime = moment.tz('Asia/Kolkata').format('HH:mm:ss')
 	            const xdate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
 	            const xmembers = metadata.participants.length
-                xeonbody = `┌─❖
-│「 𝗛𝗶 👋 」
-└┬❖ 「  @${xeonName.split("@")[0]}  」
-   │✑  𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝘁𝗼 
-   │✑  ${metadata.subject}
-   │✑  𝗠𝗲𝗺𝗯𝗲𝗿 : 
-   │✑ ${xmembers}th
-   │✑  𝗝𝗼𝗶𝗻𝗲𝗱 : 
-   │✑ ${xtime} ${xdate}
-   └───────────────┈ ⳹`
+                xeonbody = `*Welcome.*`
 XeonBotInc.sendMessage(anu.id,
  { text: xeonbody,
  contextInfo:{
@@ -178,16 +181,7 @@ XeonBotInc.sendMessage(anu.id,
 	                const xeondate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
                 	let xeonName = num
                     const xeonmembers = metadata.participants.length
-                    xeonbody = `┌─❖
-│「 𝗚𝗼𝗼𝗱𝗯𝘆𝗲 👋 」
-└┬❖ 「 @${xeonName.split("@")[0]}  」
-   │✑  𝗟𝗲𝗳𝘁 
-   │✑ ${metadata.subject}
-   │✑  𝗠𝗲𝗺𝗯𝗲𝗿 : 
-   │✑ ${xeonmembers}th
-   │✑  𝗧𝗶𝗺𝗲 : 
-   │✑  ${xeontime} ${xeondate}
-   └───────────────┈ ⳹`
+                    xeonbody = `*Goodbye.*`
 XeonBotInc.sendMessage(anu.id,
  { text: xeonbody,
  contextInfo:{
@@ -205,7 +199,7 @@ const xeonbuffer = await getBuffer(ppuser)
 const xeontime = moment.tz('Asia/Kolkata').format('HH:mm:ss')
 const xeondate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
 let xeonName = num
-xeonbody = ` 𝗖𝗼𝗻𝗴𝗿𝗮𝘁𝘀🎉 @${xeonName.split("@")[0]}, you have been *promoted* to *admin* 🥳`
+xeonbody = `*@${xeonName.split("@")[0]} Dipromosikan Menjadi Admin*`
    XeonBotInc.sendMessage(anu.id,
  { text: xeonbody,
  contextInfo:{
@@ -223,7 +217,7 @@ const xeonbuffer = await getBuffer(ppuser)
 const xeontime = moment.tz('Asia/Kolkata').format('HH:mm:ss')
 const xeondate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
 let xeonName = num
-xeonbody = `𝗢𝗼𝗽𝘀‼️ @${xeonName.split("@")[0]}, you have been *demoted* from *admin* 😬`
+xeonbody = `*@${xeonName.split("@")[0]} Diturunkan Menjadi Anggota*`
 XeonBotInc.sendMessage(anu.id,
  { text: xeonbody,
  contextInfo:{
