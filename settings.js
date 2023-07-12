@@ -48,7 +48,7 @@ global.flasmurf = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutp
 
 //messages
 global.mess = {
-    success: '*Sukses*',
+    success: '*Sukses Sayang, Jangan Lupa Follow IG Aku Di instagram.com/is_keizha/*',
     admin: '*Fitur Khusus Admin Grup*',
     botAdmin: '*Bot Harus Menjadi Admin Grup*',
     premime: '*Fitur Khusus Pengguna Premium*',
@@ -56,7 +56,7 @@ global.mess = {
     group: '*Fitur Khusus Untuk Grup*',
     private: '*Fitur Khusus Untuk Obrolan Pribadi*',
     bot: '*Fitur Khusus Bot*',
-    wait: '*⏳ Permintaan Diproses...*',
+    wait: '*⏳ Lagi Diproses Sayang...*',
     linkm: '*Masukkan Tautan Setelah Perintah*',
     endLimit: '*Limit Anda Habis, Limit Direset Sekali 24 Jam*',
     nsfw: '*Fitur NSFW Mati, Hubungi Admin Grup Untuk Mengaktifkan*',
