@@ -1188,36 +1188,48 @@ case 'juzamma': {
 				})
 				.catch(console.error)
 			break
-case 'menu': case 'help': case 'ggdxcghh': case 'gvcfg': case 'jgccvhj': case 'hgcccv': {
-const messages = ["*Advertisement From Keizha 📣\n\n*Lihat Cara Menambahkan Bot Hoshino Secara Gratis di Situs Berikut: https://msha.ke/keizha_bot*\n","*Advertisement From Keizha 📣*\n\n*Mengobrol dengan Hoshino? Gunakan Perintah berikut:*\n*- .hoshino Statement` (Ramah) atau*\n*- .hoshino2 Statement` (Toxic)*\n","*Advertisement From Keizha 📣*\n\n*Kamu Bisa Pasang Iklan Berbentuk Teks Disini dengan Harga Rp 15.000 untuk Durasi 1 Bulan (30 Hari), Hubungi wa.me/6281249122429*\n","*Advertisement From Keizha 📣*\n\n*Butuh Bantuan atau Ingin Tahu Cara Menggunakan Bot? Hubungi wa.me/6281249122429 (Jangan Lupa Ucapkan Salam Agar Mendapatkan Respon)*\n","*Advertisement From Keizha 📣*\n\n*Mau Main Game Bot? Kunjungi wa.me/6285163083750 dan ajak Felicia untuk bermain bersama*\n","*Advertisement From Keizha 📣*\n\n*Bergabung dengan Grup Resmi Bot Felicia dan Hoshino di WhatsApp: https://chat.whatsapp.com/HanfYszpKzbGcCGgWdHLTa*\n","*Advertisement From Keizha 📣*\n\n*Jika Bot Tidak Merespon Namun Terdapat Tanda Centang Biru, Silakan Ulangi Perintah Setelah 1 Menit Tanpa Mendapatkan Respon. Apabila Bot Masih Tidak Merespon, Harap Menunggu Beberapa Saat.*\n","*Advertisement From Keizha 📣*\n\n*Kami mengundang Anda untuk berpartisipasi dalam donasi demi meningkatkan kualitas bot ini. Donasi Anda akan digunakan untuk pengembangan dan peningkatan fitur-fitur yang ada. Anda dapat melakukan donasi melalui situs resmi kami di http://trakteer.id/is_keizha. Setiap sumbangan yang Anda berikan akan sangat berarti bagi kami. Terima kasih atas kontribusi dan dukungan Anda.*\n"];
-let randomMessageIndex = Math.floor(Math.random() * messages.length);
-let ownernya = ownernomer + '@s.whatsapp.net'
-let me = m.sender
-let timestampe = speed();
-let latensie = speed() - timestampe
-xeonezy = ``
-let ments = [ownernya, me, mark]
+case 'menu':
+case 'help':
+case 'ggdxcghh':
+case 'gvcfg':
+case 'jgccvhj':
+case 'hgcccv': {
+  const messages = ["*Advertisement From Keizha 📣*\n\n*Lihat Cara Menambahkan Bot Hoshino Secara Gratis di Situs Berikut: https://msha.ke/keizha_bot*\n","*Advertisement From Keizha 📣*\n\n*Mengobrol dengan Hoshino? Gunakan Perintah berikut:*\n*- .hoshino Statement` (Ramah) atau*\n*- .hoshino2 Statement` (Toxic)*\n","*Advertisement From Keizha 📣*\n\n*Kamu Bisa Pasang Iklan Berbentuk Teks Disini dengan Harga Rp 15.000 untuk Durasi 1 Bulan (30 Hari), Hubungi wa.me/6281249122429*\n","*Advertisement From Keizha 📣*\n\n*Butuh Bantuan atau Ingin Tahu Cara Menggunakan Bot? Hubungi wa.me/6281249122429 (Jangan Lupa Ucapkan Salam Agar Mendapatkan Respon)*\n","*Advertisement From Keizha 📣*\n\n*Mau Main Game Bot? Kunjungi wa.me/6285163083750 dan ajak Felicia untuk bermain bersama*\n","*Advertisement From Keizha 📣*\n\n*Bergabung dengan Grup Resmi Bot Felicia dan Hoshino di WhatsApp: https://chat.whatsapp.com/HanfYszpKzbGcCGgWdHLTa*\n","*Advertisement From Keizha 📣*\n\n*Jika Bot Tidak Merespon Namun Terdapat Tanda Centang Biru, Silakan Ulangi Perintah Setelah 1 Menit Tanpa Mendapatkan Respon. Apabila Bot Masih Tidak Merespon, Harap Menunggu Beberapa Saat.*\n","*Advertisement From Keizha 📣*\n\n*Kami mengundang Anda untuk berpartisipasi dalam donasi demi meningkatkan kualitas bot ini. Donasi Anda akan digunakan untuk pengembangan dan peningkatan fitur-fitur yang ada. Anda dapat melakukan donasi melalui situs resmi kami di http://trakteer.id/is_keizha. Setiap sumbangan yang Anda berikan akan sangat berarti bagi kami. Terima kasih atas kontribusi dan dukungan Anda.*\n"];
+  let randomMessageIndex = Math.floor(Math.random() * messages.length);
+  let ownernya = ownernomer + '@s.whatsapp.net'
+  let me = m.sender
+  let timestampe = speed();
+  let latensie = speed() - timestampe
+  xeonezy = ``
+  let ments = [ownernya, me, mark]
+  
+  const thumbnailPath = './XeonMedia/theme/cheemspic.jpg';
+  const videoPath = './XeonMedia/theme/cheemspic.mp4';
+    
+  // Baca file video dan thumbnail
+  const videoData = fs.readFileSync(videoPath);
+  const thumbnailData = fs.readFileSync(thumbnailPath);
 
-XeonBotInc.sendMessage(from, {
-text: messages[randomMessageIndex],
-contextInfo:{
-forwardingScore: 9999999,
-isForwarded: true,
-mentionedJid:[sender],
-"externalAdReply": {
-"showAdAttribution": true,
-"renderLargerThumbnail": true,
-"title": botname, 
-"containsAutoReply": true,
-"mediaType": 1, 
-"thumbnail": fs.readFileSync("./XeonMedia/theme/cheemspic.jpg"),
-"mediaUrl": `${wagc}`,
-"sourceUrl": `${wagc}`
+  XeonBotInc.sendMessage(from, {
+    text: messages[randomMessageIndex],
+    contextInfo: {
+      forwardingScore: 9999999,
+      isForwarded: true,
+      mentionedJid: [sender],
+      "externalAdReply": {
+        "showAdAttribution": true,
+        "renderLargerThumbnail": true,
+        "title": botname, 
+        "containsAutoReply": true,
+        "mediaType": 2, // Gunakan 2 untuk tipe video
+        "thumbnail": thumbnailData,
+        "mediaUrl": videoData,
+        "sourceUrl": `${wagc}`
+      }
+    }
+  }, { quoted: m });
 }
-}
-}, { quoted: m })
-}
-break
+break;
 case 'ownermenu': {
 var unicorn = await getBuffer(picak+'Owner Menu')
 sendXeonBotIncMessage(from, { 
@@ -3228,188 +3240,587 @@ case 'jsksidi': case 'jgcfy': {
   break
   case 'dare':
               const dare =[
-     "makan nasi 2 sendok makan tanpa lauk pauk, kalau seret bisa minum",
-     "tumpahkan orang yang membuatmu berhenti",
-     "telepon crush/acar sekarang dan kirim ss",
-     "jatuhkan saja emote setiap kali Anda mengetik di gc/pc selama 1 hari.",
-     "ucapkan Selamat Datang Kepada Yang Ingin Menjadi Jutawan! kepada semua grup yang Anda miliki",
-     "panggil mantan bilang kangen",
-     "nyanyikan bagian refrein dari lagu terakhir yang kamu mainkan",
-     "vn mantan/naksir/pacar kamu, sapa (nama), mau telpon, sebentar. Aku kangenðŸ¥ºðŸ‘‰ðŸ¼ðŸ‘ˆðŸ¼",
-     "Bang meja (yang ada di rumah) sampai dimarahi karena berisik",
-     "Katakan ke sembarang orang _aku baru dikasih tau aku kembaran kamu dulu, kita pisah, trus aku operasi plastik. Dan ini hal yang paling ciyuss_",
-     "sebutkan nama mantan",
-     "buat 1 sajak untuk para member!",
-     "kirim daftar obrolan whatsapp Anda",
-     "obrolan orang secara acak dengan bahasa gheto lalu ss di sini",
-     "ceritakan hal memalukan versimu sendiri",
-     "tag orang yang kamu benci",
+     "Makan nasi 2 sendok makan tanpa lauk pauk",
+     "Tampar orang yang membuatmu marah",
+     "Telepon crush atau pacar sekarang dan kirim ss",
+     "Gunakan emoji setiap kali Anda mengetik di GC/PC selama 1 hari",
+     "Ucapkan 'Selamat Datang' kepada yang ingin menjadi jutawan kepada semua grup yang Anda miliki",
+     "Panggil mantan bilang kangen",
+     "Nyanyikan bagian refrein dari lagu terakhir yang kamu mainkan",
+     "VN Mantan/naksir/pacar kamu, sapa (nama), mau telpon, sebentar. Aku kangen",
+     "Buang meja yang ada di rumah sampai dimarahi karena berisik",
+     "Katakan ke sembarang orang 'Aku Baru Dikasih Tau Aku Kembaran Kamu Dulu, Kita Pisah, Trus Aku Operasi Plastik. Dan Ini Hal Yang Paling Ciyuss'",
+     "Sebutkan nama mantan",
+     "Buat 1 sajak untuk para member!",
+     "Kirim daftar obrolan whatsapp Anda",
+     "Obrolan orang secara acak dengan bahasa Gheto lalu ss di sini",
+     "Ceritakan hal memalukan versimu sendiri",
+     "Tag orang yang kamu benci",
      "Berpura-pura kesurupan, misalnya: kesurupan anjing, kesurupan belalang, kesurupan kulkas, dll.",
-     "ganti nama menjadi *I AM DONKEY* selama 24 jam",
-     "teriak *ma chuda ma chuda ma chuda* di depan rumahmu",
-     "jepret/posting foto pacar/naksir",
-     "beritahu aku tipe pacarmu!",
-     "katakan *aku naksir kamu, kamu mau jadi pacarku?* ke lawan jenis, terakhir kali kamu chat (submit di wa/tele), tunggu dia balas, kalau punya, mampir ke sini",
-     "rekam suaramu yang berbunyi *titar ke umur do titar, titar ke piche do titar*",
-     "prank chat mantan dan bilang *i love u, please come back.* tanpa bilang dare!",
-     "obrolan ke kontak wa sesuai urutan % baterai anda, lalu beritahu dia *saya beruntung bisa mendapatkan anda!*",
-     "ganti nama jadi *aku anak randi* selama 5 jam",
-     "ketik bahasa bengali 24 jam",
-     "Gunakan foto selmon bhoi selama 3 hari",
-     "jatuhkan kutipan lagu lalu beri tag anggota yang cocok untuk kutipan itu",
-     "Kirim catatan suara mengatakan bisakah aku memanggilmu sayang?",
-     "ss baru-baru ini menelepon whatsapp",
-     "Katakan *KAU SANGAT INDAH JANGAN BERBOHONG* kepada teman-teman!",
-     "muncul ke anggota grup, dan katakan fuck you",
+     "Ganti nama menjadi 'I Am Donkey' selama 24 jam",
+     "Teriak 'Ma Chuda Ma Chuda Ma Chuda' di depan rumahmu",
+     "Jepret/posting foto pacar/naksir",
+     "Beritahu aku tipe pacarmu!",
+     "Katakan 'Aku Naksir Kamu, Kamu Mau Jadi Pacarku?' ke lawan jenis, terakhir kali kamu chat (submit di wa/tele), tunggu dia balas, kalau punya mampir ke sini",
+     "Rekam suaramu yang berbunyi 'Titar Ke Umur Do Titar, Titar Ke Piche Do Titar'",
+     "Prank chat mantan dan bilang 'I Love U, Please Come Back.' tanpa bilang Dare",
+     "Obrolan ke kontak wa sesuai urutan % baterai anda, lalu beritahu dia 'Saya Beruntung Bisa Mendapatkan Anda'",
+     "Ganti nama jadi 'Aku Anak Randi' selama 5 jam",
+     "Ketik bahasa Bengali 24 jam",
+     "Gunakan foto Selmon Bhoi selama 3 hari",
+     "Jatuhkan kutipan lagu lalu beri tag anggota yang cocok untuk kutipan itu",
+     "Kirim catatan suara mengatakan 'Bisakah Aku Memanggilmu Sayang?'",
+     "SS baru-baru ini menelepon whatsapp",
+     "Katakan 'Kau Sangat Indah Jangan Berbohong' kepada teman-teman",
+     "Pergi ke anggota grup, dan katakan 'Fuck You'",
      "Bertingkah seperti ayam di depan orang tuamu",
      "Ambil buku acak dan baca satu halaman dengan lantang di vn n kirimkan ke sini",
      "Buka pintu depanmu dan melolong seperti serigala selama 10 detik",
      "Ambil selfie yang memalukan dan tempel di foto profil Anda",
-     "Biarkan kelompok memilih kata dan lagu terkenal. Anda harus menyanyikan lagu itu dan mengirimkannya dalam catatan suara",
+     "Biarkan teman anda memilih kata dan lagu terkenal, Anda harus menyanyikan lagu itu dan mengirimkannya dalam catatan suara",
      "Berjalan dengan siku dan lutut selama mungkin",
-     "nyanyikan lagu kebangsaan dengan nada suara",
-     "Breakdance selama 30 detik di ruang dudukðŸ˜‚",
+     "Nyanyikan lagu kebangsaan dengan nada suara",
+     "Breakdance selama 30 detik di ruang duduk",
      "Ceritakan kisah paling menyedihkan yang kamu tahu",
-     "buat video tarian twerk dan statuskan selama 5 menit",
+     "Buat video tarian twerk dan statuskan selama 5 menit",
      "Makan sepotong bawang putih mentah",
      "Tunjukkan lima orang terakhir yang Anda kirimi SMS dan isi pesannya",
-     "cantumkan nama lengkap Anda pada status selama 5 jam",
-     "buat video dansa pendek tanpa filter apa pun hanya dengan musik dan letakkan di status Anda selama 5 jam",
-     "panggil sahabatmu, jalang",
-     "letakkan foto Anda tanpa filter pada status Anda selama 10 menit",
-     "katakan saya suka oli london di catatan suaraðŸ¤£ðŸ¤£",
-     "Kirim pesan ke mantanmu dan katakan aku masih menyukaimu",
-     "hubungi Crush/pacar/sahabat sekarang dan tangkapan layar di sini",
-     "muncul ke salah satu obrolan pribadi anggota grup dan Katakan kamu bustard jelek",
-     "katakan KAMU CANTIK/TAMPAN kepada salah satu orang yang ada di daftar pin atas kamu atau orang pertama di daftar obrolan kamu",
-     "kirim catatan suara dan katakan, bolehkah aku meneleponmu sayang, jika kamu laki-laki tag perempuan/jika perempuan tag laki-laki",
-     "tulis i love you (nama anggota grup acak, yang sedang online) di obrolan pribadi, (kalau laki-laki tulis nama perempuan/kalau perempuan tulis nama laki-laki) ambil fotonya dan kirim ke sini",
-     "gunakan foto aktor bollywood apa pun sebagai pfp Anda selama 3 hari",
-     "letakkan foto gebetanmu di status dengan keterangan, ini gebetanku",
-     "ganti nama menjadi I AM GAY selama 5 jam",
-     "ngobrol dengan kontak mana pun di whatsapp dan katakan saya akan menjadi bf/gf Anda selama 5 jam",
+     "Cantumkan nama lengkap Anda pada status selama 5 jam",
+     "Buat video dansa pendek tanpa filter apa pun hanya dengan musik dan letakkan di status Anda selama 5 jam",
+     "Panggil sahabatmu 'Jalang'",
+     "Letakkan foto Anda tanpa filter pada status Anda selama 10 menit",
+     "katakan 'Saya Suka Oli London' di catatan suara",
+     "Kirim pesan ke mantanmu dan katakan 'Aku Masih Menyukaimu'",
+     "Hubungi Crush/Pacar/Sahabat sekarang dan tangkapan layar di sini",
+     "Pergi ke salah satu obrolan pribadi anggota grup dan Katakan 'Kamu Bustard Jelek'",
+     "Katakan 'Kamu Cantik/Tampan' kepada salah satu orang yang ada di daftar tag atas kamu atau orang pertama di daftar obrolan kamu",
+     "Kirim voice note dan katakan 'Bolehkah Aku Meneleponmu Sayang', jika kamu laki-laki tag perempuan/jika kamu perempuan tag laki-laki",
+     "Tulis 'I Love You (nama anggota grup acak, yang sedang online)' di obrolan pribadi, (kalau laki-laki tulis nama perempuan/kalau perempuan tulis nama laki-laki) ambil fotonya dan kirim ke sini",
+     "Gunakan foto aktor Bollywood apa pun sebagai PFP Anda selama 3 hari",
+     "Letakkan foto Gebetanmu di status dengan keterangan 'Ini Gebetanku'",
+     "Ganti nama menjadi 'I AM GAY' selama 5 jam",
+     "Ngobrol dengan kontak mana pun di Whatsapp dan katakan 'Saya Akan Menjadi BF/GF Anda Selama 5 Jam'",
      "Kirim catatan suara mengatakan aku naksir kamu, mau jadi pacarku atau tidak? ke sembarang orang dari grup (kalau kamu perempuan pilih laki-laki, kalau laki-laki pilih perempuan",
-     "tampar pantatmu hampir tidak mengirimkan suara tamparan melalui catatan suaraðŸ˜‚",
-     "sebutkan tipe gf/bf kamu dan kirim fotonya ke sini dengan keterangan, cewek/cowok paling jelek di dunia",
-     "berteriak bravooooooooo dan kirim ke sini melalui voice note",
-     "jepret wajahmu lalu kirim ke sini",
-     "Kirim foto Anda dengan keterangan, saya lesbian",
-     "berteriak menggunakan kata-kata kasar dan kirimkan ke sini melalui vn",
-     "teriak kau bajingan di depan ibu/papamu",
-     "ganti nama menjadi saya idiot selama 24 jam",
-     "tampar dirimu dengan tegas dan kirim suara tamparan melalui catatan suaraðŸ˜‚",
-     "katakan saya suka pemilik bot xeon melalui voice note",
-     "kirim foto gf/bf kamu ke sini",
-     "Buat video tantangan dance tiktok apa saja dan jadikan status, Anda dapat menghapusnya setelah 5 jam",
-     "putus dengan sahabatmu selama 5 jam tanpa memberitahunya bahwa itu berani",
-      "katakan pada salah satu temanmu bahwa kamu mencintainya dan ingin majak dia, tanpa memberitahu dia bahwa itu adalah tantangan",
-      "katakan aku cinta depak kalal lewat voice note",
-      "tulis saya merasa terangsang dan letakkan di status, Anda dapat menghapusnya hanya setelah 5 jam",
-      "tulis saya lesbian dan taruh di status, kamu hanya bisa menghapusnya setelah 5 jam",
-      "cium ibu atau papamu dan katakan aku mencintaimuðŸ˜Œ",
-      "cantumkan nama ayahmu di status selama 5 jam",
-      "kirim kata-kata kasar di grup mana pun, kecuali grup ini, dan kirim bukti tangkapan layar di sini"
+     "Tampar pantatmu dan kirimkan suara tamparannya ke sini menggunakan voice note",
+     "Sebutkan tipe GF/BF kamu dan kirim fotonya ke sini dengan keterangan 'Cewek/Cowok Paling Jelek Didunia'",
+     "Berteriak 'Kontol' dan kirim ke sini melalui voice note",
+     "Foto wajahmu lalu kirim ke sini",
+     "KIRIM foto Anda dengan keterangan 'Saya Lesbian'",
+     "Berteriak menggunakan kata-kata kasar dan kirimkan ke sini melalui voice note",
+     "Teriak 'Kau Bajingan' di depan Ibu/papamu",
+     "Ganti nama menjadi 'Saya Idiot' selama 24 jam",
+     "Tampar dirimu dengan keras dan kirim suara tamparan melalui voice note",
+     "Katakan saya suka pemilik Bot Hoshino melalui voice note",
+     "Kirim foto GF/BF kamu ke sini",
+     "Buat video tantangan dance Tik Tok apa saja dan jadikan status, Anda dapat menghapusnya setelah 5 jam",
+     "Putus dengan sahabatmu selama 5 jam tanpa memberitahunya bahwa itu tantangan",
+      "Katakan pada salah satu temanmu bahwa kamu mencintainya dan ingin majak dia, tanpa memberitahu dia bahwa itu adalah tantangan",
+      "Katakan 'Aku Cinta Depak Kalal' lewat voice note",
+      "Tulis saya merasa terangsang dan letakkan di status, Anda dapat menghapusnya hanya setelah 5 jam",
+      "Tulis 'Saya Lesbian' dan letakkan di status, kamu hanya bisa menghapusnya setelah 5 jam",
+      "Cium Ibu atau Papamu dan katakan 'Aku Mencintaimu'",
+      "Cantumkan nama Ayahmu di status selama 5 jam",
+      "Kirim kata-kata kasar di grup mana pun kecuali grup ini dan kirim bukti tangkapan layar di sini",
+   "Buat video mengucapkan terima kasih kepada teman-temanmu dengan penuh keceriaan dan kehangatan.",
+    "Tunjukkan keahlianmu dalam memainkan alat musik digital kepada teman-temanmu.",
+    "Buat seni lukis menggunakan teknik kolase dengan berbagai macam bahan yang unik dan bagikan di grup.",
+    "Ambil foto dengan pose superhero favoritmu di tempat yang menarik dan eksotis, dan jadikan sebagai foto profil selama 1 hari.",
+    "Buat rekaman suara membacakan cerita petualangan dengan suara yang seru dan mengasyikkan, dan bagikan di grup.",
+    "Tunjukkan trik sulap sederhana menggunakan benda-benda sehari-hari kepada teman-temanmu.",
+    "Buat video mengajarkan gerakan tari tango kepada teman-temanmu.",
+    "Ambil selfie dengan pose paling modis dan kreatif sekaligus, dan bagikan di grup.",
+    "Bicaralah dengan suara yang sangat pelan dan lembut, dengan gaya bicara yang santai dan tenang, selama 10 menit di panggilan suara dengan temanmu.",
+    "Tunjukkan gerakan tari breakdance kepada teman-temanmu.",
+    "Buat video membacakan puisi cinta dengan suara yang penuh kasih sayang dan romantis, dan bagikan di grup.",
+    "Ambil foto dirimu sedang melakukan aksi yang mempesona dan jadikan sebagai foto profil selama 1 hari.",
+    "Buat rekaman suara menceritakan cerita lucu dengan suara yang ceria dan kocak, dan bagikan di grup.",
+    "Tunjukkan gerakan tari salsa kepada teman-temanmu.",
+    "Buat video mengucapkan selamat ulang tahun dengan membuat lagu ulang tahun yang penuh semangat dan kreatif.",
+    "Ambil foto objek seni di sekitarmu dengan sudut pandang yang unik dan jadikan sebagai wallpaper ponselmu selama 1 hari.",
+    "Buat pantun lucu tentang teknologi favoritmu dan bagikan di grup.",
+    "Tunjukkan gerakan senam pilates kepada teman-temanmu.",
+    "Buat mimik wajah paling ekspresif dan konyol sekaligus, dan bagikan di grup.",
+    "Buat video mengucapkan terima kasih kepada teman-temanmu dengan penuh keceriaan dan kehangatan.",
+    "Tunjukkan keahlianmu dalam memainkan alat musik digital kepada teman-temanmu.",
+    "Buat seni lukis menggunakan teknik kolase dengan berbagai macam bahan yang unik dan bagikan di grup.",
+    "Ambil foto dengan pose superhero favoritmu di tempat yang menarik dan eksotis, dan jadikan sebagai foto profil selama 1 hari.",
+    "Buat rekaman suara membacakan cerita petualangan dengan suara yang seru dan mengasyikkan, dan bagikan di grup.",
+    "Tunjukkan trik sulap sederhana menggunakan benda-benda sehari-hari kepada teman-temanmu.",
+    "Buat video mengajarkan gerakan tari tango kepada teman-temanmu.",
+    "Ambil selfie dengan pose paling modis dan kreatif sekaligus, dan bagikan di grup.",
+    "Bicaralah dengan suara yang sangat pelan dan lembut, dengan gaya bicara yang santai dan tenang, selama 10 menit di panggilan suara dengan temanmu.",
+    "Tunjukkan gerakan tari breakdance kepada teman-temanmu.",
+    "Buat video membacakan puisi cinta dengan suara yang penuh kasih sayang dan romantis, dan bagikan di grup.",
+    "Ambil foto dirimu sedang melakukan aksi yang mempesona dan jadikan sebagai foto profil selama 1 hari.",
+    "Buat rekaman suara menceritakan cerita lucu dengan suara yang ceria dan kocak, dan bagikan di grup.",
+    "Tunjukkan gerakan tari salsa kepada teman-temanmu.",
+    "Buat video mengucapkan selamat ulang tahun dengan membuat lagu ulang tahun yang penuh semangat dan kreatif.",
+    "Ambil foto objek seni di sekitarmu dengan sudut pandang yang unik dan jadikan sebagai wallpaper ponselmu selama 1 hari.",
+    "Buat pantun lucu tentang teknologi favoritmu dan bagikan di grup.",
+    "Tunjukkan gerakan senam pilates kepada teman-temanmu.",
+    "Buat mimik wajah paling ekspresif dan konyol sekaligus, dan bagikan di grup.",
+    "Buat video mengucapkan terima kasih kepada teman-temanmu dengan penuh keceriaan dan kehangatan.",
+    "Tunjukkan keahlianmu dalam memainkan alat musik digital kepada teman-temanmu.",
+    "Buat seni lukis menggunakan teknik kolase dengan berbagai macam bahan yang unik dan bagikan di grup.",
+    "Ambil foto dengan pose superhero favoritmu di tempat yang menarik dan eksotis, dan jadikan sebagai foto profil selama 1 hari.",
+    "Buat rekaman suara membacakan cerita petualangan dengan suara yang seru dan mengasyikkan, dan bagikan di grup.",
+    "Tunjukkan trik sulap sederhana menggunakan benda-benda sehari-hari kepada teman-temanmu.",
+    "Buat video mengajarkan gerakan tari tango kepada teman-temanmu.",
+    "Ambil selfie dengan pose paling modis dan kreatif sekaligus, dan bagikan di grup.",
+    "Bicaralah dengan suara yang sangat pelan dan lembut, dengan gaya bicara yang santai dan tenang, selama 10 menit di panggilan suara dengan temanmu.",
+    "Tunjukkan gerakan tari breakdance kepada teman-temanmu.",
+    "Buat video membacakan puisi cinta dengan suara yang penuh kasih sayang dan romantis, dan bagikan di grup.",
+    "Ambil foto dirimu sedang melakukan aksi yang mempesona dan jadikan sebagai foto profil selama 1 hari.",
+    "Buat rekaman suara menceritakan cerita lucu dengan suara yang ceria dan kocak, dan bagikan di grup.",
+    "Tunjukkan gerakan tari salsa kepada teman-temanmu.",
+    "Buat video mengucapkan selamat ulang tahun dengan membuat lagu ulang tahun yang penuh semangat dan kreatif.",
+    "Ambil foto objek seni di sekitarmu dengan sudut pandang yang unik dan jadikan sebagai wallpaper ponselmu selama 1 hari.",
+    "Buat pantun lucu tentang teknologi favoritmu dan bagikan di grup.",
+    "Tunjukkan gerakan senam pilates kepada teman-temanmu.",
+    "Buat mimik wajah paling ekspresif dan konyol sekaligus, dan bagikan di grup.",
+    "Buat video mengucapkan terima kasih kepada teman-temanmu dengan penuh keceriaan dan kehangatan.",
+    "Tunjukkan keahlianmu dalam memainkan alat musik digital kepada teman-temanmu.",
+    "Buat seni lukis menggunakan teknik kolase dengan berbagai macam bahan yang unik dan bagikan di grup.",
+    "Ambil foto dengan pose superhero favoritmu di tempat yang menarik dan eksotis, dan jadikan sebagai foto profil selama 1 hari.",
+    "Buat rekaman suara membacakan cerita petualangan dengan suara yang seru dan mengasyikkan, dan bagikan di grup.",
+    "Tunjukkan trik sulap sederhana menggunakan benda-benda sehari-hari kepada teman-temanmu.",
+    "Buat video mengajarkan gerakan tari tango kepada teman-temanmu.",
+    "Ambil selfie dengan pose paling modis dan kreatif sekaligus, dan bagikan di grup.",
+    "Bicaralah dengan suara yang sangat pelan dan lembut, dengan gaya bicara yang santai dan tenang, selama 10 menit di panggilan suara dengan temanmu.",
+    "Tunjukkan gerakan tari breakdance kepada teman-temanmu.",
+    "Buat video membacakan puisi cinta dengan suara yang penuh kasih sayang dan romantis, dan bagikan di grup.",
+    "Ambil foto dirimu sedang melakukan aksi yang mempesona dan jadikan sebagai foto profil selama 1 hari.",
+    "Buat rekaman suara menceritakan cerita lucu dengan suara yang ceria dan kocak, dan bagikan di grup.",
+    "Tunjukkan gerakan tari salsa kepada teman-temanmu.",
+    "Buat video mengucapkan selamat ulang tahun dengan membuat lagu ulang tahun yang penuh semangat dan kreatif.",
+    "Ambil foto objek seni di sekitarmu dengan sudut pandang yang unik dan jadikan sebagai wallpaper ponselmu selama 1 hari.",
+    "Buat pantun lucu tentang teknologi favoritmu dan bagikan di grup.",
+    "Tunjukkan gerakan senam pilates kepada teman-temanmu.",
+    "Buat mimik wajah paling ekspresif dan konyol sekaligus, dan bagikan di grup.",
+    "Buat video mengucapkan terima kasih kepada teman-temanmu dengan penuh keceriaan dan kehangatan.",
+    "Tunjukkan keahlianmu dalam memainkan alat musik digital kepada teman-temanmu.",
+    "Buat seni lukis menggunakan teknik kolase dengan berbagai macam bahan yang unik dan bagikan di grup.",
+    "Ambil foto dengan pose superhero favoritmu di tempat yang menarik dan eksotis, dan jadikan sebagai foto profil selama 1 hari.",
+    "Buat rekaman suara membacakan cerita petualangan dengan suara yang seru dan mengasyikkan, dan bagikan di grup.",
+    "Tunjukkan trik sulap sederhana menggunakan benda-benda sehari-hari kepada teman-temanmu.",
+    "Buat video mengajarkan gerakan tari tango kepada teman-temanmu.",
+    "Ambil selfie dengan pose paling modis dan kreatif sekaligus, dan bagikan di grup.",
+    "Bicaralah dengan suara yang sangat pelan dan lembut, dengan gaya bicara yang santai dan tenang, selama 10 menit di panggilan suara dengan temanmu.",
+    "Tunjukkan gerakan tari breakdance kepada teman-temanmu.",
+    "Buat video membacakan puisi cinta dengan suara yang penuh kasih sayang dan romantis, dan bagikan di grup.",
+    "Ambil foto dirimu sedang melakukan aksi yang mempesona dan jadikan sebagai foto profil selama 1 hari.",
+   "Buat mimik wajah paling ekspresif dan bagikan di grup.",
+    "Buat video mengucapkan terima kasih kepada teman-temanmu dengan penuh semangat dan keceriaan.",
+    "Tunjukkan keahlianmu dalam memainkan alat musik digital kepada teman-temanmu.",
+    "Buat seni lukis menggunakan teknik kolase dengan berbagai macam bahan yang unik dan bagikan di grup.",
+    "Ambil foto dengan pose superhero favoritmu di tempat yang menarik dan unik, dan jadikan sebagai foto profil selama 1 hari.",
+    "Buat rekaman suara membacakan cerita fiksi dengan suara yang penuh emosi dan bagikan di grup.",
+    "Tunjukkan trik sulap sederhana menggunakan benda-benda di sekitarmu kepada teman-temanmu.",
+    "Buat video mengajarkan gerakan tari tango kepada teman-temanmu.",
+    "Ambil selfie dengan pose paling kreatif dan unik sekaligus, dan bagikan di grup.",
+    "Bicaralah dengan suara yang sangat keras dan energik, dengan gaya bicara seperti pengumuman di stasiun radio, selama 10 menit di panggilan suara dengan temanmu.",
+    "Tunjukkan gerakan tari bollywood kepada teman-temanmu.",
+    "Buat video membacakan puisi cinta dengan suara yang menggetarkan dan romantis, dan bagikan di grup.",
+    "Ambil foto dirimu sedang melakukan aksi yang memukau dan menginspirasi, dan jadikan sebagai foto profil selama 1 hari.",
+    "Buat rekaman suara menceritakan pengalaman menegangkan yang pernah kamu alami dengan suara yang menegangkan, dan bagikan di grup.",
+    "Tunjukkan gerakan tari breakdance kepada teman-temanmu.",
+    "Buat video mengucapkan selamat ulang tahun dengan membuat lagu ulang tahun yang ceria dan kreatif.",
+    "Ambil foto objek alam yang menawan di sekitarmu dengan sudut pandang yang menarik dan jadikan sebagai wallpaper ponselmu selama 1 hari.",
+    "Buat pantun lucu tentang makanan favoritmu dan bagikan di grup.",
+    "Tunjukkan gerakan senam tai chi kepada teman-temanmu.",
+    "Buat mimik wajah paling menggemaskan dan lucu sekaligus, dan bagikan di grup.",
+    "Buat video mengucapkan terima kasih kepada teman-temanmu dengan penuh semangat dan kegembiraan.",
+    "Tunjukkan keahlianmu dalam memainkan alat musik perkusi kepada teman-temanmu.",
+    "Buat seni lukis menggunakan cat air dengan tema alam dan bagikan di grup.",
+    "Ambil foto dengan pose superhero favoritmu di tempat yang menarik dan eksotis, dan jadikan sebagai foto profil selama 1 hari.",
+    "Buat rekaman suara membacakan cerita petualangan dengan suara yang seru dan mengasyikkan, dan bagikan di grup.",
+    "Tunjukkan trik sulap sederhana menggunakan kartu remi kepada teman-temanmu.",
+    "Buat video mengajarkan gerakan tari hip-hop freestyle kepada teman-temanmu.",
+    "Ambil selfie dengan pose paling modis dan gaya sekaligus, dan bagikan di grup.",
+    "Bicaralah dengan suara yang sangat pelan dan lembut, dengan gaya bicara yang santai, selama 10 menit di panggilan suara dengan temanmu.",
+    "Tunjukkan gerakan tari bollywood kepada teman-temanmu.",
+    "Buat video membacakan puisi cinta dengan suara yang penuh kasih sayang dan bagikan di grup.",
+    "Ambil foto dirimu sedang melakukan aksi yang mempesona dan jadikan sebagai foto profil selama 1 hari.",
+    "Buat rekaman suara menceritakan cerita lucu dengan suara yang ceria dan kocak, dan bagikan di grup.",
+    "Tunjukkan gerakan tari salsa kepada teman-temanmu.",
+    "Buat video mengucapkan selamat ulang tahun dengan membuat lagu ulang tahun yang penuh semangat dan kreatif.",
+    "Ambil foto objek seni di sekitarmu dengan sudut pandang yang unik dan jadikan sebagai wallpaper ponselmu selama 1 hari.",
+    "Buat pantun lucu tentang teknologi favoritmu dan bagikan di grup.",
+    "Tunjukkan gerakan senam pilates kepada teman-temanmu.",
+    "Buat mimik wajah paling ekspresif dan konyol sekaligus, dan bagikan di grup.",
+    "Buat video mengucapkan terima kasih kepada teman-temanmu dengan penuh keceriaan dan kehangatan.",
+    "Tunjukkan keahlianmu dalam memainkan alat musik digital kepada teman-temanmu.",
+    "Buat seni lukis menggunakan teknik kolase dengan berbagai macam bahan yang unik dan bagikan di grup.",
+    "Ambil foto dengan pose superhero favoritmu di tempat yang menarik dan eksotis, dan jadikan sebagai foto profil selama 1 hari.",
+    "Buat rekaman suara membacakan cerita petualangan dengan suara yang seru dan mengasyikkan, dan bagikan di grup.",
+    "Tunjukkan trik sulap sederhana menggunakan benda-benda sehari-hari kepada teman-temanmu.",
+    "Buat video mengajarkan gerakan tari tango kepada teman-temanmu.",
+    "Ambil selfie dengan pose paling modis dan kreatif sekaligus, dan bagikan di grup.",
+    "Bicaralah dengan suara yang sangat pelan dan lembut, dengan gaya bicara yang santai dan tenang, selama 10 menit di panggilan suara dengan temanmu.",
+    "Tunjukkan gerakan tari breakdance kepada teman-temanmu.",
+    "Buat video membacakan puisi cinta dengan suara yang penuh kasih sayang dan romantis, dan bagikan di grup.",
+    "Ambil foto dirimu sedang melakukan aksi yang mempesona dan jadikan sebagai foto profil selama 1 hari.",
+    "Buat rekaman suara menceritakan cerita lucu dengan suara yang ceria dan kocak, dan bagikan di grup.",
+    "Tunjukkan gerakan tari salsa kepada teman-temanmu.",
+    "Buat video mengucapkan selamat ulang tahun dengan membuat lagu ulang tahun yang penuh semangat dan kreatif.",
+    "Ambil foto objek seni di sekitarmu dengan sudut pandang yang unik dan jadikan sebagai wallpaper ponselmu selama 1 hari.",
+    "Buat pantun lucu tentang makanan favoritmu dan bagikan di grup.",
+    "Tunjukkan gerakan senam pilates kepada teman-temanmu.",
+    "Buat mimik wajah paling ekspresif dan konyol sekaligus, dan bagikan di grup.",
+    "Buat video mengucapkan terima kasih kepada teman-temanmu dengan penuh keceriaan dan kehangatan.",
+    "Tunjukkan keahlianmu dalam memainkan alat musik digital kepada teman-temanmu.",
+    "Buat seni lukis menggunakan teknik kolase dengan berbagai macam bahan yang unik dan bagikan di grup.",
+    "Ambil foto dengan pose superhero favoritmu di tempat yang menarik dan eksotis, dan jadikan sebagai foto profil selama 1 hari.",
+    "Buat rekaman suara membacakan cerita petualangan dengan suara yang seru dan mengasyikkan, dan bagikan di grup.",
+    "Tunjukkan trik sulap sederhana menggunakan benda-benda sehari-hari kepada teman-temanmu.",
+    "Buat video mengajarkan gerakan tari tango kepada teman-temanmu.",
+    "Ambil selfie dengan pose paling modis dan kreatif sekaligus, dan bagikan di grup.",
+    "Bicaralah dengan suara yang sangat pelan dan lembut, dengan gaya bicara yang santai dan tenang, selama 10 menit di panggilan suara dengan temanmu.",
+    "Tunjukkan gerakan tari breakdance kepada teman-temanmu.",
+    "Buat video membacakan puisi cinta dengan suara yang penuh kasih sayang dan romantis, dan bagikan di grup.",
+    "Ambil foto dirimu sedang melakukan aksi yang mempesona dan jadikan sebagai foto profil selama 1 hari.",
+    "Buat rekaman suara menceritakan cerita lucu dengan suara yang ceria dan kocak, dan bagikan di grup.",
+    "Tunjukkan gerakan tari salsa kepada teman-temanmu.",
+    "Buat video mengucapkan selamat ulang tahun dengan membuat lagu ulang tahun yang penuh semangat dan kreatif.",
+    "Ambil foto objek seni di sekitarmu dengan sudut pandang yang unik dan jadikan sebagai wallpaper ponselmu selama 1 hari.",
+    "Buat pantun lucu tentang teknologi favoritmu dan bagikan di grup.",
+    "Tunjukkan gerakan senam pilates kepada teman-temanmu.",
+   "Makan makanan pedas tanpa minum selama 1 menit.",
+    "Buat tarian konyol dan tampilkan di depan teman-temanmu.",
+    "Lakukan panggilan video dengan temanmu dan tunjukkan bakat menyanyimu.",
+    "Tunjukkan gerakan tarian terbaikmu di tengah-tengah keramaian.",
+    "Kirim pesan suara menyanyikan lagu cinta kepada seseorang yang kamu sukai.",
+    "Beri komplimen kepada setiap anggota grup dengan kata-kata yang penuh kebaikan.",
+    "Bicaralah dengan aksen yang berbeda selama 5 menit.",
+    "Tunjukkan aksi sulap sederhana kepada temanmu.",
+    "Ganti nama di akun media sosialmu menjadi 'Superhero' selama 24 jam.",
+    "Ambil foto wajah terbaikmu dan jadikan sebagai foto profil selama 1 hari.",
+    "Hubungi seseorang yang tidak pernah kamu bicarakan dan ajak mereka untuk berteman.",
+    "Buat puisi singkat tentang alam dan bacakan kepada teman-temanmu.",
+    "Tulis sebuah cerita pendek dalam waktu 10 menit dan bagikan ke grup.",
+    "Kirim meme lucu kepada teman-temanmu untuk membuat mereka tertawa.",
+    "Buat video mengucapkan selamat ulang tahun untuk seseorang yang sedang berulang tahun.",
+    "Tunjukkan keahlianmu dalam memainkan alat musik kepada teman-temanmu.",
+    "Buat sketsa singkat tentang kehidupan sehari-hari dan bagikan di grup.",
+    "Tunjukkan trik sulap sederhana menggunakan benda-benda di sekitarmu.",
+    "Buat senyuman paling lebar dan kirim foto senyummu kepada teman-temanmu.",
+    "Baca puisi cinta favoritmu dengan perasaan yang mendalam.",
+    "Ambil foto dirimu sedang melakukan aksi lucu dan jadikan sebagai foto profil selama 1 hari.",
+    "Buat rekaman suara menceritakan kisah lucu yang pernah kamu alami dan bagikan di grup.",
+    "Tunjukkan gerakan tarian terburukmu di depan teman-temanmu.",
+    "Tunjukkan keahlianmu dalam membuat origami dan berikan hadiah kecil kepada teman-temanmu.",
+    "Ambil selfie dengan ekspresi paling lucu dan bagikan di grup.",
+    "Bicaralah dengan suara yang sangat pelan selama 10 menit di panggilan suara dengan temanmu.",
+    "Tunjukkan gerakan parkour sederhana di depan teman-temanmu.",
+    "Buat video komedi pendek dengan sketsa yang lucu dan bagikan di grup.",
+    "Ambil foto objek yang indah di sekitarmu dan jadikan sebagai wallpaper ponselmu selama 1 hari.",
+    "Buat pantun lucu tentang hobi teman-temanmu dan bagikan di grup.",
+    "Tunjukkan gerakan tari khas daerahmu kepada teman-temanmu.",
+    "Buat mimik wajah paling lucu dan bagikan di grup.",
+    "Buat video mengucapkan terima kasih kepada teman-temanmu dengan penuh perasaan.",
+    "Tunjukkan keahlianmu dalam memainkan permainan video kepada teman-temanmu.",
+    "Buat seni lukis sederhana menggunakan pensil atau cat air dan bagikan di grup.",
+    "Ambil foto dengan pose superhero favoritmu dan jadikan sebagai foto profil selama 1 hari.",
+    "Buat rekaman suara membacakan dongeng pendek dan bagikan di grup.",
+    "Tunjukkan trik sulap sederhana menggunakan kartu remi kepada teman-temanmu.",
+    "Buat video mengajarkan gerakan tari sederhana kepada teman-temanmu.",
+    "Ambil foto dirimu sedang melakukan pose yoga dan jadikan sebagai foto profil selama 1 hari.",
+    "Buat sketsa wajah temanmu dengan gaya kartun dan bagikan di grup.",
+    "Tunjukkan keahlianmu dalam memasak hidangan favoritmu kepada teman-temanmu.",
+    "Buat video komedi singkat dengan dialog yang lucu dan bagikan di grup.",
+    "Ambil selfie dengan ekspresi paling serius dan bagikan di grup.",
+    "Bicaralah dengan suara yang sangat keras selama 10 menit di panggilan suara dengan temanmu.",
+    "Tunjukkan gerakan tari modern kepada teman-temanmu.",
+    "Buat video membacakan puisi cinta favoritmu dengan perasaan yang mendalam dan bagikan di grup.",
+    "Ambil foto dirimu sedang melakukan aksi yang menakjubkan dan jadikan sebagai foto profil selama 1 hari.",
+    "Buat rekaman suara menceritakan pengalaman seram yang pernah kamu alami dan bagikan di grup.",
+    "Tunjukkan gerakan tari khas suku tertentu kepada teman-temanmu.",
+    "Buat video mengucapkan selamat ulang tahun dengan menyanyikan lagu ulang tahun yang penuh semangat.",
+    "Ambil foto objek yang menarik di sekitarmu dengan sudut pandang yang kreatif dan jadikan sebagai wallpaper ponselmu selama 1 hari.",
+    "Buat pantun lucu tentang makanan favoritmu dan bagikan di grup.",
+    "Tunjukkan gerakan senam atau yoga kepada teman-temanmu.",
+    "Buat mimik wajah paling serius dan bagikan di grup.",
+    "Buat video mengucapkan terima kasih kepada teman-temanmu dengan penuh kehangatan.",
+    "Tunjukkan keahlianmu dalam memainkan alat musik tradisional kepada teman-temanmu.",
+    "Buat seni lukis menggunakan tangan kosong dengan teknik finger painting dan bagikan di grup.",
+    "Ambil foto dengan pose superhero favoritmu di tempat yang tidak biasa dan jadikan sebagai foto profil selama 1 hari.",
+    "Buat rekaman suara membacakan dongeng klasik dengan suara yang dramatis dan bagikan di grup.",
+    "Tunjukkan trik sulap sederhana menggunakan benda-benda sehari-hari kepada teman-temanmu.",
+    "Buat video mengajarkan gerakan tari tradisional kepada teman-temanmu.",
+    "Ambil selfie dengan pose paling artistik dan bagikan di grup.",
+    "Bicaralah dengan suara yang sangat cepat selama 10 menit di panggilan suara dengan temanmu.",
+    "Tunjukkan gerakan tari hip-hop kepada teman-temanmu.",
+    "Buat video membacakan puisi cinta buatanmu sendiri dengan perasaan yang mendalam dan bagikan di grup.",
+    "Ambil foto dirimu sedang melakukan aksi yang kreatif dan jadikan sebagai foto profil selama 1 hari.",
+    "Buat rekaman suara menceritakan cerita lucu yang pernah kamu alami dan bagikan di grup.",
+    "Tunjukkan gerakan tari balet kepada teman-temanmu.",
+    "Buat video mengucapkan selamat ulang tahun dengan menyanyikan lagu ulang tahun dengan suara merdu.",
+    "Ambil foto objek alam yang indah di sekitarmu dan jadikan sebagai wallpaper ponselmu selama 1 hari.",
+    "Buat pantun lucu tentang hewan favoritmu dan bagikan di grup.",
+    "Tunjukkan gerakan senam jantung sehat kepada teman-temanmu.",
+    "Buat mimik wajah paling kreatif dan bagikan di grup.",
+    "Buat video mengucapkan terima kasih kepada teman-temanmu dengan penuh keceriaan.",
+    "Tunjukkan keahlianmu dalam memainkan alat musik modern kepada teman-temanmu.",
+    "Buat seni lukis abstrak dengan warna-warna cerah dan bagikan di grup.",
+    "Ambil foto dengan pose superhero favoritmu di tempat yang indah dan jadikan sebagai foto profil selama 1 hari.",
+    "Buat rekaman suara membacakan dongeng interaktif dengan berbagai suara karakter dan bagikan di grup.",
+    "Tunjukkan trik sulap sederhana menggunakan uang koin kepada teman-temanmu."
 ]
               const xeondare = dare[Math.floor(Math.random() * dare.length)]
-              bufferdare = await getBuffer(`https://i.ibb.co/305yt26/bf84f20635dedd5dde31e7e5b6983ae9.jpg`)
-              XeonBotInc.sendMessage(from, { image: bufferdare, caption: '_Anda Memilih BERANI_\n'+ xeondare }, {quoted:m})
+              bufferdare = await getBuffer(`https://telegra.ph/file/87ea7fa4801aecb2ddf38.jpg`)
+              XeonBotInc.sendMessage(from, { image: bufferdare, caption: '*Anda Memilih DARE*\n'+ xeondare }, {quoted:m})
               break
                             break
        case 'truth':
               const truth =[
-     "Apakah kamu pernah menyukai seseorang? Berapa lama?",
-     "Kalau bisa atau kalau mau, gc/gc luar yang mana yang akan kamu jadikan teman? (mungkin beda/tipe sama)",
-     "apa ketakutan terbesar kamu?",
-     "Pernahkah kamu menyukai seseorang dan merasa orang itu juga menyukaimu?",
-     "Siapa nama mantan pacar temanmu yang dulu kamu suka diam-diam?",
-     "Apakah kamu pernah mencuri uang dari ayah atau ibumu? Alasannya?",
-     "Apa yang membuatmu bahagia saat sedih?",
-     "Pernah cinta bertepuk sebelah tangan? Kalo pernah sama siapa? gimana rasanya gan?",
-     "pernah menjadi simpanan seseorang?",
-     "hal yang paling ditakuti",
-     "Siapakah orang yang paling berpengaruh dalam hidupmu?",
-     "Hal yang membanggakan apa yang kamu dapatkan tahun ini",
-     "Siapa orang yang bisa membuatmu luar biasa",
-     "Siapakah orang yang pernah membuatmu sangat bahagia?",
-     "Siapa yang paling dekat dengan tipe pasangan idealmu di sini",
-     "Kamu suka main sama siapa??",
-     "Pernahkah kamu menolak orang? Alasannya kenapa?",
-     "Sebutkan kejadian yang membuatmu terluka yang masih kamu ingat",
-     "Prestasi apa yang kamu dapatkan tahun ini??",
-     "Apa kebiasaan terburukmu di sekolah??",
-     "Lagu apa yang paling sering kamu nyanyikan saat mandi",
-     "Apakah Anda pernah memiliki pengalaman mendekati kematian",
-     "Kapan terakhir kali kamu benar-benar marah. Kenapa?",
-     "Siapa orang terakhir yang meneleponmu",
-     "Apakah kamu memiliki bakat tersembunyi, Apa itu",
-     "Kata apa yang paling kamu benci?",
-     "Apa video YouTube terakhir yang kamu tonton?",
-     "Apa hal terakhir yang Anda cari di Google",
-     "Dengan siapa di grup ini kamu ingin bertukar kehidupan selama seminggu",
-     "Apa hal paling menakutkan yang pernah terjadi padamu",
-     "Pernahkah kamu kentut dan menyalahkan orang lain",
-     "Kapan terakhir kali kamu membuat orang lain menangis",
-     "Pernahkah kamu meng-ghost teman",
-     "Pernahkah kamu melihat mayat",
-     "Siapa di antara anggota keluargamu yang paling mengganggumu dan mengapa",
-     "Jika Anda harus menghapus satu aplikasi dari ponsel Anda, aplikasi mana yang akan dipilih",
-     "Aplikasi apa yang paling Anda buang waktu",
-     "Pernahkah kamu berpura-pura sakit untuk pulang sekolah",
-     "Barang apa yang paling memalukan di kamarmu",
-     "Lima barang apa yang akan kamu bawa jika kamu terjebak di pulau terpencil",
-     "Pernahkah kamu tertawa begitu keras hingga pipis di celana",
-     "Apakah kamu mencium bau kentutmu sendiri",
-     "apakah kamu pernah pipis di tempat tidur saat tidur ???",
-     "Apa kesalahan terbesar yang pernah kamu buat",
-     "Pernahkah kamu menyontek saat ujian",
-     "Apa hal terburuk yang pernah kamu lakukan",
-     "Kapan terakhir kali kamu menangis",
-     "siapa yang paling kamu cintai di antara orang tuamu",
-     "Apakah kamu kadang-kadang memasukkan jarimu ke dalam lubang hidung?",
-     "siapa yang kamu suka saat sekolah",
-     "Katakan dengan jujur, apakah kamu menyukai laki-laki di grup ini",
-     "apakah kamu pernah menyukai seseorang? sudah berapa lama?",
-     "apakah kamu punya gf/bf', 'apa ketakutan terbesarmu?",
-     "pernahkah kamu menyukai seseorang dan merasa orang itu juga menyukaimu?",
-     "Siapa nama mantan pacar temanmu yang pernah kamu sukai diam-diam?",
-     "pernahkah kamu mencuri uang ibumu atau uang ayahmu",
-     "apa yang membuatmu bahagia saat kamu sedih",
-     "apakah kamu menyukai seseorang yang ada digrup ini? kalau kamu lalu siapa?",
-     "apakah kamu pernah ditipu orang?",
-     "Siapakah orang yang paling penting dalam hidupmu",
-     "Hal membanggakan apa yang kamu dapatkan tahun ini",
-     "siapa orang yang bisa membuatmu bahagia saat kamu sedih",
-     "Siapakah orang yang pernah membuatmu merasa tidak nyaman",
-     "apakah kamu pernah berbohong kepada orang tuamu",
-     "kamu masih suka mantan kamu",
-     "dengan siapa kamu suka bermain bersama?",
-     "apakah kamu pernah mencuri barang besar dalam hidupmu? alasannya kenapa?",
-     "Sebutkan kejadian yang membuatmu terluka yang masih kamu ingat",
-     "prestasi apa yang kamu dapatkan tahun ini?",
-     "apa kebiasaan terburukmu di sekolah?",
-     "apakah Anda menyukai pembuat bot, xeon?ðŸ¤£",
-     "pernahkah kamu berpikir untuk membalas dendam dari gurumu?",
-     "apakah Anda menyukai perdana menteri negara Anda saat ini",
-     "Anda bukan sayuran atau sayuran",
-     "jika kamu bisa menjadi tidak terlihat, apa hal pertama yang akan kamu lakukan",
-     "rahasia apa yang kamu sembunyikan dari orang tuamu",
-     "Siapa naksir rahasiamu",
-     "siapa orang terakhir yang kamu creep di media sosial",
-     "Jika seorang jin mengabulkan tiga keinginanmu, apa yang akan kamu minta",
-     "Apa penyesalan terbesarmu",
-     "Menurutmu binatang apa yang paling mirip denganmu",
-     "Berapa banyak selfie yang kamu lakukan sehari",
-     "Apa acara masa kecil favoritmu",
-     "jika kamu bisa menjadi karakter fiksi selama sehari, siapa yang akan kamu pilih",
-     "siapa yang paling sering kamu SMS",
-     "Apa kebohongan terbesar yang pernah kamu katakan kepada orang tuamu",
-     "Siapa selebritas yang kamu sukai",
-     "Apa mimpi teraneh yang pernah kamu alami",
-     "Apakah Anda bermain pubg, jika Anda kemudian mengirimkan nomor id Anda"
+  "Apakah kamu pernah menyukai seseorang? Berapa lama?",
+  "Kalau bisa atau kalau mau, gc/gc luar yang mana yang akan kamu jadikan teman? (mungkin beda/tipe sama)",
+  "Apa ketakutan terbesar kamu?",
+  "Pernahkah kamu menyukai seseorang dan merasa orang itu juga menyukaimu?",
+  "Siapa nama mantan pacar temanmu yang dulu kamu suka diam-diam?",
+  "Apakah kamu pernah mencuri uang dari ayah atau ibumu? Alasannya?",
+  "Apa yang membuatmu bahagia saat sedih?",
+  "Pernah cinta bertepuk sebelah tangan? Kalo pernah sama siapa? Gimana rasanya, bro?",
+  "Pernah menjadi simpanan seseorang?",
+  "Hal yang paling ditakuti",
+  "Siapakah orang yang paling berpengaruh dalam hidupmu?",
+  "Hal membanggakan apa yang kamu dapatkan tahun ini?",
+  "Siapa orang yang bisa membuatmu luar biasa?",
+  "Siapakah orang yang pernah membuatmu sangat bahagia?",
+  "Siapa yang paling dekat dengan tipe pasangan idealmu di sini?",
+  "Kamu suka main dengan siapa?",
+  "Pernahkah kamu menolak seseorang? Alasannya kenapa?",
+  "Sebutkan kejadian yang membuatmu terluka yang masih kamu ingat",
+  "Prestasi apa yang kamu dapatkan tahun ini?",
+  "Apa kebiasaan terburukmu di sekolah?",
+  "Lagu apa yang paling sering kamu nyanyikan saat mandi?",
+  "Apakah kamu pernah memiliki pengalaman mendekati kematian?",
+  "Kapan terakhir kali kamu benar-benar marah? Kenapa?",
+  "Siapa orang terakhir yang meneleponmu?",
+  "Apakah kamu memiliki bakat tersembunyi? Apa itu?",
+  "Kata apa yang paling kamu benci?",
+  "Apa video YouTube terakhir yang kamu tonton?",
+  "Apa hal terakhir yang Anda cari di Google?",
+  "Dengan siapa di grup ini kamu ingin bertukar kehidupan selama seminggu?",
+  "Apa hal paling menakutkan yang pernah terjadi padamu?",
+  "Pernahkah kamu kentut dan menyalahkan orang lain?",
+  "Kapan terakhir kali kamu membuat orang lain menangis?",
+  "Pernahkah kamu meng-ghost teman?",
+  "Pernahkah kamu melihat mayat?",
+  "Siapa di antara anggota keluargamu yang paling mengganggumu dan mengapa?",
+  "Jika Anda harus menghapus satu aplikasi dari ponsel Anda, aplikasi mana yang akan dipilih?",
+  "Aplikasi apa yang paling Anda buang waktu?",
+  "Pernahkah kamu berpura-pura sakit untuk pulang sekolah?",
+  "Barang apa yang paling memalukan di kamarmu?",
+  "Lima barang apa yang akan kamu bawa jika kamu terjebak di pulau terpencil?",
+  "Pernahkah kamu tertawa begitu keras hingga pipis di celana?",
+  "Apakah kamu mencium bau kentutmu sendiri?",
+  "Apakah kamu pernah pipis di tempat tidur saat tidur?",
+  "Apa kesalahan terbesar yang pernah kamu buat?",
+  "Pernahkah kamu menyontek saat ujian?",
+  "Apa hal terburuk yang pernah kamu lakukan?",
+  "Kapan terakhir kali kamu menangis?",
+  "Siapa yang paling kamu cintai di antara orang tuamu?",
+  "Apakah kamu kadang-kadang memasukkan jarimu ke dalam lubang hidung?",
+  "Siapa yang kamu suka saat sekolah?",
+  "Katakan dengan jujur, apakah kamu menyukai laki-laki di grup ini?",
+  "Apakah kamu pernah menyukai seseorang? Sudah berapa lama?",
+  "Apakah kamu punya pacar? Apa ketakutan terbesarmu?",
+  "Pernahkah kamu menyukai seseorang dan merasa orang itu juga menyukaimu?",
+  "Siapa nama mantan pacar temanmu yang pernah kamu sukai diam-diam?",
+  "Pernahkah kamu mencuri uang ibumu atau uang ayahmu?",
+  "Apa yang membuatmu bahagia saat kamu sedih?",
+  "Apakah kamu menyukai seseorang yang ada di grup ini? Kalau kamu lalu siapa?",
+  "Apakah kamu pernah ditipu orang?",
+  "Siapakah orang yang paling penting dalam hidupmu?",
+  "Hal membanggakan apa yang kamu dapatkan tahun ini?",
+  "Siapa orang yang bisa membuatmu bahagia saat kamu sedih?",
+  "Siapakah orang yang pernah membuatmu merasa tidak nyaman?",
+  "Apakah kamu pernah berbohong kepada orang tuamu?",
+  "Apakah kamu masih menyukai mantanmu?",
+  "Dengan siapa kamu suka bermain bersama?",
+  "Apakah kamu pernah mencuri barang berharga dalam hidupmu? Alasannya kenapa?",
+  "Sebutkan kejadian yang membuatmu terluka yang masih kamu ingat",
+  "Prestasi apa yang kamu dapatkan tahun ini?",
+  "Apa kebiasaan terburukmu di sekolah?",
+  "Apakah Anda menyukai pembuat bot, Hoshino?",
+  "Pernahkah kamu berpikir untuk membalas dendam dari gurumu?",
+  "Apakah Anda menyukai perdana menteri negara Anda saat ini?",
+  "Apakah Anda lebih suka daging atau sayuran?",
+  "Jika kamu bisa menjadi tidak terlihat, apa hal pertama yang akan kamu lakukan?",
+  "Rahasia apa yang kamu sembunyikan dari orang tuamu?",
+  "Siapa naksir rahasiamu?",
+  "Siapa orang terakhir yang kamu stalk di media sosial?",
+  "Jika seorang jin mengabulkan tiga keinginanmu, apa yang akan kamu minta?",
+  "Apa penyesalan terbesarmu?",
+  "Menurutmu binatang apa yang paling mirip denganmu?",
+  "Berapa banyak selfie yang kamu ambil dalam sehari?",
+  "Apa acara masa kecil favoritmu?",
+  "Jika kamu bisa menjadi karakter fiksi selama sehari, siapa yang akan kamu pilih?",
+  "Siapa yang paling sering kamu SMS?",
+  "Apa kebohongan terbesar yang pernah kamu katakan kepada orang tuamu?",
+  "Siapa selebritas yang kamu sukai?",
+  "Apa mimpi teraneh yang pernah kamu alami?",
+  "Apakah kamu bermain PUBG? Jika iya, tolong kirimkan nomor ID-mu.",
+  "Apakah kamu pernah berbohong kepada sahabatmu? Alasannya?",
+  "Siapa orang yang paling kamu kagumi di dunia?",
+  "Pernahkah kamu menjatuhkan barang berharga milik orang lain? Ceritakan.",
+  "Apa hal paling aneh yang pernah kamu lihat di jalan?",
+  "Pernahkah kamu berbohong kepada pasanganmu? Alasannya?",
+  "Siapa selebritas yang kamu benci? Mengapa?",
+  "Apakah kamu pernah memalsukan identitas online? Mengapa?",
+  "Apa hal terbesar yang kamu korbankan demi orang lain?",
+  "Pernahkah kamu melakukan tindakan yang melanggar hukum? Ceritakan.",
+  "Siapa orang yang paling membuatmu iri? Mengapa?",
+  "Apakah ada kebiasaan buruk yang ingin kamu tinggalkan? Apa itu?",
+  "Apa makanan yang paling kamu benci? Mengapa?",
+  "Pernahkah kamu mengkhianati kepercayaan seseorang? Ceritakan.",
+  "Siapa tokoh fiksi favoritmu? Mengapa?",
+  "Apakah kamu pernah memutuskan hubungan dengan seseorang secara tidak baik? Alasannya?",
+  "Apa impian terbesar yang ingin kamu wujudkan?",
+  "Pernahkah kamu mengambil hak orang lain? Ceritakan.",
+  "Siapa guru favoritmu di masa kecil? Mengapa?",
+  "Apakah kamu pernah merasa bersalah karena menyakiti seseorang? Alasannya?",
+  "Apa kebiasaan terbaik yang ingin kamu tingkatkan?",
+  "Pernahkah kamu mengingkari janji yang telah kamu buat? Ceritakan.",
+  "Siapa pahlawan favoritmu? Mengapa?",
+  "Apakah kamu pernah mengecewakan orang yang sangat kamu sayangi? Ceritakan.",
+  "Apa hal terburuk yang pernah kamu katakan kepada seseorang?",
+  "Pernahkah kamu merasa dirimu tidak berarti? Mengapa?",
+  "Siapa musuh terbesarmu? Mengapa?",
+  "Apakah kamu pernah berbohong kepada dirimu sendiri? Alasannya?",
+  "Apa hal yang paling ingin kamu ubah dari dirimu?",
+  "Pernahkah kamu mengambil keuntungan dari kelemahan orang lain? Ceritakan.",
+  "Siapa tokoh sejarah yang paling kamu kagumi? Mengapa?",
+  "Apakah ada kejadian yang membuatmu merasa sangat menyesal? Ceritakan.",
+  "Apa kelemahan terbesarmu? Mengapa?",
+  "Pernahkah kamu mengabaikan seseorang yang berarti bagimu? Alasannya?",
+  "Siapa orang yang paling kamu kagumi di grup ini?",
+  "Apakah kamu pernah memanipulasi orang lain? Ceritakan.",
+  "Apa hal yang paling ingin kamu capai dalam hidup ini?",
+  "Pernahkah kamu merasa iri terhadap keberhasilan orang lain? Mengapa?",
+  "Siapa tokoh terkenal yang paling kamu tidak suka? Mengapa?",
+  "Apakah kamu pernah menyalahkan orang lain atas kesalahanmu sendiri? Alasannya?",
+  "Apa yang membuatmu merasa tidak aman?",
+  "Pernahkah kamu berbohong kepada dirimu sendiri agar terlihat lebih baik? Ceritakan.",
+  "Siapa orang yang paling kamu rindukan? Mengapa?",
+  "Apakah kamu pernah membuat janji yang tidak bisa kamu tepati? Alasannya?",
+  "Apa impian terbesarmu yang belum tercapai?",
+  "Pernahkah kamu menjatuhkan orang lain agar kamu bisa naik? Ceritakan.",
+  "Siapa yang paling berpengaruh dalam kehidupanmu saat ini?",
+  "Apakah ada sesuatu yang ingin kamu katakan kepada seseorang, tapi belum pernah kamu sampaikan? Apa itu?",
+  "Apa hal yang paling ingin kamu ubah dari masa lalu?",
+  "Pernahkah kamu melakukan sesuatu yang sangat berisiko? Ceritakan.",
+  "Siapa teman yang paling bisa kamu andalkan dalam situasi sulit?",
+  "Apakah kamu pernah memanfaatkan seseorang demi keuntunganmu sendiri? Ceritakan.",
+  "Apa hal yang paling ingin kamu capai dalam waktu dekat?",
+  "Pernahkah kamu membuat orang lain terluka secara sengaja? Alasannya?",
+  "Siapa sosok yang paling kamu kagumi dalam hidup ini? Mengapa?",
+  "Apakah kamu pernah mengkhianati rahasia seseorang? Ceritakan.",
+  "Apa yang paling kamu sesali tentang hubungan asmaramu yang lalu?",
+  "Pernahkah kamu menjatuhkan orang lain hanya karena kesalahan kecil? Ceritakan.",
+  "Siapa tokoh terkenal yang paling kamu kagumi? Mengapa?",
+  "Apakah ada kejadian yang membuatmu merasa sangat malu? Ceritakan.",
+  "Apa yang paling membuatmu merasa tidak berharga?",
+  "Pernahkah kamu mengorbankan nilai-nilai pentingmu demi popularitas? Ceritakan.",
+  "Siapa orang yang paling kamu cintai di luar keluarga? Mengapa?",
+  "Apakah kamu pernah menyembunyikan sesuatu yang penting dari orang yang kamu cintai? Ceritakan.",
+  "Apa hal yang paling ingin kamu lupakan dari masa lalu?",
+  "Pernahkah kamu mengabaikan kebutuhan seseorang yang kamu cintai? Alasannya?",
+  "Siapa tokoh inspiratif yang paling kamu kagumi? Mengapa?",
+  "Apakah kamu pernah menghancurkan hubungan persahabatanmu dengan sengaja? Ceritakan.",
+  "Apa yang paling kamu sesali tentang tindakanmu dalam hubungan asmaramu yang lalu?",
+  "Pernahkah kamu membuat seseorang merasa tidak berarti? Alasannya?",
+  "Siapa orang yang paling berarti dalam hidupmu saat ini?",
+  "Apakah kamu pernah menyalahgunakan kepercayaan seseorang? Ceritakan.",
+  "Apa yang paling kamu sesali tentang cara kamu memperlakukan orang lain?",
+  "Pernahkah kamu merasa tidak pantas mendapatkan kebahagiaan? Mengapa?",
+  "Siapa tokoh olahraga yang paling kamu kagumi? Mengapa?",
+  "Apakah kamu pernah mengecewakan dirimu sendiri? Ceritakan.",
+  "Apa yang paling kamu sesali tentang tindakanmu dalam hubungan keluargamu?",
+  "Pernahkah kamu melakukan sesuatu yang melanggar nilai-nilai etika? Ceritakan.",
+  "Siapa tokoh politik yang paling kamu kagumi? Mengapa?",
+  "Apakah kamu pernah memanipulasi perasaan seseorang demi keuntunganmu sendiri? Ceritakan.",
+  "Apa yang paling kamu sesali tentang cara kamu memperlakukan dirimu sendiri?",
+  "Pernahkah kamu merasa tidak layak menerima cinta? Mengapa?",
+  "Siapa orang yang paling kamu kagumi dalam bidang seni? Mengapa?",
+  "Apakah kamu pernah mempengaruhi seseorang agar mereka melakukan sesuatu yang tidak benar? Ceritakan.",
+  "Apa yang paling kamu sesali tentang tindakanmu dalam hubungan persahabatanmu?",
+  "Pernahkah kamu menjatuhkan orang lain hanya untuk kepuasan dirimu sendiri? Ceritakan.",
+  "Siapa tokoh inspiratif yang paling kamu kagumi? Mengapa?",
+  "Apakah kamu pernah mengkhianati janji yang penting? Ceritakan.",
+  "Apa yang paling kamu sesali tentang tindakanmu dalam hubungan asmaramu yang lalu?",
+  "Pernahkah kamu membuat seseorang merasa tidak berarti? Alasannya?",
+  "Siapa orang yang paling berarti dalam hidupmu saat ini?",
+  "Apakah kamu pernah menyalahgunakan kepercayaan seseorang? Ceritakan.",
+  "Apa yang paling kamu sesali tentang cara kamu memperlakukan orang lain?",
+  "Apa hal yang paling membuatmu merasa kikuk saat bertemu orang baru?",
+  "Pernahkah kamu menyesali keputusan besar yang pernah kamu ambil? Apa itu?",
+  "Siapa tokoh politik yang paling kamu kagumi? Mengapa?",
+  "Apakah kamu pernah mengkhianati kepercayaan seseorang? Ceritakan.",
+  "Apa yang paling kamu sesali tentang hubungan asmaramu yang lalu?",
+  "Pernahkah kamu merasa tidak dihargai di tempat kerja? Bagaimana kamu menghadapinya?",
+  "Siapa orang yang paling kamu cintai di luar keluarga? Mengapa?",
+  "Apakah kamu pernah memiliki obsesi yang tidak sehat? Apa itu?",
+  "Apa yang paling membuatmu merasa tertekan saat menghadapi masalah?",
+  "Pernahkah kamu terjebak dalam perasaan cemburu yang tidak sehat? Ceritakan.",
+  "Siapa selebritas yang menurutmu paling overrated? Mengapa?",
+  "Apa yang paling membuatmu tertawa hingga sakit perut?",
+  "Pernahkah kamu melakukan perjalanan sendirian? Bagaimana pengalamanmu?",
+  "Apa hal yang paling membuatmu stres dalam pekerjaanmu?",
+  "Siapa tokoh sejarah yang paling kamu kagumi? Mengapa?",
+  "Apakah kamu pernah mengkhianati rahasia seseorang? Alasannya?",
+  "Apa yang paling kamu sesali tentang hubungan asmaramu yang lalu?",
+  "Pernahkah kamu merasa tidak adil di tempat kerja? Ceritakan.",
+  "Siapa orang yang paling kamu cintai di luar keluarga? Mengapa?",
+  "Apakah kamu pernah memiliki obsesi yang tidak sehat? Apa itu?",
+  "Apa yang paling membuatmu gelisah saat menghadapi situasi sosial?",
+  "Pernahkah kamu merasa tidak cukup baik bagi seseorang yang kamu cintai?",
+  "Siapa tokoh fiksi yang paling kamu kagumi? Mengapa?",
+  "Apa kegiatan yang membuatmu merasa hidupmu berarti?",
+  "Apakah kamu pernah memendam perasaan kepada seseorang yang sudah memiliki pasangan? Ceritakan.",
+  "Siapa temanmu yang paling sukses? Apa yang membuatmu iri padanya?",
+  "Apa hal yang paling kamu takuti dalam hidup ini?",
+  "Pernahkah kamu terlibat dalam suatu perselisihan fisik? Ceritakan.",
+  "Siapa orang yang paling mempengaruhi pilihan fashionmu?",
+  "Apakah kamu pernah memendam rasa iri terhadap sahabatmu? Alasannya?",
+  "Apa yang paling membuatmu frustasi dalam hubungan asmaramu yang lalu?",
+  "Pernahkah kamu menolak tawaran pekerjaan yang sebenarnya kamu inginkan? Mengapa?",
+  "Siapa penulis favoritmu? Mengapa kamu menyukai karyanya?",
+  "Apakah kamu pernah merasa tidak diterima oleh lingkungan sekitarmu?",
+  "Apa yang paling membuatmu tegang saat berbicara di depan umum?",
+  "Pernahkah kamu menyakiti seseorang secara tidak sengaja? Bagaimana kamu memperbaikinya?",
+  "Siapa selebritas yang menurutmu paling underrated? Mengapa?",
+  "Apa yang paling membuatmu takut saat berada di tempat yang gelap?",
+  "Pernahkah kamu membuat kesalahan besar dalam pekerjaanmu? Ceritakan.",
+  "Siapa seniman favoritmu? Mengapa kamu menyukai karya-karyanya?",
+  "Apakah kamu pernah merasa terjebak dalam rutinitas yang membosankan? Bagaimana kamu mengatasinya?",
+  "Apa yang paling membuatmu gugup saat berkencan?",
+  "Pernahkah kamu menyembunyikan perasaanmu agar tidak menyakiti orang lain?",
+  "Siapa tokoh inspiratif yang paling kamu kagumi? Mengapa?",
+  "Apakah kamu pernah berpura-pura menyukai sesuatu hanya untuk menyenangkan orang lain?",
+  "Apa hal yang paling membuatmu merasa tidak percaya diri?",
+  "Pernahkah kamu merasa tidak mampu mencapai tujuanmu? Mengapa?",
+  "Siapa orang yang paling kamu kagumi dalam bidang teknologi? Mengapa?",
+  "Apakah kamu pernah merasa terjebak dalam rutinitas yang tidak kamu sukai? Bagaimana kamu mengatasinya?",
+  "Apa yang paling membuatmu gugup saat tampil di depan umum?",
+  "Pernahkah kamu merasa tidak diterima oleh lingkungan sekitarmu?",
+  "Siapa penulis komik favoritmu? Mengapa kamu menyukai karyanya?",
+  "Apakah kamu pernah merasa dirimu tidak cukup baik bagi seseorang yang kamu cintai?",
+  "Apa yang paling membuatmu khawatir saat berada di tempat yang ramai?",
+  "Pernahkah kamu membuat kesalahan besar dalam kehidupan asmaramu? Ceritakan.",
+  "Siapa pembawa acara TV favoritmu? Mengapa kamu menyukainya?",
+  "Apakah kamu pernah merasa tidak puas dengan pekerjaanmu?",
+  "Apa yang paling membuatmu gugup saat wawancara kerja?",
+  "Pernahkah kamu merasa tidak adil dibandingkan dengan orang lain? Mengapa?",
+  "Siapa penulis lagu favoritmu? Mengapa kamu menyukai lirik-liriknya?",
+  "Apakah ada masa lalu yang ingin kamu ubah? Apa itu?",
+  "Apa yang paling membuatmu takut saat berada di tempat yang sunyi?",
+  "Pernahkah kamu membuat kesalahan besar dalam pekerjaanmu? Ceritakan."
 ]
               const xeontruth = truth[Math.floor(Math.random() * truth.length)]
-              buffertruth = await getBuffer(`https://i.ibb.co/305yt26/bf84f20635dedd5dde31e7e5b6983ae9.jpg`)
-              XeonBotInc.sendMessage(from, { image: buffertruth, caption: '_Anda Memilih KEBENARAN_\n'+ xeontruth }, {quoted:m})
+              buffertruth = await getBuffer(`https://telegra.ph/file/87ea7fa4801aecb2ddf38.jpg`)
+              XeonBotInc.sendMessage(from, { image: buffertruth, caption: '*Anda Memilih TRUTH*\n'+ xeontruth }, {quoted:m})
               break
 case 'checkme':
 					neme = args.join(" ")
@@ -4910,8 +5321,8 @@ replygcxeon(mess.wait)
 
   break
 }
-case 'spotifydownload': {
-  if (!q) return replygcxeon('Format: *.spotifydownload Tautan Spotify*')
+case 'spotifydl': {
+  if (!q) return replygcxeon('Format: *.spotifydl Tautan Spotify*')
 replygcxeon(mess.wait)
   const axios = require('axios')
   const apiKey = 'Shirooo' // Replace with your API key
@@ -5503,7 +5914,7 @@ case 'jadwaltvnow' : {
       let scheduleMessage = '';
 
       for (const channel in result) {
-        scheduleMessage += `${channel}: *${result[channel]}*\n`;
+        scheduleMessage += `*${channel}:* ${result[channel]}\n`;
       }
 
       replygcxeon(scheduleMessage);
@@ -5538,7 +5949,7 @@ case 'jalantikus' : {
           `Tautan: *${link}*\n\n`;
       });
 
-      const message = `Berita terbaru dari Jalan Tikus:*\n\n${newsList}`;
+      const message = `*Berita terbaru dari Jalan Tikus:*\n\n${newsList}`;
 
       replygcxeon(message);
     })
@@ -7083,14 +7494,6 @@ var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/bdsm.json'))
 var xeonyresult = pickRandom(ahegaonsfw)
 XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
 break
-case 'cuckold':
-if (!m.isGroup) return replygcxeon(mess.group)
-	if (!AntiNsfw) return replygcxeon(mess.nsfw)
-replygcxeon(mess.wait)
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/cuckold.json'))
-var xeonyresult = pickRandom(ahegaonsfw)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
-break
 case 'eba':
 if (!m.isGroup) return replygcxeon(mess.group)
 	if (!AntiNsfw) return replygcxeon(mess.nsfw)
@@ -7099,51 +7502,11 @@ var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/eba.json'))
 var xeonyresult = pickRandom(ahegaonsfw)
 XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
 break
-case 'foot':
-if (!m.isGroup) return replygcxeon(mess.group)
-	if (!AntiNsfw) return replygcxeon(mess.nsfw)
-replygcxeon(mess.wait)
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/foot.json'))
-var xeonyresult = pickRandom(ahegaonsfw)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
-break
-case 'gangbang':
-if (!m.isGroup) return replygcxeon(mess.group)
-	if (!AntiNsfw) return replygcxeon(mess.nsfw)
-replygcxeon(mess.wait)
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/gangbang.json'))
-var xeonyresult = pickRandom(ahegaonsfw)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
-break
-case 'glasses':
-if (!m.isGroup) return replygcxeon(mess.group)
-	if (!AntiNsfw) return replygcxeon(mess.nsfw)
-replygcxeon(mess.wait)
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/glasses.json'))
-var xeonyresult = pickRandom(ahegaonsfw)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
-break
-case 'jahy':
-if (!m.isGroup) return replygcxeon(mess.group)
-	if (!AntiNsfw) return replygcxeon(mess.nsfw)
-replygcxeon(mess.wait)
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/jahy.json'))
-var xeonyresult = pickRandom(ahegaonsfw)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
-break
 case 'manga':
 if (!m.isGroup) return replygcxeon(mess.group)
 	if (!AntiNsfw) return replygcxeon(mess.nsfw)
 replygcxeon(mess.wait)
 var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/manga.json'))
-var xeonyresult = pickRandom(ahegaonsfw)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
-break
-case 'masturbation':
-if (!m.isGroup) return replygcxeon(mess.group)
-	if (!AntiNsfw) return replygcxeon(mess.nsfw)
-replygcxeon(mess.wait)
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/masturbation.json'))
 var xeonyresult = pickRandom(ahegaonsfw)
 XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
 break
@@ -7179,22 +7542,6 @@ var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/orgy.json'))
 var xeonyresult = pickRandom(ahegaonsfw)
 XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
 break
-case 'panties':
-if (!m.isGroup) return replygcxeon(mess.group)
-	if (!AntiNsfw) return replygcxeon(mess.nsfw)
-replygcxeon(mess.wait)
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/panties.json'))
-var xeonyresult = pickRandom(ahegaonsfw)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
-break
-case 'tentacles':
-if (!m.isGroup) return replygcxeon(mess.group)
-	if (!AntiNsfw) return replygcxeon(mess.nsfw)
-replygcxeon(mess.wait)
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/tentacles.json'))
-var xeonyresult = pickRandom(ahegaonsfw)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
-break
 case 'thights':
 if (!m.isGroup) return replygcxeon(mess.group)
 	if (!AntiNsfw) return replygcxeon(mess.nsfw)
@@ -7208,14 +7555,6 @@ if (!m.isGroup) return replygcxeon(mess.group)
 	if (!AntiNsfw) return replygcxeon(mess.nsfw)
 replygcxeon(mess.wait)
 var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/yuri.json'))
-var xeonyresult = pickRandom(ahegaonsfw)
-XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
-break
-case 'zettai':
-if (!m.isGroup) return replygcxeon(mess.group)
-	if (!AntiNsfw) return replygcxeon(mess.nsfw)
-replygcxeon(mess.wait)
-var ahegaonsfw = JSON.parse(fs.readFileSync('./HostMedia/nsfw/zettai.json'))
 var xeonyresult = pickRandom(ahegaonsfw)
 XeonBotInc.sendMessage(m.chat, { caption: mess.success, image: { url: xeonyresult.url } }, { quoted: m })
 break
