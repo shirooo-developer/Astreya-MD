@@ -1188,48 +1188,36 @@ case 'juzamma': {
 				})
 				.catch(console.error)
 			break
-case 'menu':
-case 'help':
-case 'ggdxcghh':
-case 'gvcfg':
-case 'jgccvhj':
-case 'hgcccv': {
-  const messages = ["*Advertisement From Keizha 📣*\n\n*Lihat Cara Menambahkan Bot Hoshino Secara Gratis di Situs Berikut: https://msha.ke/keizha_bot*\n","*Advertisement From Keizha 📣*\n\n*Mengobrol dengan Hoshino? Gunakan Perintah berikut:*\n*- .hoshino Statement` (Ramah) atau*\n*- .hoshino2 Statement` (Toxic)*\n","*Advertisement From Keizha 📣*\n\n*Kamu Bisa Pasang Iklan Berbentuk Teks Disini dengan Harga Rp 15.000 untuk Durasi 1 Bulan (30 Hari), Hubungi wa.me/6281249122429*\n","*Advertisement From Keizha 📣*\n\n*Butuh Bantuan atau Ingin Tahu Cara Menggunakan Bot? Hubungi wa.me/6281249122429 (Jangan Lupa Ucapkan Salam Agar Mendapatkan Respon)*\n","*Advertisement From Keizha 📣*\n\n*Mau Main Game Bot? Kunjungi wa.me/6285163083750 dan ajak Felicia untuk bermain bersama*\n","*Advertisement From Keizha 📣*\n\n*Bergabung dengan Grup Resmi Bot Felicia dan Hoshino di WhatsApp: https://chat.whatsapp.com/HanfYszpKzbGcCGgWdHLTa*\n","*Advertisement From Keizha 📣*\n\n*Jika Bot Tidak Merespon Namun Terdapat Tanda Centang Biru, Silakan Ulangi Perintah Setelah 1 Menit Tanpa Mendapatkan Respon. Apabila Bot Masih Tidak Merespon, Harap Menunggu Beberapa Saat.*\n","*Advertisement From Keizha 📣*\n\n*Kami mengundang Anda untuk berpartisipasi dalam donasi demi meningkatkan kualitas bot ini. Donasi Anda akan digunakan untuk pengembangan dan peningkatan fitur-fitur yang ada. Anda dapat melakukan donasi melalui situs resmi kami di http://trakteer.id/is_keizha. Setiap sumbangan yang Anda berikan akan sangat berarti bagi kami. Terima kasih atas kontribusi dan dukungan Anda.*\n"];
-  let randomMessageIndex = Math.floor(Math.random() * messages.length);
-  let ownernya = ownernomer + '@s.whatsapp.net'
-  let me = m.sender
-  let timestampe = speed();
-  let latensie = speed() - timestampe
-  xeonezy = ``
-  let ments = [ownernya, me, mark]
-  
-  const thumbnailPath = './XeonMedia/theme/cheemspic.jpg';
-  const videoPath = './XeonMedia/theme/cheemspic.mp4';
-    
-  // Baca file video dan thumbnail
-  const videoData = fs.readFileSync(videoPath);
-  const thumbnailData = fs.readFileSync(thumbnailPath);
+case 'menu': case 'help': case 'ggdxcghh': case 'gvcfg': case 'jgccvhj': case 'hgcccv': {
+const messages = ["*Advertisement From Keizha 📣*\n\n*Lihat Cara Menambahkan Bot Hoshino Secara Gratis di Situs Berikut: https://msha.ke/keizha_bot*\n","*Advertisement From Keizha 📣*\n\n*Mengobrol dengan Hoshino? Gunakan Perintah berikut:*\n*- .hoshino Statement` (Ramah) atau*\n*- .hoshino2 Statement` (Toxic)*\n","*Advertisement From Keizha 📣*\n\n*Kamu Bisa Pasang Iklan Berbentuk Teks Disini dengan Harga Rp 15.000 untuk Durasi 1 Bulan (30 Hari), Hubungi wa.me/6281249122429*\n","*Advertisement From Keizha 📣*\n\n*Butuh Bantuan atau Ingin Tahu Cara Menggunakan Bot? Hubungi wa.me/6281249122429 (Jangan Lupa Ucapkan Salam Agar Mendapatkan Respon)*\n","*Advertisement From Keizha 📣*\n\n*Mau Main Game Bot? Kunjungi wa.me/6285163083750 dan ajak Felicia untuk bermain bersama*\n","*Advertisement From Keizha 📣*\n\n*Bergabung dengan Grup Resmi Bot Felicia dan Hoshino di WhatsApp: https://chat.whatsapp.com/HanfYszpKzbGcCGgWdHLTa*\n","*Advertisement From Keizha 📣*\n\n*Jika Bot Tidak Merespon Namun Terdapat Tanda Centang Biru, Silakan Ulangi Perintah Setelah 1 Menit Tanpa Mendapatkan Respon. Apabila Bot Masih Tidak Merespon, Harap Menunggu Beberapa Saat.*\n","*Advertisement From Keizha 📣*\n\n*Kami mengundang Anda untuk berpartisipasi dalam donasi demi meningkatkan kualitas bot ini. Donasi Anda akan digunakan untuk pengembangan dan peningkatan fitur-fitur yang ada. Anda dapat melakukan donasi melalui situs resmi kami di http://trakteer.id/is_keizha. Setiap sumbangan yang Anda berikan akan sangat berarti bagi kami. Terima kasih atas kontribusi dan dukungan Anda.*\n"];
+let randomMessageIndex = Math.floor(Math.random() * messages.length);
+let ownernya = ownernomer + '@s.whatsapp.net'
+let me = m.sender
+let timestampe = speed();
+let latensie = speed() - timestampe
+xeonezy = ``
+let ments = [ownernya, me, mark]
 
-  XeonBotInc.sendMessage(from, {
-    text: messages[randomMessageIndex],
-    contextInfo: {
-      forwardingScore: 9999999,
-      isForwarded: true,
-      mentionedJid: [sender],
-      "externalAdReply": {
-        "showAdAttribution": true,
-        "renderLargerThumbnail": true,
-        "title": botname, 
-        "containsAutoReply": true,
-        "mediaType": 2, // Gunakan 2 untuk tipe video
-        "thumbnail": thumbnailData,
-        "mediaUrl": videoData,
-        "sourceUrl": `${wagc}`
-      }
-    }
-  }, { quoted: m });
+XeonBotInc.sendMessage(from, {
+text: messages[randomMessageIndex],
+contextInfo:{
+forwardingScore: 9999999,
+isForwarded: true,
+mentionedJid:[sender],
+"externalAdReply": {
+"showAdAttribution": true,
+"renderLargerThumbnail": true,
+"title": botname, 
+"containsAutoReply": true,
+"mediaType": 1, 
+"thumbnail": fs.readFileSync("./XeonMedia/theme/cheemspic.jpg"),
+"mediaUrl": `${wagc}`,
+"sourceUrl": `${wagc}`
 }
-break;
+}
+}, { quoted: m })
+}
+break
 case 'ownermenu': {
 var unicorn = await getBuffer(picak+'Owner Menu')
 sendXeonBotIncMessage(from, { 
